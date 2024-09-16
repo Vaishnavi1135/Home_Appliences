@@ -13,6 +13,7 @@ class Contact extends CI_Controller
         $data['content'] = $this->load->view("contact",$data,true);
         $data['active'] = "Contact";
         $this->load->view("main_template",$data);
+		
     }
 }
  ?>

@@ -3,9 +3,6 @@
 
 <h4 class="mb-3">ELECTRONIC APPLIENCES</h4>
 
-	<h4 class="mb-3">ELECTRONIC APPLIENCES</h4>
-	
-
 <div class="row g-5 mx-lg-0">
 <div class="col-md-6">
 <img class="img-fluid" src="<?php echo base_url();?>\assets\images\household.webp" alt="" style="height:300px; width:600px">

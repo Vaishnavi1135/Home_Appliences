@@ -1,28 +1,19 @@
 
-<div class="row g-12 mt-5">
-<div class="bg-image" 
-     style="background-image: url('<?php echo base_url();?>\assets\img\consignment_tracking_jpg_0_0_cover_70.jpg');
-            height: 100vh">
-<form action="" class="container">
-<div class="text-center">
+<div class="container-fluid pt-5 pb-0">
+                <img class="img-fluid" src="<?php echo base_url();?>\assets\images\consignment_tracking_jpg_0_0_cover_70.jpg" alt=""  style="height:600px; width:1800px">
+                <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center" style="background: cover;">
+                    <div class="container">
+                        <div class="row justify-content-start" style="float:right; ">
+                         <form action="" class="container" >
+                        <h1 style="color:white;">Tracking</h1>
 
-<img src="<?php echo base_url();?>\assets\images\consignment_tracking_jpg_0_0_cover_70.jpg" style="align:center">
-<div class="h-100 w-100 align-items-center">
-<form action="/action_page.php" class="container">
-    <h1>Login</h1>
-
-    <label for="email"><b>Email</b></label>
-    <input type="text" placeholder="Enter Email" name="email" required>
-
-    <label for="psw"><b>Password</b></label>
-    <input type="password" placeholder="Enter Password" name="psw" required>
-
-    <button type="submit" class="btn">Login</button>
-    </form>
+                        <label for="email"><b>Email</b></label>
+                        <input type="text" placeholder="Enter Email" name="email"  required>
+                
+                <input type="submit" value="track" style="background:red; color:white;">
+            </form>
+        </div>
+         </div>
+        </div>
     </div>
-</div>
-
-
-
-
-
+            

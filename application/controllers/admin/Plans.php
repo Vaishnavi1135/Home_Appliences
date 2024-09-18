@@ -77,11 +77,11 @@ class Plans extends CI_Controller
     public function delete($id=0)
     {
         $this->db->where('id',$id);
-        $this->db->delete('user');
+        $this->db->delete('plans');
         $res = 0;
         if($this->input->post('id')==0){
             $data['created_at'] =date('Y-m-d H:i:s');
-            $res = $this->user_model->delete($data);
+            $res = $this->plans_model->delete($data);
             if($res){
                 echo "deleted successfully";
             

@@ -177,9 +177,7 @@
     </div>
     <!-- Service End -->
 
-
     <!-- Service End -->
-
 
     <!-- Feature Start -->
     <div class="container-fluid overflow-hidden py-5 px-lg-0">
@@ -206,13 +204,7 @@
                             <p class="mb-0">With a mission to revolutionize the relocation experience, ShiftingBazar set out on its journey. Our founders realized the need for a reliable platform to link people and businesses with reputable packers and movers after they had personally experienced the difficulties of moving. ShiftingBazar developed into a solution-driven platform, offering a seamless moving experience thanks to careful planning, thorough research, and a profound understanding of customer pain points.</p>
                         </div>
                     </div>
-                    <!-- <div class="d-flex mb-0 wow fadeInUp" data-wow-delay="0.7s">
-                        <i class="fa fa-headphones text-primary fa-3x flex-shrink-0"></i>
-                        <div class="ms-4">
-                            <h5>24/7 Telephone Support</h5>
-                            <p class="mb-0">Diam dolor ipsum sit amet eos erat ipsum lorem sed stet lorem sit clita duo justo magna erat amet</p>
-                        </div>
-                    </div> -->
+                    
                 </div>
                 <div class="col-lg-6 pe-lg-0 wow fadeInRight" data-wow-delay="0.1s" style="min-height: 400px;">
                     <div class="position-relative h-100">
@@ -302,18 +294,7 @@
             <div class="row g-6 align-items-center">
             <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
             <h3 class="text-secondary text-uppercase mb-3">Contact Us</h3>
-                <!-- <div class="col-lg-5 wow fadeInUp" data-wow-delay="0.1s">
-                    <h6 class="text-secondary text-uppercase mb-3">Get A Quote</h6>
-                    <h1 class="mb-5">Request A Free Qoute!</h1>
-                    <p class="mb-5">Providing your potential client with a simple way to request a quote from you is essential for running a business.
-                    The request quote form is crucial for any website, containing versatile fields based on the industry.</p>
-                    <div class="d-flex align-items-center">
-                        <i class="fa fa-headphones fa-2x flex-shrink-0 bg-primary p-3 text-white"></i>
-                        <div class="ps-4">
-                            <h6>Call for any query!</h6>
-                            <h3 class="text-primary m-0">+012 345 6789</h3>
-                        </div>
-                    </div> -->
+                
                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d29250838.18065772!2d61.0245165611659!3d19.69009515037612!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30635ff06b92b791%3A0xd78c4fa1854213a6!2sIndia!5e1!3m2!1sen!2sin!4v1724247406396!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 
                 </div>
@@ -330,14 +311,7 @@
                                 <div class="col-12 col-sm-12">
                                     <input type="text" class="form-control border-0" placeholder="Your Mobile" style="height: 55px;">
                                 </div>
-                                <!-- <div class="col-12 col-sm-6">
-                                    <select class="form-select border-0" style="height: 55px;">
-                                        <option selected>Select A Freight</option>
-                                        <option value="1">Freight 1</option>
-                                        <option value="2">Freight 2</option>
-                                        <option value="3">Freight 3</option>
-                                    </select>
-                                </div> -->
+                                
                                 <div class="col-12">
                                     <textarea class="form-control border-0" placeholder="Special Note"></textarea>
                                 </div>
@@ -417,10 +391,6 @@
         </div>
     </div>
     <!-- Testimonial End -->
-
-
-    
-
 
     <!-- Back to Top -->
 

@@ -6,10 +6,11 @@
                         <div class="row justify-content-start" style="float:right; ">
                          <form action="" class="container" >
                         <h3 style="color:white;">Track your belongings with us!</h3>
-                        <h6 style="color:white;">To get the location updates of your consignment, write the Goods Consignment (GC) number in the box given below:</h6>
+                        <h6 style="color:white;">To get the location updates of your consignment, <br>
+                        write the Goods Consignment (GC) number in the box given below:</h6>
 
-                        <label for="email"><b>Email</b></label>
-                        <input type="text" placeholder="Enter Email" name="email"  required>
+                        <label for="email"><b>GC Number</b></label>
+                        <input type="number" placeholder="Enter GC Number" name="GC NUmber"  required>
                 
                 <input type="submit" value="track" style="background:red; color:white;">
             </form>

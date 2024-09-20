@@ -15,7 +15,7 @@
                                 <h5 class="text-white text-uppercase mb-3 animated slideInDown">Packing and Moving Solution</h5>
                                 <h1 class="display-3 text-white animated slideInDown mb-4">#1 Place For Your <span class="text-primary">Shifting</span> Solution</h1>
                                 <p class="fs-5 fw-medium text-white mb-4 pb-2">Let our Team make you moving convenient and easy.</p>
-                                <a href="<?php echo base_url("home/read_more");?>" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Read More</a>
+                                <a href="<?php echo base_url("home/track");?>" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Read More</a>
                                 <a href="<?php echo base_url("home/free_quote");?>" class="btn btn-secondary py-md-3 px-md-5 animated slideInRight">Free Quote</a>
                             </div>
                         </div>
@@ -31,7 +31,7 @@
                                 <h5 class="text-white text-uppercase mb-3 animated slideInDown">Packing and Moving Solution</h5>
                                 <h1 class="display-3 text-white animated slideInDown mb-4">#1 Place For Your <span class="text-primary">Shifting</span> Solution</h1>
                                 <p class="fs-5 fw-medium text-white mb-4 pb-2">Let our Team make you moving convenient and easy.</p>
-                                <a href="" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Read More</a>
+                                <a href="<?php echo base_url("home/track");?>" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Read More</a>
                                 <a href="<?php echo base_url("home/free_quote");?>" class="btn btn-secondary py-md-3 px-md-5 animated slideInRight">Free Quote</a>
                             </div>
                         </div>

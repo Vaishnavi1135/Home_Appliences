@@ -5,7 +5,8 @@
                     <div class="container">
                         <div class="row justify-content-start" style="float:right; ">
                          <form action="" class="container" >
-                        <h1 style="color:white;">Tracking</h1>
+                        <h1 style="color:white;">Track your belongings with us!</h1>
+                        <h3 style="color:white;">To get the location updates of your consignment, write the Goods Consignment (GC) number in the box given below:</h3>
 
                         <label for="email"><b>Email</b></label>
                         <input type="text" placeholder="Enter Email" name="email"  required>

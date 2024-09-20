@@ -4,7 +4,7 @@
                 <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center" style="background: cover;">
                     <div class="container">
                         <div class="row justify-content-start" style="float:right; ">
-                         <form action="" class="container" >
+                         <form action="" class="container" style="pt-5" >
                         <h3 style="color:white;">Track your belongings with us!</h3>
                         <h6 style="color:white;">To get the location updates of your consignment, <br>
                         write the Goods Consignment (GC) number in the box given below:</h6>

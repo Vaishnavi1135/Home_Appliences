@@ -66,7 +66,7 @@
                 <a href="<?php echo base_url('contact');?>" class="nav-item nav-link <?=$active=='Contact'?'active':''?>">Contact</a>
 
 
-                <a href="<?php echo base_url('admin/login');?>" class="nav-item nav-link <?=$active=='Contact'?'active':''?>">Login</a>
+                <a href="<?php echo base_url('admin/login');?>" class="nav-item nav-link <?=$active=='login'?'active':''?>">Login</a>
 
 
 

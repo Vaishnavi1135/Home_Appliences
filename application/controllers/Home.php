@@ -23,10 +23,10 @@ class Home extends CI_Controller
         $this->load->view("main_template",$data);
     }
 
-    public function read_more()
+    public function track()
     {
         $data['title'] = "Kolhapur Packers and Movers";
-        $data['content'] = $this->load->view("read_more",$data,true);
+        $data['content'] = $this->load->view("track",$data,true);
         $data['active'] = "Home";
         $this->load->view("main_template",$data);
     }

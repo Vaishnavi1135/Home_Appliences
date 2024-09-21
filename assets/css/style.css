@@ -308,7 +308,7 @@
 .price-item a.btn-slide i,
 .price-item a.btn-slide span,
 .team-item div.btn-slide i,
-.team-item div.btn-slide span {
+.service-item a.btn-slide span, .price-item a.btn-slide i, .price-item a.btn-slide span, .team-item div.btn-slide i, .team-item div.btn-slide span {
     position: relative;
     height: 40px;
     padding: 0 15px;
@@ -330,14 +330,11 @@
     background: var(--secondary);
 }
 
-.service-item a.btn-slide span,
-.price-item a.btn-slide span,
-.team-item div.btn-slide span {
+.service-item a.btn-slide span, .price-item a.btn-slide span, .team-item div.btn-slide span {
     padding-left: 0;
     left: -100%;
     z-index: 1;
 }
-
 .service-item:hover a.btn-slide i,
 .price-item:hover a.btn-slide i,
 .team-item:hover div.btn-slide i {

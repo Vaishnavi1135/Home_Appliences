@@ -71,7 +71,7 @@
 
                 <a href="<?php echo base_url('admin/login');?>" class="nav-item nav-link <?=$active=='login'?'active':''?>">Login</a>
 
-
+                <button type="button" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">SignUp</button>
 
 
             </div>
@@ -155,3 +155,4 @@
         <script src="<?php echo base_url();?>/assets/js/main.js"></script>
     </body>
 </html>
+

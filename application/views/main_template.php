@@ -17,8 +17,8 @@
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Roboto:wght@500;700&display=swap" rel="stylesheet">
 
         <!-- Icon Font Stylesheet -->
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/<?php echo base_url();?>/assets/css/all.min.css" rel="stylesheet">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+        <link href="<?php echo base_url();?>/assets/css/all.min.css" rel="stylesheet">
+        <link href="<?php echo base_url();?>/assets/css/font/bootstrap-icons.css" rel="stylesheet">
 
         <!-- Libraries Stylesheet -->
         <link href="<?php echo base_url();?>/assets/lib/animate/animate.min.css" rel="stylesheet">

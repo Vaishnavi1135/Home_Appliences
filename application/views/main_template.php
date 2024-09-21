@@ -71,7 +71,7 @@
 
                 <a href="<?php echo base_url('admin/login');?>" class="nav-item nav-link <?=$active=='login'?'active':''?>">Login</a>
 
-                <button type="button" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-3 me-2  <?=$active=='login'?'active':''?>" href="<?php echo base_url('admin/login');?>" >Login</button>
+                <!-- <button type="button" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-3 me-2  <?=$active=='login'?'active':''?>" href="<?php echo base_url('admin/login');?>" >Login</button> -->
 
 
             </div>

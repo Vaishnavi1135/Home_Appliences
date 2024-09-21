@@ -70,7 +70,6 @@
 
 
 
-                <!-- <a  href="<?= base_url('admin/login')?>" class="btn btn-primary py-2 position-absolute top-4 end-0 mt-0 me-3">SignUp</a> -->
 
             </div>
         </div>

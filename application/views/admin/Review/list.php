@@ -35,7 +35,7 @@
                         
                             <tr>
                             <td><?= $count++?></td>
-                                <td><?= $review->image?></td>
+                                <td><img src="<?php echo base_url();?>assets/images/<?= $review->image?>" height='100px' width='100px'></td>
                                 <td><?= $review->name?></td>
                                 <td><?= $review->description?></td>
                                 <td><?= $review->created_at?></td>

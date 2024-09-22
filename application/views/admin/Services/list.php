@@ -35,7 +35,7 @@
                         
                             <tr>
                             <td><?= $count++?></td>
-                                <td><?= $services->image?></td>
+                                <td><img src='" <?= $services->image?> "' ></td>
                                 <td><?= $services->name?></td>
                                 <td><?= $services->description?></td>
                                 <td><?= $services->created_at?></td>

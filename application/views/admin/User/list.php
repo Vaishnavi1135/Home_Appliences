@@ -36,7 +36,7 @@
                             <tr>
                                 
                                 <td><?= $count++?></td>
-                                <td><?= $user->fname?>
+                                <td><?= $user->name?>
                                 </td>
                                 <td><?= $user->email?></td>
                                 <td><?= $user->phone?></td>

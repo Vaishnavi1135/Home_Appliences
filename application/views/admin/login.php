@@ -70,10 +70,10 @@
       <!-- /.social-auth-links -->
 
       <p class="mb-1">
-        <a href="<?php echo base_url('login/forgot_pass');?>">I forgot my password</a>
+        <a href="<?php echo base_url('admin/login/forgot_pass');?>">I forgot my password</a>
       </p>
       <p class="mb-0">
-        <a href="<?php echo base_url('login/register');?>" class="text-center">Register a new membership</a>
+        <a href="<?php echo base_url('admin/login/register');?>" class="text-center">Register a new membership</a>
       </p>
     </div>
     <!-- /.login-card-body -->

@@ -24,7 +24,11 @@ class Register extends CI_Controller
     
 
     public function register(){
-        redirect('admin/register');
+        $data['title'] = "Admin : Register ";
+        $data['page_heading'] = "Register";
+        $data['active'] = "Register";
+        //$data['content'] = $this->load->view("admin/login",$data,true);
+        $this->load->view("admin/register",$data);
     }
     
 

@@ -84,7 +84,11 @@ class Login extends CI_Controller
     
 
     public function forgot_pass(){
-        redirect('admin/forgot_pass');
+        $data['title'] = "Admin : Forgot_Pass ";
+        $data['page_heading'] = "Forgot_Pass";
+        $data['active'] = "Forgot_Passr";
+        //$data['content'] = $this->load->view("admin/login",$data,true);
+        $this->load->view("admin/forgot_Pass",$data);
     }
 
     public function logout(){

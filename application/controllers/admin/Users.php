@@ -54,7 +54,7 @@ class Users extends CI_Controller
             
             'email'=>$this->input->post('email'),
             'password'=>md5($this->input->post('password')),
-            'username'=>$this->input->post('username'),
+            
             'phone'=>$this->input->post('phone'),
             'status'=>1,
         );

@@ -20,9 +20,7 @@ class Forgot_Pass extends CI_Controller
 
     
 
-    public function register(){
-        redirect('admin/forgot_Pass');
-    }
+    
     
 
     

@@ -23,10 +23,7 @@ class Register extends CI_Controller
 
     
 
-    public function register(){
-        redirect('admin/register');
-    }
-    
+   
 
     
 

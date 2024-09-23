@@ -74,7 +74,12 @@ class Login extends CI_Controller
 
 
     public function register(){
-        redirect('admin/login');
+        $data['title'] = "Register";
+        $data['page_heading'] = "Register";
+        $data['active'] = "Dashboard";
+        //$data['content'] = $this->load->view("admin/login",$data,true);
+        $this->load->view("admin/register",$data);
+
     }
     
 

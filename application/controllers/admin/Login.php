@@ -103,7 +103,7 @@ class Login extends CI_Controller
             
             'email'=>$this->input->post('email'),
             'password'=>md5($this->input->post('password')),
-            'retypepassword'=>md5($this->input->post('retypepassword')),
+            // 'retypepassword'=>md5($this->input->post('retypepassword')),
             
             'status'=>1,
         );

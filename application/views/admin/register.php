@@ -22,6 +22,8 @@
 
   <div class="card">
     <div class="card-body register-card-body">
+    <?php echo form_open("admin/login/save",'');?>
+    <?php echo form_hidden('id',0); ?>
       <p class="login-box-msg">Register a new membership</p>
 
       <form action="" method="post">

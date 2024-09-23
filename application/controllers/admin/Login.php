@@ -77,7 +77,6 @@ class Login extends CI_Controller
         $data['title'] = "Register";
         $data['page_heading'] = "Register";
         $data['active'] = "Dashboard";
-        
         $this->load->view("admin/register",$data);
 
     }
@@ -94,6 +93,41 @@ class Login extends CI_Controller
     public function logout(){
         $this->session->sess_destroy();
         redirect('admin/login');
+    }
+
+    public function save()
+    {
+        $data=array(
+            'id'=>$this->input->post('id'),
+            'name'=>$this->input->post('name'),
+            
+            'email'=>$this->input->post('email'),
+            'password'=>md5($this->input->post('password')),
+            'retypepassword'=>md5($this->input->post('retypepassword')),
+            
+            'status'=>1,
+        );
+        $res = 0;
+        if($this->input->post('id')==0){
+            $data['created_at'] =date('Y-m-d H:i:s');
+            $data['created_by'] = $this->session->userdata('id');
+            $res = $this->user_model->create($data);
+            if($res){
+                echo "added successfully";
+            
+            }
+            
+        }else{
+            $data['updated_at'] =date('Y-m-d H:i:s');
+            $data['updated_by'] =$this->session->userdata('id');
+            $res = $this->user_model->update($data);
+            if($res){
+                echo "updates successfully";
+            
+            }
+        }
+        
+
     }
 
 

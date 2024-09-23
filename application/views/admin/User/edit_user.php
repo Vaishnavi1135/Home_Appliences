@@ -12,24 +12,19 @@
                         <?php echo form_hidden('id',$user->id); ?>
                         <div class="row">
                             <div class="col-md-12 form-group">
-                                <label for="fname">First Name</label>
-                                <input type="text" name="fname" class="form-control" id="fname" value="<?=$user->fname?>">
+                                <label for="name"> Name</label>
+                                <input type="text" name="name" class="form-control" id="name" value="<?=$user->name?>">
                             </div>
                         </div>
 
-                        <div class="row">
-                            <div class="col-md-12 form-group">
-                                <label for="lname">Last Name</label>
-                                <input type="text" name="lname" class="form-control" id="lname" value="<?=$user->lname?>">
-                            </div>
-                        </div>
+                       
 
-                        <div class="row">
+                        <!-- <div class="row">
                             <div class="col-md-12 form-group">
                                 <label for="username">Username</label>
                                 <input type="text" name="username" class="form-control" id="username" value="<?=$user->username?>">
                             </div>
-                        </div>
+                        </div> -->
 
                         <div class="row">
                             <div class="col-md-12 form-group">

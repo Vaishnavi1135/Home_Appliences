@@ -113,7 +113,7 @@ class Login extends CI_Controller
             $res = $this->user_model->create($data);
             if($res){
                 $this->session->set_flashdata('exception',"Added successfully..!");
-                redirect('admin/login');
+               
             
             }
             

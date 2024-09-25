@@ -100,7 +100,6 @@ class Login extends CI_Controller
         $data=array(
             'id'=>$this->input->post('id'),
             'name'=>$this->input->post('name'),
-            
             'email'=>$this->input->post('email'),
             'password'=>md5($this->input->post('password')),
             // 'retypepassword'=>md5($this->input->post('retypepassword')),

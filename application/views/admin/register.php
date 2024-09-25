@@ -28,7 +28,7 @@
   <div class = "col-lg-9">
   <div class="alert alert-success alert-dismissible fade show">
     
-    <strong>Success!</strong> This alert. 
+    <strong>Added successfully..!</strong>  
   </div>
   </div>
 </div>

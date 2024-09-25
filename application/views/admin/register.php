@@ -26,7 +26,7 @@
 <?php if($error=$this->session->flashdata("Added successfully..!"));?>
 <div class ="row">
   <div class = "col-lg-9">
-  <div class="alert alert-success alert-dismissible fade show">
+  <div class="alert alert-primary alert-dismissible fade show">
     
     <strong>Added successfully..!</strong>  
   </div>

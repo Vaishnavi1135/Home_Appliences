@@ -33,7 +33,7 @@
 </div>
 </div>
 </div>
-<?php endif; ?>
+
 
       <p class="login-box-msg">Register a new membership</p>
 

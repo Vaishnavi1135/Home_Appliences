@@ -28,7 +28,7 @@
   <div class = "col-lg-9">
   <div class="alert alert-success alert-dismissible fade show">
     <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
-    <strong>Success!</strong> This alert box could indicate a successful or positive action.
+    <strong>Success!</strong> This alert. 
   </div>
   </div>
 </div>
@@ -36,10 +36,7 @@
     <?php echo form_open("admin/login/save",'');?>
     <?php echo form_hidden('id',0); ?>
 
-    <div class="alert alert-success alert-dismissible fade show">
-    <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
-    <strong>Success!</strong> This alert box could indicate a successful or positive action.
-  </div>
+    
 
 
       <p class="login-box-msg">Register a new membership</p>

@@ -121,7 +121,8 @@ class Login extends CI_Controller
             $data['updated_by'] =$this->session->userdata('id');
             $res = $this->user_model->update($data);
             if($res){
-                echo "updates successfully";
+                //echo "updates successfully";
+                $this->session->set_flashdata("Added successfully..!");
             
             }
         }

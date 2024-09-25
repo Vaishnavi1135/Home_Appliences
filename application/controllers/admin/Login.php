@@ -112,7 +112,7 @@ class Login extends CI_Controller
             $data['created_by'] = $this->session->userdata('id');
             $res = $this->user_model->create($data);
             if($res){
-                $this->session->set_flashdata("Added successfully..!");
+                echo "added successfully";
             
             }
             

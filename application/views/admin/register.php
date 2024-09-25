@@ -44,9 +44,9 @@
           </div>
         </div>
         <div class="input-group mb-3">
-          <input type="phone" class="form-control" placeholder="Phone.No" name="phone">
+          <input type="phone" class="form-control" placeholder="Phone" name="phone">
           <div class="input-group-append">
-            <div class="input-group-number">
+            <div class="input-group-text">
               <span class="fas fa-phone"></span>
             </div>
           </div>

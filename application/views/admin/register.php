@@ -22,17 +22,20 @@
 
   <div class="card">
     <div class="card-body register-card-body">
-    <?php echo form_open("admin/login/save",'');?>
-    <?php echo form_hidden('id',0); ?>
 
-<?php if($error=$this->session->flashdata("Added successfully..!"));?>
+    <?php if($error=$this->session->flashdata("Added successfully..!"));?>
 <div class ="row">
-  <div class = "col-lg-6">
+  <div class = "col-lg-9">
     <div class = "alert alert-dismissible alert-success">
       <?= $error?>
 </div>
 </div>
 </div>
+
+    <?php echo form_open("admin/login/save",'');?>
+    <?php echo form_hidden('id',0); ?>
+
+
 
 
       <p class="login-box-msg">Register a new membership</p>

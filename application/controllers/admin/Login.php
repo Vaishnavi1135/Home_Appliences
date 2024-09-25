@@ -123,7 +123,7 @@ class Login extends CI_Controller
             $res = $this->user_model->update($data);
             if($res){
                 //echo "updates successfully";
-                
+               
             
             }
         }

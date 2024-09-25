@@ -27,7 +27,7 @@
 <div class ="row">
   <div class = "col-lg-9">
   <div class="alert alert-success alert-dismissible fade show">
-    <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+    
     <strong>Success!</strong> This alert. 
   </div>
   </div>

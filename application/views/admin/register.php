@@ -28,7 +28,7 @@
   <div class = "col-lg-9">
   <div class="alert alert-primary alert-dismissible fade show">
     <?=$error?>
-    <!-- <strong>Added successfully..!</strong>   -->
+    <strong>Added successfully..!</strong>  
   </div>
   </div>
 </div>

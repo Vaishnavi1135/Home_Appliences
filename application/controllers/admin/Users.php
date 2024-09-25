@@ -70,7 +70,7 @@ class Users extends CI_Controller
             
         }else{
             $data['updated_at'] =date('Y-m-d H:i:s');
-            $data['updated_by'] =$this->session->userdata('id');
+            // $data['updated_by'] =$this->session->userdata('id');
             $res = $this->user_model->update($data);
             if($res){
                 echo "updates successfully";

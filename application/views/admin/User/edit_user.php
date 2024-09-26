@@ -10,7 +10,7 @@
                     <div class="card-body">
 
                     <?php if($this->session->flashdata('status')) ;?>
-                    <div class="alert alert-success alert-dismissible fade show">  
+                    <div class="alert alert-success ">  
                         <?= $this->session->flashdata('status');?>
                     </div>
  

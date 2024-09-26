@@ -83,7 +83,7 @@ class Plans extends CI_Controller
             $data['created_at'] =date('Y-m-d H:i:s');
             $res = $this->plans_model->delete($data);
             if($res){
-                echo "deleted successfully";
+                $this->session->set_flashdata('status',' Deleted successfully..!');
             
             }
             

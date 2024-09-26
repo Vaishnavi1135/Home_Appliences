@@ -23,11 +23,11 @@ class Login extends CI_Controller
         if($this->input->post('loginSubmit')){ 
             $this->form_validation->set_rules('email', 'Email', 'required|valid_email'); 
             $this->form_validation->set_rules('password', 'password', 'required'); 
-             
+           
             if($this->form_validation->run() == true){ 
                 $con =array( 
                         'email'=> $this->input->post('email'), 
-                        'password' =>md5( $this->input->post('password'))
+                        'password' =>md5($this->input->post('password'))
                 ); 
                 $checkLogin = $this->user_model->checklogin($con); 
 
@@ -61,6 +61,7 @@ class Login extends CI_Controller
 
                 );
                 $this->session->set_userdata($forsession);
+                
                 if($this->session->userdata('id')){
                     redirect('admin/users');
                 }
@@ -111,10 +112,11 @@ class Login extends CI_Controller
             $data['created_at'] =date('Y-m-d H:i:s');
             $data['created_by'] = $this->session->userdata('id');
             $res = $this->user_model->create($data);
-            if($res){
-                $this->session->set_flashdata('status',' Added successfully..!');
-               
             
+            if($res){
+
+                $this->session->set_flashdata('status',' Added successfully..!');
+                redirect('admin/login');
             }
             
         }else{

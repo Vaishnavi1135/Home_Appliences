@@ -22,6 +22,13 @@
   <!-- /.login-logo -->
   <div class="card">
     <div class="card-body login-card-body">
+    <?php if($this->session->flashdata('status')) {?>
+    <div class="alert alert-success alert-dismissible fade show">  
+    <?= $this->session->flashdata('status');?>
+  </div>
+ 
+  <?php  }?>
+  
       <p class="login-box-msg">Sign in to start your session</p>
 
       <form action="<?=base_url('admin/login/verify')?>" method="post">

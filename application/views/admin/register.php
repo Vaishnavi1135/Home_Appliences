@@ -23,11 +23,14 @@
   <div class="card">
     <div class="card-body register-card-body">
 
-  <?php if($this->session->flashdata('status')) ;?>
-  <div class="alert alert-success alert-dismissible fade show">  
+  <?php if($this->session->flashdata('status')) {?>
+    <div class="alert alert-success alert-dismissible fade show">  
     <?= $this->session->flashdata('status');?>
   </div>
  
+  <?php  }?>
+  
+  
 
     <?php echo form_open("admin/login/save",'');?>
     <?php echo form_hidden('id',0); ?>
@@ -89,7 +92,7 @@
           </div>
           <!-- /.col -->
           <div class="col-4">
-            <button type="submit" class="btn btn-primary btn-block">Register</button>
+            <button type="submit" href="<?php echo base_url('admin/login/register');?>" class="btn btn-primary btn-block">Register</button>
           </div>
           <!-- /.col -->
         </div>

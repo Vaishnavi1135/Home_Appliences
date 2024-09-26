@@ -43,8 +43,10 @@ class Users extends CI_Controller
         $data['page_heading'] = "Users/edit";
         $data['active'] = "Users";
         $data['content'] = $this->load->view("admin/User/edit_user",$data,true);
+        $this->session->set_flashdata('status','Updated successfully..!');
         $this->load->view("admin/admin_template",$data);  
-    }
+
+    } 
 
     public function save()
     {
@@ -64,7 +66,7 @@ class Users extends CI_Controller
             $data['created_by'] = $this->session->userdata('id');
             $res = $this->user_model->create($data);
             if($res){
-                echo "added successfully";
+                $this->session->set_flashdata('status','Added successfully..!');
             
             }
             
@@ -73,7 +75,7 @@ class Users extends CI_Controller
             // $data['updated_by'] =$this->session->userdata('id');
             $res = $this->user_model->update($data);
             if($res){
-                echo "updates successfully";
+                $this->session->set_flashdata('status','Updated successfully..!');
             
             }
         }
@@ -90,7 +92,7 @@ class Users extends CI_Controller
             $data['created_at'] =date('Y-m-d H:i:s');
             $res = $this->user_model->delete($data);
             if($res){
-                $this->session->set_flashdata('status',' Deleted successfully..!');
+                $this->session->set_flashdata('status','Deleted successfully..!');
             
             }
             

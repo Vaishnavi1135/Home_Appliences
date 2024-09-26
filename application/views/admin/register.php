@@ -23,15 +23,11 @@
   <div class="card">
     <div class="card-body register-card-body">
 
-<?php if($exception=$this->session->flashdata("Added successfully..!"));?>
-<div class ="row">
-  <div class = "col-lg-9">
-  <div class="alert alert-success alert-dismissible fade show">
-    <?=$exception?>
-    <strong>Added successfully..!</strong>  
+  <?php if($this->session->flashdata('status')) ;?>
+  <div class="alert alert-success alert-dismissible fade show">  
+    <?= $this->session->flashdata('status');?>
   </div>
-  </div>
-</div>
+ 
 
     <?php echo form_open("admin/login/save",'');?>
     <?php echo form_hidden('id',0); ?>

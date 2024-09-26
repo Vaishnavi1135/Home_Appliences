@@ -8,6 +8,13 @@
                     </div>
                     <!-- /.card-header -->
                     <div class="card-body">
+
+                    <?php if($this->session->flashdata('status')) ;?>
+                    <div class="alert alert-success alert-dismissible fade show">  
+                        <?= $this->session->flashdata('status');?>
+                    </div>
+ 
+
                         <?php echo form_open("admin/users/save",'');?>
                         <?php echo form_hidden('id',$user->id); ?>
                         <div class="row">

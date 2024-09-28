@@ -12,24 +12,19 @@
                         <?php echo form_hidden('id',0); ?>
                         <div class="row">
                             <div class="col-md-12 form-group">
-                                <label for="fname">First Name</label>
-                                <input type="text" class="form-control" name="fname" id="fname" >
+                                <label for="name">Name</label>
+                                <input type="text" class="form-control" name="name" id="name" >
                             </div>
                         </div>
 
-                        <div class="row">
+                        <!-- <div class="row">
                             <div class="col-md-12 form-group">
                                 <label for="lname">Last Name</label>
                                 <input type="text" class="form-control" name="lname" id="lname" >
                             </div>
-                        </div>
+                        </div> -->
 
-                        <div class="row">
-                            <div class="col-md-12 form-group">
-                                <label for="username">Username</label>
-                                <input type="text" class="form-control" name="username" id="username">
-                            </div>
-                        </div>
+                        
 
                         <div class="row">
                             <div class="col-md-12 form-group">
@@ -42,6 +37,13 @@
                             <div class="col-md-12 form-group">
                                 <label for="passsword">Password</label>
                                 <input type="password" class="form-control" name="password" id="password">
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-12 form-group">
+                                <label for="passsword">Confirm Password</label>
+                                <input type="confirmpassword" class="form-control" name="confirmpassword" id="confirmpassword">
                             </div>
                         </div>
 

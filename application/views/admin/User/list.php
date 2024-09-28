@@ -6,6 +6,14 @@
             <div class="col-12">
             
                 <div class="card">
+
+                <?php if($this->session->flashdata('status')) {?>
+                <div class="alert alert-success alert-dismissible fade show">  
+                <?= $this->session->flashdata('status');?>
+            </div>
+            
+            <?php  }?>
+            
                     <div class="card-header">
                         <h3 class="card-title">User</h3>
                         <div style="float:right"><a href="<?= base_url('admin/users/add/')?>" class="btn btn-sm btn-primary">Add New</a></div>

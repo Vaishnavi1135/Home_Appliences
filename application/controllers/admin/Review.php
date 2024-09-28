@@ -57,7 +57,8 @@ class Review extends CI_Controller
             $data['created_by'] = $this->session->userdata('id');
             $res = $this->review_model->create($data);
             if($res){
-                echo "added successfully";
+                $this->session->set_flashdata('status',' Added successfully..!');
+                redirect('admin/login');
             
             }
             
@@ -66,7 +67,9 @@ class Review extends CI_Controller
             $data['updated_by'] = $this->session->userdata('id');
             $res = $this->review_model->update($data);
             if($res){
-                echo "updates successfully";
+                $this->session->set_flashdata('status','Updated successfully..!');
+                redirect('admin/users');
+            
             
             }
         }

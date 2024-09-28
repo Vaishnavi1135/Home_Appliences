@@ -5,6 +5,13 @@
             <div class="col-12">
             
                 <div class="card">
+                <?php if($this->session->flashdata('status')) {?>
+            <div class="alert alert-success alert-dismissible fade show">  
+            <?= $this->session->flashdata('status');?>
+        </div>
+        
+        <?php }?>
+
                     <div class="card-header">
                         <h3 class="card-title">Plans</h3>
                         <div style="float:right"><a href="<?= base_url('admin/plans/add/')?>" class="btn btn-sm btn-primary">Add New</a></div>
@@ -15,8 +22,7 @@
                     <table id="example1" class="table table-bordered table-striped">
                         <thead>
                             <tr>
-
-                                <th>Sr.No</th>
+                            <th>Sr.No</th>
                                 <th>Plan_name</th>
                                 <th>Ammount</th>
                                 <th>Services</th>
@@ -28,13 +34,12 @@
                             </tr>
                         </thead>
                         <tbody>
-
                         <?php 
                             $count=1;
                             foreach($plans as $plans){
 
                            ?> 
-                            <tr>
+                        
                             <tr>
                             <td><?= $count++?></td>
                                 <td><?= $plans->plan_name?></td>
@@ -51,12 +56,11 @@
                                 </td>
                                 
                             </tr>
-                                
 
-                            </tr>
                             <?php
                             }
                             ?>
+                            
                         </tbody>
                         
                         </table>
@@ -69,7 +73,15 @@
 <script>
   $(function () {
    
-    $('#example1').DataTable();
+    $('#example1').DataTable({
+      "paging": true,
+      "lengthChange": true,
+      "searching": true,
+      "ordering": true,
+      "info": true,
+      "autoWidth": false,
+      "responsive": true,
+    });
   });
 </script>
 

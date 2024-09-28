@@ -56,6 +56,7 @@ class Users extends CI_Controller
             
             'email'=>$this->input->post('email'),
             'password'=>md5($this->input->post('password')),
+            'confirmpassword'=>md5($this->input->post('confirmpassword')),
             
             'phone'=>$this->input->post('phone'),
             'status'=>1,
@@ -66,7 +67,8 @@ class Users extends CI_Controller
             $data['created_by'] = $this->session->userdata('id');
             $res = $this->user_model->create($data);
             if($res){
-                $this->session->set_flashdata('status','Added successfully..!');
+                $this->session->set_flashdata('status',' Added successfully..!');
+                redirect('admin/login');
             
             }
             
@@ -76,6 +78,7 @@ class Users extends CI_Controller
             $res = $this->user_model->update($data);
             if($res){
                 $this->session->set_flashdata('status','Updated successfully..!');
+                redirect('admin/users');
             
             }
         }

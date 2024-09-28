@@ -23,6 +23,8 @@ class Login extends CI_Controller
         if($this->input->post('loginSubmit')){ 
             $this->form_validation->set_rules('email', 'Email', 'required|valid_email'); 
             $this->form_validation->set_rules('password', 'password', 'required'); 
+
+           
            
             if($this->form_validation->run() == true){ 
                 $con =array( 
@@ -57,6 +59,7 @@ class Login extends CI_Controller
                     'username' => $user['username'],
                     'email' => $user['email'],
                     'password' => $user['password'],
+                    'confirmpassword' => $user['confirmpassword'],
                     'phone' => $user['phone'],
 
                 );
@@ -104,6 +107,7 @@ class Login extends CI_Controller
             'email'=>$this->input->post('email'),
             'password'=>md5($this->input->post('password')),
             'phone'=>$this->input->post('phone'),
+            'confirmpassword'=>$this->input->post('confirmpassword'),
             
             'status'=>1,
         );

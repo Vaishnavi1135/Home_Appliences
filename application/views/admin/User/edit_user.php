@@ -9,10 +9,7 @@
                     <!-- /.card-header -->
                     <div class="card-body">
 
-                    <?php if($this->session->flashdata('status')) ;?>
-                    <div class="alert alert-success alert-dismissible fade show">  
-                        <?= $this->session->flashdata('status');?>
-                    </div>
+                    
  
 
                         <?php echo form_open("admin/users/save",'');?>
@@ -26,13 +23,7 @@
 
                        
 
-                        <!-- <div class="row">
-                            <div class="col-md-12 form-group">
-                                <label for="username">Username</label>
-                                <input type="text" name="username" class="form-control" id="username" value="<?=$user->username?>">
-                            </div>
-                        </div> -->
-
+                        
                         <div class="row">
                             <div class="col-md-12 form-group">
                                 <label for="email">Email</label>
@@ -44,6 +35,13 @@
                             <div class="col-md-12 form-group">
                                 <label for="passsword">Password</label>
                                 <input type="password" name="password" class="form-control" id="password" value="<?=$user->password?>">
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-12 form-group">
+                                <label for="passsword">Confirm Password</label>
+                                <input type="confirmpassword" name="confirmpassword" class="form-control" id="confirmpassword" value="<?=$user->confirmpassword?>">
                             </div>
                         </div>
 

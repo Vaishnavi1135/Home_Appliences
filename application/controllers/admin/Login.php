@@ -20,6 +20,8 @@ class Login extends CI_Controller
 
     public function verify(){
 
+
+
         if($this->input->post('loginSubmit')){ 
             $this->form_validation->set_rules('email', 'Email', 'required|valid_email'); 
             $this->form_validation->set_rules('password', 'password', 'required'); 
@@ -47,10 +49,27 @@ class Login extends CI_Controller
             }else{ 
                echo $data['error_msg'] = 'Please fill all the mandatory fields.'; 
             } 
-        } 
 
+          
+
+        } 
+        if($email==""){
+            $this->form_validation->set_rules('email', 'Email', 'required|valid_email'); 
+        }elseif($password==""){
+            $this->form_validation->set_rules('password', 'Password', 'required'); 
+        }else{
+            echo $data['error_msg'] = 'Please fill all the mandatory fields.';  
+        }
+
+
+
+        
+        
+        
         if(!empty($data['email']) && !empty($data['password']))
         {
+
+
             $checkLogin = $this->user_model->checklogin($con); 
 
             if(!empty($user)){
@@ -109,12 +128,27 @@ class Login extends CI_Controller
             'email'=>$this->input->post('email'),
             'password'=>md5($this->input->post('password')),
             'phone'=>$this->input->post('phone'),
-            
-            
             'status'=>1,
-
+            
             // 'confirmpassword'=>md5($this->input->post('confirmpassword')),
         );
+
+        if($name==""){
+            $this->form_validation->set_rules('name','Name','required');
+        }
+        elseif($email==""){
+            $this->form_validation->set_rules('email', 'Email', 'required|valid_email'); 
+        }
+        elseif($password==""){
+            $this->form_validation->set_rules('password', 'Password', 'required'); 
+        }
+        elseif($phone=="")
+        {
+            $this->form_validation->set_rules('phone', 'Phone', 'required'); 
+        }else{ 
+            echo  $data['error_msg'] = 'Wrong email or password, please try again.'; }
+
+
         $res = 0;
         if($this->input->post('id')==0){
             $data['created_at'] =date('Y-m-d H:i:s');

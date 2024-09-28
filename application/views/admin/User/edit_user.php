@@ -38,12 +38,12 @@
                             </div>
                         </div>
 
-                        <div class="row">
+                        <!-- <div class="row">
                             <div class="col-md-12 form-group">
                                 <label for="passsword">Confirm Password</label>
                                 <input type="confirmpassword" name="confirmpassword" class="form-control" id="confirmpassword" value="<?=$user->confirmpassword?>">
                             </div>
-                        </div>
+                        </div> -->
 
                         <div class="row">
                             <div class="col-md-12 form-group">

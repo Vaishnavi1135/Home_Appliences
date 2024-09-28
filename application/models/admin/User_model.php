@@ -49,6 +49,7 @@ class User_Model extends CI_Model
        ->from($this->table)
         ->where('email',$data['email'])
         ->where('password',$data['password'])
+        // ->where('confirmpassword',$data['confirmpassword'])
         ->get()
         ->row();
     }

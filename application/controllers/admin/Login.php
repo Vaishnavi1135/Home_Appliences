@@ -23,13 +23,15 @@ class Login extends CI_Controller
         if($this->input->post('loginSubmit')){ 
             $this->form_validation->set_rules('email', 'Email', 'required|valid_email'); 
             $this->form_validation->set_rules('password', 'password', 'required'); 
+            // $this->form_validation->set_rules('confirmpassword', 'Confirm password', 'required'); 
 
            
            
             if($this->form_validation->run() == true){ 
                 $con =array( 
                         'email'=> $this->input->post('email'), 
-                        'password' =>md5($this->input->post('password'))
+                        'password' =>md5($this->input->post('password')),
+                        // 'confirmpassword' =>md5($this->input->post('confirmpassword'))
                 ); 
                 $checkLogin = $this->user_model->checklogin($con); 
 
@@ -107,9 +109,11 @@ class Login extends CI_Controller
             'email'=>$this->input->post('email'),
             'password'=>md5($this->input->post('password')),
             'phone'=>$this->input->post('phone'),
-            'confirmpassword'=>$this->input->post('confirmpassword'),
+            
             
             'status'=>1,
+
+            // 'confirmpassword'=>md5($this->input->post('confirmpassword')),
         );
         $res = 0;
         if($this->input->post('id')==0){

@@ -47,19 +47,19 @@ class Login extends CI_Controller
                   echo  $data['error_msg'] = 'Wrong email or password, please try again.'; 
                 } 
             }else{ 
-               echo $data['error_msg'] = 'Please fill all the mandatory fields.'; 
+
+                // $this->session->set_flashdata('status',' Updated successfully..!');
+                $this->load->view('admin/login');
+                // redirect('admin/login');
+            //    echo $data['error_msg'] = 'Please fill all the mandatory fields.'; 
             } 
 
           
 
-        } 
-        if($email==""){
-            $this->form_validation->set_rules('email', 'Email', 'required|valid_email'); 
-        }elseif($password==""){
-            $this->form_validation->set_rules('password', 'Password', 'required'); 
-        }else{
-            echo $data['error_msg'] = 'Please fill all the mandatory fields.';  
         }
+        
+        
+       
 
 
 
@@ -133,20 +133,39 @@ class Login extends CI_Controller
             // 'confirmpassword'=>md5($this->input->post('confirmpassword')),
         );
 
-        if($name==""){
-            $this->form_validation->set_rules('name','Name','required');
-        }
-        elseif($email==""){
+        if($this->input->post('registerSubmit')){ 
+            $this->form_validation->set_rules('name', 'name', 'required'); 
             $this->form_validation->set_rules('email', 'Email', 'required|valid_email'); 
-        }
-        elseif($password==""){
-            $this->form_validation->set_rules('password', 'Password', 'required'); 
-        }
-        elseif($phone=="")
-        {
-            $this->form_validation->set_rules('phone', 'Phone', 'required'); 
+            $this->form_validation->set_rules('password', 'password', 'required'); 
+            $this->form_validation->set_rules('phone', 'phone', 'required|valid_phone'); 
+
+        if($this->form_validation->run() == true){ 
+            $con =array( 
+                    'name'=> $this->input->post('name'), 
+                    'email'=>$this->input->post('email'),
+                    'password' =>md5($this->input->post('password')),
+                    'phone'=>$this->input->post('phone'),
+                    'confirmpassword' =>md5($this->input->post('confirmpassword')),
+            ); 
+            $checkregister = $this->user_model->checkregister($con); 
+
+            if($checkregister){ 
+                $this->session->set_userdata('isUserRegisterIn', TRUE); 
+                $this->session->set_userdata('userId', $checkRegister->id); 
+
+               // echo "<pre>"; print_r($this->session->userdata());die();
+                redirect('admin/register/'); 
+            }else{ 
+              echo  $data['error_msg'] = 'Wrong registration'; 
+            } 
         }else{ 
-            echo  $data['error_msg'] = 'Wrong email or password, please try again.'; }
+
+            // $this->session->set_flashdata('status',' Updated successfully..!');
+            $this->load->view('admin/register');
+            // redirect('admin/login');
+        //    echo $data['error_msg'] = 'Please fill all the mandatory fields.'; 
+        } 
+    }
 
 
         $res = 0;

@@ -40,6 +40,8 @@
             </div>
           </div>
         </div>
+        <?php echo form_error('email', '<div class="error" style="color:red;">','</div>');?>
+
         <div class="input-group mb-3">
           <input type="password" class="form-control" name="password" placeholder="Password">
           <div class="input-group-append">
@@ -48,6 +50,9 @@
             </div>
           </div>
         </div>
+
+        <?php echo form_error('password', '<div class="error" style="color:red;">','</div>');?>
+
         <div class="row">
           <div class="col-8">
             <div class="icheck-primary">

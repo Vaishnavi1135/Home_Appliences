@@ -47,6 +47,9 @@
             </div>
           </div>
         </div>
+
+        <?php echo form_error('name', '<div class="error" style="color:red;">','</div>');?>
+
         <div class="input-group mb-3">
           <input type="email" class="form-control" placeholder="Email" name="email">
           <div class="input-group-append">
@@ -55,6 +58,9 @@
             </div>
           </div>
         </div>
+
+        <?php echo form_error('email', '<div class="error" style="color:red;">','</div>');?>
+
         <div class="input-group mb-3">
           <input type="phone" class="form-control" placeholder="Phone" name="phone">
           <div class="input-group-append">
@@ -63,6 +69,9 @@
             </div>
           </div>
         </div>
+
+        <?php echo form_error('phone', '<div class="error" style="color:red;">','</div>');?>
+
         <div class="input-group mb-3">
           <input type="password" class="form-control" placeholder="Password" name="password">
           <div class="input-group-append">
@@ -71,6 +80,9 @@
             </div>
           </div>
         </div>
+
+        <?php echo form_error('password', '<div class="error" style="color:red;">','</div>');?>
+
         <div class="input-group mb-3">
           <input type="password" class="form-control" placeholder="confirm password" name="confirmpassword">
           <div class="input-group-append">
@@ -79,6 +91,9 @@
             </div>
           </div>
         </div>
+
+        <?php echo form_error('confirmpassword', '<div class="error" style="color:red;">','</div>');?>
+
         <div class="row">
           <div class="col-8">
             <div class="icheck-primary">

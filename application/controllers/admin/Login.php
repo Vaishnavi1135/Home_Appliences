@@ -154,7 +154,7 @@ class Login extends CI_Controller
                 $this->session->set_userdata('userId', $checkRegister->id); 
 
                // echo "<pre>"; print_r($this->session->userdata());die();
-                redirect('admin/register/'); 
+                redirect('admin/dashboard/'); 
             }else{ 
               echo  $data['error_msg'] = 'Wrong registration'; 
             } 

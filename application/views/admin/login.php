@@ -40,6 +40,7 @@
             </div>
           </div>
         </div>
+        
         <?php echo form_error('email', '<div class="error" style="color:red;">','</div>');?>
 
         <div class="input-group mb-3">

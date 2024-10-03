@@ -105,7 +105,7 @@
           </div>
           <!-- /.col -->
           <div class="col-4">
-            <button type="submit" href="<?php echo base_url('admin/login/register');?>" class="btn btn-primary btn-block">Register</button>
+            <button type="submit" href="<?php echo base_url('admin/login/register');?>" class="btn btn-primary btn-block" name="registerSubmit">Register</button>
           </div>
           <!-- /.col -->
         </div>

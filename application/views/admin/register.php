@@ -38,7 +38,7 @@
     
       <p class="login-box-msg">Register a new membership</p>
 
-      <form action="" method="post">
+      <form action="<?=base_url('admin/login/verify2')?>" method="post">
         <div class="input-group mb-3">
           <input type="text" class="form-control" placeholder="Full name" name="name">
           <div class="input-group-append">
@@ -47,6 +47,7 @@
             </div>
           </div>
         </div>
+        <!-- <div class="error" style="color:red;">The Name field is required.</div> -->
 
         <?php echo form_error('name', '<div class="error" style="color:red;">','</div>');?>
 
@@ -69,7 +70,7 @@
             </div>
           </div>
         </div>
-
+       
         <?php echo form_error('phone', '<div class="error" style="color:red;">','</div>');?>
 
         <div class="input-group mb-3">
@@ -105,7 +106,7 @@
           </div>
           <!-- /.col -->
           <div class="col-4">
-            <button type="submit" href="<?php echo base_url('admin/login/register');?>" class="btn btn-primary btn-block" name="registerSubmit">Register</button>
+            <button type="submit"  class="btn btn-primary btn-block" name="registerSubmit">Register</button>
           </div>
           <!-- /.col -->
         </div>

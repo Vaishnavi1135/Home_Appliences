@@ -21,66 +21,41 @@ class Login extends CI_Controller
     public function verify(){
 
         if($this->input->post('loginSubmit')){ 
+            // Initialize $data array to prevent undefined errors
+            $data = array();
+    
+            // Set form validation rules
             $this->form_validation->set_rules('email', 'Email', 'required|valid_email'); 
-            $this->form_validation->set_rules('password', 'password', 'required'); 
-            // $this->form_validation->set_rules('confirmpassword', 'Confirm password', 'required'); 
-
+            $this->form_validation->set_rules('password', 'Password', 'required'); 
+    
             if($this->form_validation->run() == true){ 
-                $con =array( 
-                        'email'=> $this->input->post('email'), 
-                        'password' =>md5($this->input->post('password')),
-                        // 'confirmpassword' =>md5($this->input->post('confirmpassword'))
+                // Collect form data
+                $con = array( 
+                    'email' => $this->input->post('email'), 
+                    'password' => md5($this->input->post('password'))
                 ); 
+    
+                // Check login using the user model
                 $checkLogin = $this->user_model->checklogin($con); 
-
+    
                 if($checkLogin){ 
+                    // Set session data
                     $this->session->set_userdata('isUserLoggedIn', TRUE); 
                     $this->session->set_userdata('userId', $checkLogin->id); 
-
-                   // echo "<pre>"; print_r($this->session->userdata());die();
+    
+                    // Redirect to the dashboard
                     redirect('admin/dashboard/'); 
-                }else{ 
-                  echo  $data['error_msg'] = 'Wrong email or password, please try again.'; 
-                } 
-            }else{ 
-
-                // $this->session->set_flashdata('status',' Updated successfully..!');
+                } else { 
+                    // Set error message for wrong credentials
+                    $data['error_msg'] = 'Wrong email or password, please try again.';
+                }
+            } else {
+                // Load login view if validation fails
                 $this->load->view('admin/login');
-                // redirect('admin/login');
-            //    echo $data['error_msg'] = 'Please fill all the mandatory fields.'; 
-            }           
-
-        }
-        
-        if(!empty($data['email']) && !empty($data['password']))
-        {
-
-
-            $checkLogin = $this->user_model->checklogin($con); 
-
-            if(!empty($user)){
-                $forsession = array(
-                    'id' => $user['id'],
-                    'firstname' => $user['firstname'],
-                    'lastname' => $user['lastname'],
-                    'username' => $user['username'],
-                    'email' => $user['email'],
-                    'password' => $user['password'],
-                    'confirmpassword' => $user['confirmpassword'],
-                    'phone' => $user['phone'],
-
-                );
-                $this->session->set_userdata($forsession);
-                
-                if($this->session->userdata('id')){
-                    redirect('admin/users');
-                }
-                else{
-                    echo "session is not created";
-                }
             }
         }
-        
+    
+        // No need for the second login check, it was redundant and has been removed
     }
 
 
@@ -140,77 +115,47 @@ class Login extends CI_Controller
             }
         }
         
-
     }
 
 
     public function verify2(){
 
         if($this->input->post('registerSubmit')){ 
+            // Set form validation rules
             $this->form_validation->set_rules('email', 'Email', 'required|valid_email'); 
-            $this->form_validation->set_rules('password', 'password', 'required'); 
-            $this->form_validation->set_rules('name', 'Name', 'required|valid_name'); 
-            $this->form_validation->set_rules('phone', 'Phone', 'required|valid_phone');
-            $this->form_validation->set_rules('confirmpassword', 'confirmpassword', 'required'); 
-           
+            $this->form_validation->set_rules('password', 'Password', 'required'); 
+            $this->form_validation->set_rules('confirmpassword', 'Confirm password', 'required|matches[password]');
+            $this->form_validation->set_rules('name', 'Name', 'required|alpha'); 
+            $this->form_validation->set_rules('phone', 'Phone', 'required|regex_match[/^[0-9]{10}$/]');
            
             if($this->form_validation->run() == true){ 
-                $conn =array( 
-                        'email'=> $this->input->post('email'), 
-                        'password' =>md5($this->input->post('password')),
-                        'name' =>$this->input->post('password'),
-                        'phone' =>$this->input->post('phone'),
-                        'confirmpassword' =>$this->input->post('confirmpassword'),
-
-                        
+                // Collect form data
+                $conn = array( 
+                    'email' => $this->input->post('email'),
+                    'password' => md5($this->input->post('password')),
+                    'name' => $this->input->post('name'),
+                    'phone' => $this->input->post('phone')
                 ); 
+                
+                // Check if user can be registered
                 $checkRegister = $this->user_model->checkRegister($conn); 
-
+    
                 if($checkRegister){ 
+                    // Set session data
                     $this->session->set_userdata('isRegisteredIn', TRUE); 
                     $this->session->set_userdata('userId', $checkRegister->id); 
-
-                   
+    
+                    // Redirect to dashboard
                     redirect('admin/dashboard/'); 
-                }else{ 
-                  echo  $data['error_msg'] = 'Wrong information.'; 
+                } else { 
+                    // Error message for registration failure
+                    $data['error_msg'] = 'Registration failed. Please try again.';
                 } 
-            }else{ 
-
-                
+            } else { 
+                // Load registration view if validation fails
                 $this->load->view('admin/register');
-               
             }           
-
         }
-        
-        if(!empty($data['email']) && !empty($data['password']) && !empty($data['name']) && !empty($data['phone']) && !empty($data['confirmpassword']))
-        {
-
-
-            $checkRegister = $this->user_model->checkRegister($conn); 
-
-            if(!empty($user)){
-                $forsession = array(
-                    'id' => $user['id'],
-                    'name' => $user['name'],
-                    'email' => $user['email'],
-                    'password' => $user['password'],
-                    'confirmpassword' => $user['confirmpassword'],
-                    'phone' => $user['phone'],
-
-                );
-                $this->session->set_userdata($forsession);
-                
-                if($this->session->userdata('id')){
-                    redirect('admin/users');
-                }
-                else{
-                    echo "session is not created";
-                }
-            }
-        }
-        
     }
 
     

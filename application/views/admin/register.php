@@ -31,6 +31,7 @@
   <?php  }?>
   
   
+    
 
     <?php echo form_open("admin/login/save",'');?>
     <?php echo form_hidden('id',0); ?>
@@ -49,7 +50,7 @@
         </div>
         <!-- <div class="error" style="color:red;">The Name field is required.</div> -->
 
-        <?php echo form_error('name', '<div class="error" style="color:red;">','</div>');?>
+        <?php echo form_error('name','<div class="error" style="color:red;">','</div>');?>
 
         <div class="input-group mb-3">
           <input type="email" class="form-control" placeholder="Email" name="email">

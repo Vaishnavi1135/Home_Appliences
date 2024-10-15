@@ -58,7 +58,7 @@ class Plans extends CI_Controller
             $res = $this->plans_model->create($data);
             if($res){
                 $this->session->set_flashdata('status',' Added successfully..!');
-                redirect('admin/login');
+                redirect('admin/plans');
             
             }
             

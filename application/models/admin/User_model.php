@@ -49,11 +49,22 @@ class User_Model extends CI_Model
        ->from($this->table)
         ->where('email',$data['email'])
         ->where('password',$data['password'])
-        // ->where('confirmpassword',$data['confirmpassword'])
         ->get()
         ->row();
     }
 
+    public function checkRegister($data){
+        return $this->db->select('*')
+        ->from($this->table)
+        ->where('name',$data['name'])
+         ->where('email',$data['email'])
+         ->where('phone',$data['phone'])
+         ->where('password',$data['password'])
+        //  ->where('confirmpassword',$data['confirmpassword'])
+         ->get()
+         ->row();
+     }
+ 
 
 
 }

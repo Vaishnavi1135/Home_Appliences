@@ -120,13 +120,16 @@ class Login extends CI_Controller
 
     public function verify2(){
 
-        if($this->input->post('registerSubmit')){ 
+
+        // if($this->input->post('registerSubmit')){ 
             // Set form validation rules
             $this->form_validation->set_rules('email', 'Email', 'required|valid_email'); 
             $this->form_validation->set_rules('password', 'Password', 'required'); 
             $this->form_validation->set_rules('confirmpassword', 'Confirm password', 'required|matches[password]');
             $this->form_validation->set_rules('name', 'Name', 'required|alpha'); 
             $this->form_validation->set_rules('phone', 'Phone', 'required|regex_match[/^[0-9]{10}$/]');
+
+           
            
             if($this->form_validation->run() == true){ 
                 // Collect form data
@@ -137,25 +140,25 @@ class Login extends CI_Controller
                     'phone' => $this->input->post('phone')
                 ); 
                 
-                // Check if user can be registered
+                
                 $checkRegister = $this->user_model->checkRegister($conn); 
     
                 if($checkRegister){ 
-                    // Set session data
+                    
                     $this->session->set_userdata('isRegisteredIn', TRUE); 
                     $this->session->set_userdata('userId', $checkRegister->id); 
     
-                    // Redirect to dashboard
+                    
                     redirect('admin/dashboard/'); 
                 } else { 
-                    // Error message for registration failure
+                   
                     $data['error_msg'] = 'Registration failed. Please try again.';
                 } 
             } else { 
-                // Load registration view if validation fails
+                
                 $this->load->view('admin/register');
             }           
-        }
+      
     }
 
     

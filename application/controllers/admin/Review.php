@@ -58,7 +58,7 @@ class Review extends CI_Controller
             $res = $this->review_model->create($data);
             if($res){
                 $this->session->set_flashdata('status',' Added successfully..!');
-                redirect('admin/login');
+                redirect('admin/review');
             
             }
             

@@ -60,15 +60,7 @@ class Users extends CI_Controller
             'status'=>1,
         );
 
-            // 'id'=>$this->input->post('id'),
-            // 'fname'=>$this->input->post('fname'),
-            // 'lname'=>$this->input->post('lname'),
-            // 'email'=>$this->input->post('email'),
-            // 'password'=>md5($this->input->post('password')),
-            // 'username'=>$this->input->post('username'),
-            // 'phone'=>$this->input->post('phone'),
-            // 'status'=>1,
-
+            
         $res = 0;
         if($this->input->post('id')==0){
             $data['created_at'] =date('Y-m-d H:i:s');
@@ -76,7 +68,7 @@ class Users extends CI_Controller
             $res = $this->user_model->create($data);
             if($res){
                 $this->session->set_flashdata('status',' Added successfully..!');
-                redirect('admin/login');
+                redirect('admin/users');
             
             }
             

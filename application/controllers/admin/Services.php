@@ -58,7 +58,7 @@ class Services extends CI_Controller
             $res = $this->services_model->create($data);
             if($res){
                 $this->session->set_flashdata('status',' Added successfully..!');
-                redirect('admin/login');
+                redirect('admin/services');
             
             }
             

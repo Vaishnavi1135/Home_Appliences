@@ -6,13 +6,13 @@
         <div class="row">
           <div class="col-12 col-sm-6 col-md-3">
             <div class="info-box">
-              <span class="info-box-icon bg-info elevation-1"><i class="fas fa-cog"></i></span>
+              <span class="info-box-icon bg-info elevation-1"><i class="fa fa-truck"></i></span>
 
               <div class="info-box-content">
-                <span class="info-box-text">CPU Traffic</span>
+                <span class="info-box-text">Total Order</span>
                 <span class="info-box-number">
-                  10
-                  <small>%</small>
+                  $238.00
+                  <small></small>
                 </span>
               </div>
               <!-- /.info-box-content -->
@@ -25,8 +25,8 @@
               <span class="info-box-icon bg-danger elevation-1"><i class="fas fa-thumbs-up"></i></span>
 
               <div class="info-box-content">
-                <span class="info-box-text">Likes</span>
-                <span class="info-box-number">41,410</span>
+                <span class="info-box-text">Total Deliverd</span>
+                <span class="info-box-number">35,874</span>
               </div>
               <!-- /.info-box-content -->
             </div>
@@ -39,11 +39,12 @@
 
           <div class="col-12 col-sm-6 col-md-3">
             <div class="info-box mb-3">
-              <span class="info-box-icon bg-success elevation-1"><i class="fa fa-truck"></i></span>
+              <span class="info-box-icon bg-success elevation-1"><i class="fa fa-spinner"></i></span>
 
               <div class="info-box-content">
-                <span class="info-box-text">Shiftings</span>
-                <span class="info-box-number">760</span>
+                <span class="info-box-text">Return Pending</span>
+                <span class="info-box-number">64<small>%</small></span>
+                
               </div>
               <!-- /.info-box-content -->
             </div>
@@ -52,11 +53,11 @@
           <!-- /.col -->
           <div class="col-12 col-sm-6 col-md-3">
             <div class="info-box mb-3">
-              <span class="info-box-icon bg-warning elevation-1"><i class="fas fa-users"></i></span>
+              <span class="info-box-icon bg-warning elevation-1"><i class="fa-solid fa-layer-group"></i></span>
 
               <div class="info-box-content">
-                <span class="info-box-text">New Members</span>
-                <span class="info-box-number">2,000</span>
+                <span class="info-box-text">Total Order</span>
+                <span class="info-box-number">$238.00</span>
               </div>
               <!-- /.info-box-content -->
             </div>
@@ -555,7 +556,7 @@
                     <thead>
                     <tr>
                       <th>Order ID</th>
-                      <th>Item</th>
+                      <th>Type</th>
                       <th>Status</th>
                       <th>Popularity</th>
                     </tr>
@@ -563,7 +564,7 @@
                     <tbody>
                     <tr>
                       <td><a href="pages/examples/invoice.html">OR9842</a></td>
-                      <td>Call of Duty IV</td>
+                      <td>Home Shifting</td>
                       <td><span class="badge badge-success">Shipped</span></td>
                       <td>
                         <div class="sparkbar" data-color="#00a65a" data-height="20">90,80,90,-70,61,-83,63</div>
@@ -571,7 +572,7 @@
                     </tr>
                     <tr>
                       <td><a href="pages/examples/invoice.html">OR1848</a></td>
-                      <td>Samsung Smart TV</td>
+                      <td>Office Shifting</td>
                       <td><span class="badge badge-warning">Pending</span></td>
                       <td>
                         <div class="sparkbar" data-color="#f39c12" data-height="20">90,80,-90,70,61,-83,68</div>
@@ -579,7 +580,7 @@
                     </tr>
                     <tr>
                       <td><a href="pages/examples/invoice.html">OR7429</a></td>
-                      <td>iPhone 6 Plus</td>
+                      <td>Mall Shifting</td>
                       <td><span class="badge badge-danger">Delivered</span></td>
                       <td>
                         <div class="sparkbar" data-color="#f56954" data-height="20">90,-80,90,70,-61,83,63</div>
@@ -587,7 +588,7 @@
                     </tr>
                     <tr>
                       <td><a href="pages/examples/invoice.html">OR7429</a></td>
-                      <td>Samsung Smart TV</td>
+                      <td>Showroom shifting</td>
                       <td><span class="badge badge-info">Processing</span></td>
                       <td>
                         <div class="sparkbar" data-color="#00c0ef" data-height="20">90,80,-90,70,-61,83,63</div>
@@ -595,7 +596,7 @@
                     </tr>
                     <tr>
                       <td><a href="pages/examples/invoice.html">OR1848</a></td>
-                      <td>Samsung Smart TV</td>
+                      <td>Hotel Shifting</td>
                       <td><span class="badge badge-warning">Pending</span></td>
                       <td>
                         <div class="sparkbar" data-color="#f39c12" data-height="20">90,80,-90,70,61,-83,68</div>
@@ -603,7 +604,7 @@
                     </tr>
                     <tr>
                       <td><a href="pages/examples/invoice.html">OR7429</a></td>
-                      <td>iPhone 6 Plus</td>
+                      <td>Office Shifting</td>
                       <td><span class="badge badge-danger">Delivered</span></td>
                       <td>
                         <div class="sparkbar" data-color="#f56954" data-height="20">90,-80,90,70,-61,83,63</div>
@@ -611,7 +612,7 @@
                     </tr>
                     <tr>
                       <td><a href="pages/examples/invoice.html">OR9842</a></td>
-                      <td>Call of Duty IV</td>
+                      <td>Dairy Shifting</td>
                       <td><span class="badge badge-success">Shipped</span></td>
                       <td>
                         <div class="sparkbar" data-color="#00a65a" data-height="20">90,80,90,-70,61,-83,63</div>
@@ -678,7 +679,7 @@
 
             <div class="card">
               <div class="card-header">
-                <h3 class="card-title">Browser Usage</h3>
+                <h3 class="card-title">Overview</h3>
 
                 <div class="card-tools">
                   <button type="button" class="btn btn-tool" data-card-widget="collapse">
@@ -701,12 +702,11 @@
                   <!-- /.col -->
                   <div class="col-md-4">
                     <ul class="chart-legend clearfix">
-                      <li><i class="far fa-circle text-danger"></i> Chrome</li>
-                      <li><i class="far fa-circle text-success"></i> IE</li>
-                      <li><i class="far fa-circle text-warning"></i> FireFox</li>
-                      <li><i class="far fa-circle text-info"></i> Safari</li>
-                      <li><i class="far fa-circle text-primary"></i> Opera</li>
-                      <li><i class="far fa-circle text-secondary"></i> Navigator</li>
+                      <li><i class="far fa-circle text-danger"></i> Percent</li>
+                      <li><i class="far fa-circle text-success"></i> Absent</li>
+                      <li><i class="far fa-circle text-warning"></i> Illness</li>
+                      <li><i class="far fa-circle text-info"></i> Late</li>
+                     
                     </ul>
                   </div>
                   <!-- /.col -->
@@ -718,25 +718,25 @@
                 <ul class="nav nav-pills flex-column">
                   <li class="nav-item">
                     <a href="#" class="nav-link">
-                      United States of America
+                      Attendence
                       <span class="float-right text-danger">
                         <i class="fas fa-arrow-down text-sm"></i>
-                        12%</span>
+                        95%</span>
                     </a>
                   </li>
                   <li class="nav-item">
                     <a href="#" class="nav-link">
-                      India
+                      Home Work
                       <span class="float-right text-success">
-                        <i class="fas fa-arrow-up text-sm"></i> 4%
+                        <i class="fas fa-arrow-up text-sm"></i> 94%
                       </span>
                     </a>
                   </li>
                   <li class="nav-item">
                     <a href="#" class="nav-link">
-                      China
+                      Test
                       <span class="float-right text-warning">
-                        <i class="fas fa-arrow-left text-sm"></i> 0%
+                        <i class="fas fa-arrow-left text-sm"></i> 80%
                       </span>
                     </a>
                   </li>

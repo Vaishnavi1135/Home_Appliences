@@ -40,7 +40,7 @@ class User_Model extends CI_Model
 
     public function delete($id=0)
     {
-
+        return $this->db->where('id',$data['id'])->delete($this->table);
         
     }
 

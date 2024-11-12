@@ -147,7 +147,7 @@ class Login extends CI_Controller
                     
                     $this->session->set_userdata('isRegisteredIn', TRUE); 
                     $this->session->set_userdata('userId', $checkRegister->id); 
-    
+
                     
                     redirect('admin/dashboard/'); 
                 } else { 

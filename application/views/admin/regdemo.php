@@ -39,10 +39,10 @@
     
       <p class="login-box-msg">Register a new membership</p>
 
-      <form action="<?=base_url('admin/login/verify2')?>" name="myForm" onsubmit="return validateForm()" method="post">
+      <form action="<?=base_url('admin/login/verify2')?>" method="post">
       <!-- <form action="/myaction.php" name="myForm" onsubmit="return validateForm()" method="post"> -->
-      <div class="input-group mb-3">
-          <input type="text" class="form-control" placeholder="Full name" name="name" required><span class="formerror"> </span>
+        <div class="input-group mb-3">
+          <input type="text" class="form-control" placeholder="Full name" name="name">
           <div class="input-group-append">
             <div class="input-group-text">
               <span class="fas fa-user"></span>
@@ -54,7 +54,7 @@
         <?php echo form_error('name','<div class="error" style="color:red;">','</div>');?>
 
         <div class="input-group mb-3">
-          <input type="email" class="form-control" placeholder="Email" name="email" required><span class="formerror"> </span>
+          <input type="email" class="form-control" placeholder="Email" name="email">
           <div class="input-group-append">
             <div class="input-group-text">
               <span class="fas fa-envelope"></span>
@@ -65,7 +65,7 @@
         <?php echo form_error('email', '<div class="error" style="color:red;">','</div>');?>
 
         <div class="input-group mb-3">
-          <input type="phone" class="form-control" placeholder="Phone" name="phone"  required><span class="formerror"> </span>
+          <input type="phone" class="form-control" placeholder="Phone" name="phone">
           <div class="input-group-append">
             <div class="input-group-text">
               <span class="fas fa-phone"></span>
@@ -76,7 +76,7 @@
         <?php echo form_error('phone', '<div class="error" style="color:red;">','</div>');?>
 
         <div class="input-group mb-3">
-          <input type="password" class="form-control" placeholder="Password" name="password" required><span class="formerror"> </span>
+          <input type="password" class="form-control" placeholder="Password" name="password">
           <div class="input-group-append">
             <div class="input-group-text">
               <span class="fas fa-lock"></span>
@@ -87,7 +87,7 @@
         <?php echo form_error('password', '<div class="error" style="color:red;">','</div>');?>
 
         <div class="input-group mb-3">
-          <input type="password" class="form-control" placeholder="confirm password" name="confirmpassword" required><span class="formerror"> </span>
+          <input type="password" class="form-control" placeholder="confirm password" name="confirmpassword">
           <div class="input-group-append">
             <div class="input-group-text">
               <span class="fas fa-lock"></span>

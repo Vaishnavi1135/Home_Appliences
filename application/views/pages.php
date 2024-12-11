@@ -65,13 +65,7 @@
                             <p class="mb-0">With a mission to revolutionize the relocation experience, ShiftingBazar set out on its journey. Our founders realized the need for a reliable platform to link people and businesses with reputable packers and movers after they had personally experienced the difficulties of moving. ShiftingBazar developed into a solution-driven platform, offering a seamless moving experience thanks to careful planning, thorough research, and a profound understanding of customer pain points.</p>
                         </div>
                     </div>
-                    <!-- <div class="d-flex mb-0 wow fadeInUp" data-wow-delay="0.7s">
-                        <i class="fa fa-headphones text-primary fa-3x flex-shrink-0"></i>
-                        <div class="ms-4">
-                            <h5>24/7 Telephone Support</h5>
-                            <p class="mb-0">Diam dolor ipsum sit amet eos erat ipsum lorem sed stet lorem sit clita duo justo magna erat amet</p>
-                        </div>
-                    </div> -->
+                   
                 </div>
                 <div class="col-lg-6 pe-lg-0 wow fadeInRight" data-wow-delay="0.1s" style="min-height: 400px;">
                     <div class="position-relative h-100">

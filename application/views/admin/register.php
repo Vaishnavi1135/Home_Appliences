@@ -13,6 +13,11 @@
   <link rel="stylesheet" href="<?=base_url()?>/assets/plugins/icheck-bootstrap/icheck-bootstrap.min.css">
   <!-- Theme style -->
   <link rel="stylesheet" href="<?=base_url()?>/assets/dist/css/adminlte.min.css">
+  <style>
+    .formerror{
+  color: red;  
+}
+    </style>
 </head>
 <body class="hold-transition register-page">
 <div class="register-box">
@@ -33,14 +38,13 @@
   
     
 
-    <?php echo form_open("admin/login/save",'');?>
+    <?php echo form_open("admin/login/save",array('id'=>"register_user",'method'=>'post'));?>
     <?php echo form_hidden('id',0); ?>
 
     
       <p class="login-box-msg">Register a new membership</p>
 
-      <form action="<?=base_url('admin/login/verify2')?>" name="myForm" onsubmit="return validateForm()" method="post">
-      <!-- <form action="/myaction.php" name="myForm" onsubmit="return validateForm()" method="post"> -->
+      <!-- <form  name="myForm" onsubmit=" validateForm()" method="post"> -->
       <div class="input-group mb-3">
           <input type="text" class="form-control" placeholder="Full name" name="name" required><span class="formerror"> </span>
           <div class="input-group-append">
@@ -65,7 +69,7 @@
         <?php echo form_error('email', '<div class="error" style="color:red;">','</div>');?>
 
         <div class="input-group mb-3">
-          <input type="phone" class="form-control" placeholder="Phone" name="phone"  required><span class="formerror"> </span>
+          <input type="phone" class="form-control" placeholder="Phone" name="phone"  required ><span class="formerror"> </span>
           <div class="input-group-append">
             <div class="input-group-text">
               <span class="fas fa-phone"></span>
@@ -112,9 +116,7 @@
           </div>
           <!-- /.col -->
         </div>
-      </form>
-
-      
+     <?php echo form_close(); ?>
 
       <a  href="<?php echo base_url('admin/login');?>" class="text-center">I already have a membership</a>
       
@@ -132,41 +134,50 @@
 <script src="<?=base_url()?>/assets/dist/js/adminlte.min.js"></script>
 <script>
   function seterror(id,error){
-    element = document.getElementById(id);
-    element.getElementsByClassName('formerror')[0].innerHTML = error;
+    el.style.color = "red";
+    element = document.getElementsByName(id);
+    $(element).next(".formerror")[0].innerHTML = error;
+   
+    //element.getElementsByClassName('formerror')[0].innerHTML = error;
 }
 
-function validateForm(){
+
+document.getElementById("register_user").addEventListener("submit", function(event){
+  event.preventDefault();
+  validateForm(this);
+});
+function validateForm(frm){
+  console.log(frm.name.value);
     var returnval = true;
     // clearErrors();
 
-    var name = document.forms['myForm']["fname"].value;
+    var name = frm.name.value;
     if(name.length==0){
         seterror("name","Name feild is empty!");
         returnval = false;
     }
 
-    var email = document.forms['myForm']["email"].value;
+    var email = frm.email.value;
     if(email.length==0){
         seterror("email","Email feild is empty!");
         returnval = false;
     }
 
-    var phone = document.forms['myForm']["phone"].value;
+    var phone =frm.phone.value;
     if(phone.length!=10){
         seterror("phone","Phone should be of 10 digits!");
         returnval = false;
     }
 
-    var password = document.forms['myForm']["password"].value;
+    var password = frm.password.value;
     if(password.length<6){
         seterror("password","Password should be of 6 digits!");
         returnval = false;
     }
 
-    var cpassword = document.forms['myForm']["confirm password"].value;
+    var cpassword = frm.confirmpassword.value;
     if(cpassword != password){
-        seterror("password","Password and Confirm Password should match!");
+        seterror("confirmpassword","Password and Confirm Password should match!");
         returnval = false;
     }
 

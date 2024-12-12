@@ -152,7 +152,7 @@
         <script src="<?php echo base_url();?>/assets/lib/owlcarousel/owl.carousel.min.js"></script>
 
         <!-- Template Javascript -->
-        <script src="<?php echo base_url();?>/assets/js/main.js"></script>
+        <script src="<?php echo base_url();?>/assets/js/main.js"></script>8
     </body>
 </html>
 

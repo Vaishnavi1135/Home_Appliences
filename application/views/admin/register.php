@@ -17,6 +17,9 @@
     .formerror{
   color: red;  
 }
+.form-control {
+  width: 50% !important; 
+}
     </style>
 </head>
 <body class="hold-transition register-page">
@@ -46,57 +49,62 @@
 
       <!-- <form  name="myForm" onsubmit=" validateForm()" method="post"> -->
       <div class="input-group mb-3">
-          <input type="text" class="form-control" placeholder="Full name" name="name" required><span class="formerror"> </span>
+          <input type="text" class="form-control" placeholder="Full name" name="name" >
           <div class="input-group-append">
             <div class="input-group-text">
               <span class="fas fa-user"></span>
             </div>
           </div>
+          <span class="formerror"> </span>
         </div>
         <!-- <div class="error" style="color:red;">The Name field is required.</div> -->
 
         <?php echo form_error('name','<div class="error" style="color:red;">','</div>');?>
 
         <div class="input-group mb-3">
-          <input type="email" class="form-control" placeholder="Email" name="email" required><span class="formerror"> </span>
+          <input type="email" class="form-control" placeholder="Email" name="email" >
           <div class="input-group-append">
             <div class="input-group-text">
               <span class="fas fa-envelope"></span>
             </div>
           </div>
+          <span class="formerror"> </span>
         </div>
 
         <?php echo form_error('email', '<div class="error" style="color:red;">','</div>');?>
 
         <div class="input-group mb-3">
-          <input type="phone" class="form-control" placeholder="Phone" name="phone"  required ><span class="formerror"> </span>
+          <input type="phone" class="form-control" placeholder="Phone" name="phone" > 
           <div class="input-group-append">
             <div class="input-group-text">
               <span class="fas fa-phone"></span>
             </div>
           </div>
+          <span class="formerror"></span>
         </div>
        
         <?php echo form_error('phone', '<div class="error" style="color:red;">','</div>');?>
 
         <div class="input-group mb-3">
-          <input type="password" class="form-control" placeholder="Password" name="password" required><span class="formerror"> </span>
-          <div class="input-group-append">
+          <input type="password" class="form-control" placeholder="Password" name="password" >
             <div class="input-group-text">
               <span class="fas fa-lock"></span>
             </div>
           </div>
+          <span class="formerror"> </span>
+          <div class="input-group-append">
         </div>
 
         <?php echo form_error('password', '<div class="error" style="color:red;">','</div>');?>
 
         <div class="input-group mb-3">
-          <input type="password" class="form-control" placeholder="confirm password" name="confirmpassword" required><span class="formerror"> </span>
+          <input type="password" class="form-control" placeholder="confirm password" name="confirmpassword" >
           <div class="input-group-append">
             <div class="input-group-text">
               <span class="fas fa-lock"></span>
             </div>
           </div>
+          <span class="formerror"> </span>
         </div>
 
         <?php echo form_error('confirmpassword', '<div class="error" style="color:red;">','</div>');?>
@@ -134,11 +142,27 @@
 <script src="<?=base_url()?>/assets/dist/js/adminlte.min.js"></script>
 <script>
   function seterror(id,error){
-    el.style.color = "red";
-    element = document.getElementsByName(id);
-    $(element).next(".formerror")[0].innerHTML = error;
+    
+    // element = document.getElementsByName(id);
+    // el= $(element).next(".formerror")[0];
+    // el.innerHTML = error;
+    // el .style.color = "red";
    
-    //element.getElementsByClassName('formerror')[0].innerHTML = error;
+    // //element.getElementsByClassName('formerror')[0].innerHTML = error;
+
+ // Get the input element by name
+ let element = document.getElementsByName(id)[0];
+  
+  // Find the <span> with class 'formerror' next to the input
+  let el = element ? element.closest('.input-group').querySelector('.formerror') : null;
+  
+  // Check if the error element exists
+  if (el) {
+    el.innerHTML = error;
+    el.style.color = "red";  // Set error message color to red
+  } else {
+    console.log("Error message element not found.");
+  }
 }
 
 

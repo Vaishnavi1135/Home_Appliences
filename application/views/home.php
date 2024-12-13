@@ -4,49 +4,61 @@
     
 
     <!-- Carousel Start -->
-    <div class="container-fluid p-0 pb-5">
-        <div class="owl-carousel header-carousel position-relative mb-5">
-            <div class="owl-carousel-item position-relative">
-                <img class="img-fluid" src="<?php echo base_url();?>\assets\images\bidkar-transport-shiroli-midc-kolhapur-packers-and-movers-all-india--0gqsxt00cs.jpg" alt="">
-                <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center" style="background: rgba(6, 3, 21, .5);">
-                    <div class="container">
-                        <div class="row justify-content-start">
-                            <div class="col-10 col-lg-8">
-                                <h5 class="text-white text-uppercase mb-3 animated slideInDown">Packing and Moving Solution</h5>
-                                <h1 class="display-3 text-white animated slideInDown mb-4">#1 Place For Your <span class="text-primary">Shifting</span> Solution</h1>
-                                <p class="fs-5 fw-medium text-white mb-4 pb-2">Let our Team make you moving convenient and easy.</p>
-                                <a href="<?php echo base_url("home/track");?>" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Read More</a>
-                                <a href="<?php echo base_url("home/free_quote");?>" class="btn btn-secondary py-md-3 px-md-5 animated slideInRight">Free Quote</a>
-                            </div>
+    <div class="container-fluid p-0 pb-0">
+    <div class="owl-carousel header-carousel position-relative mb-0">
+        <div class="owl-carousel-item position-relative">
+            <img class="img-fluid" src="<?php echo base_url();?>\assets\images\bidkar-transport-shiroli-midc-kolhapur-packers-and-movers-all-india--0gqsxt00cs.jpg"  alt="">
+            <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center" style="background: rgba(6, 3, 21, .5);">
+                <div class="container"> 
+                    <div class="row justify-content-start">
+                        <div class="col-10 col-lg-8">
+                            <h5 class="text-white text-uppercase mb-3 animated slideInDown">Packing and Moving Solution</h5>
+                            <h1 class="display-3 text-white animated slideInDown mb-4">#1 Place For Your <span class="text-primary">Shifting</span> Solution</h1>
+                            <p class="fs-5 fw-medium text-white mb-4 pb-2">Let our Team make you moving convenient and easy.</p>
+                            <a href="<?php echo base_url("home/track");?>" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Read More</a>
+                            <a href="<?php echo base_url("home/free_quote");?>" class="btn btn-secondary py-md-3 px-md-5 animated slideInRight">Free Quote</a>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="owl-carousel-item position-relative">
-                <img class="img-fluid" src="<?php echo base_url();?>/assets/img/carousel-2.jpg" alt="">
-                <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center" style="background: rgba(6, 3, 21, .5);">
-                    <div class="container">
-                        <div class="row justify-content-start">
-                            <div class="col-10 col-lg-8">
-                                <h5 class="text-white text-uppercase mb-3 animated slideInDown">Packing and Moving Solution</h5>
-                                <h1 class="display-3 text-white animated slideInDown mb-4">#1 Place For Your <span class="text-primary">Shifting</span> Solution</h1>
-                                <p class="fs-5 fw-medium text-white mb-4 pb-2">Let our Team make you moving convenient and easy.</p>
-                                <a href="<?php echo base_url("home/track");?>" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Read More</a>
-                                <a href="<?php echo base_url("home/free_quote");?>" class="btn btn-secondary py-md-3 px-md-5 animated slideInRight">Free Quote</a>
-                            </div>
+        </div>
+        <div class="owl-carousel-item position-relative">
+            <img class="img-fluid" src="<?php echo base_url();?>/assets/img/carousel-2.jpg" style="height:1519; width:855;" alt="">
+            <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center" style="background: rgba(6, 3, 21, .5);">
+                <div class="container">
+                    <div class="row justify-content-start">
+                        <div class="col-10 col-lg-8">
+                            <h5 class="text-white text-uppercase mb-3 animated slideInDown">Packing and Moving Solution</h5>
+                            <h1 class="display-3 text-white animated slideInDown mb-4">#1 Place For Your <span class="text-primary">Shifting</span> Solution</h1>
+                            <p class="fs-5 fw-medium text-white mb-4 pb-2">Let our Team make you moving convenient and easy.</p>
+                            <a href="<?php echo base_url("home/track");?>" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Read More</a>
+                            <a href="<?php echo base_url("home/free_quote");?>" class="btn btn-secondary py-md-3 px-md-5 animated slideInRight">Free Quote</a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+    <!-- Carousel navigation arrows -->
+    <div class="carousel-nav">
+        <button class="owl-prev" style="position: absolute; top: 50%; left: 0; transform: translateY(-50%); background: rgba(0, 0, 0, 0.5); color: white; border: none; padding: 10px;">
+            <i class="fa fa-chevron-left"></i>
+        </button>
+        <button class="owl-next" style="position: absolute; top: 50%; right: 0; transform: translateY(-50%); background: rgba(0, 0, 0, 0.5); color: white; border: none; padding: 10px;">
+            <i class="fa fa-chevron-right"></i>
+        </button>
+    </div>
+</div>
+
+
+
     <!-- Carousel End -->
 
 
     <!-- About Start -->
-    <div class="container-fluid overflow-hidden py-5 px-lg-0">
+    <div class="container-fluid overflow-hidden py-3 px-lg-0 pt-0 pb-0">
         <div class="container about py-5 px-lg-0">
-            <div class="row g-5 mx-lg-0">
+            <div class="row g-5 mx-lg-0" style="background-color:#FBCEB1;">
                 <div class="col-lg-6 ps-lg-0 wow fadeInLeft" data-wow-delay="0.1s" style="min-height: 400px;">
                     <div class="position-relative h-100">
                         <img class="position-absolute img-fluid w-100 h-100" src="<?php echo base_url();?>/assets/img/about.jpg" style="object-fit: cover;" alt="">
@@ -77,7 +89,7 @@
 
 
     <!-- Fact Start -->
-    <div class="container-xxl py-5">
+    <div class="container-xxl pb-5">
         <div class="container py-5">
             <div class="row g-5">
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
@@ -122,7 +134,7 @@
 
 
     <!-- Service Start -->
-    <div class="container-xxl py-5">
+    <div class="container-xxl pb-5" >
         <div class="container py-5">
             <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
                 <h6 class="text-secondary text-uppercase">Our Services</h6>
@@ -135,7 +147,7 @@
                             <img class="img-fluid" src="<?php echo base_url();?>\assets\images\how-to-pack-electronics-for-a-diy-shift-1.jpg" alt="">
                         </div>
                         <h4 class="mb-3">ELECTRONIC APPLIENCES</h4>
-                        <p> Once the packing materials have been arranged, then a well planned process must be followed for the packing of the electronic items. If you have any plans to shift to the new house from to your new house, then they provides advice that a lot more attention must be shifting.</p>
+                        <p> Once the packing materials have been arranged, then a well planned process must be followed for the packing of the electronic items. If you have any plans to shift new house to your new house, then they provides advice that attentions must be shifting.Unforeseen circumstances, etc transports.</p>
                         <a class="btn-slide mt-2" href="<?php echo base_url("services/electronic");?>"><i class="fa fa-arrow-right"></i><span>Read More</span></a>
                     </div>
                 </div>
@@ -144,8 +156,8 @@
                         <div class="overflow-hidden mb-4">
                             <img class="img-fluid" src="<?php echo base_url();?>\assets\images\modular-kitchen-accessories-for-modern-homes.jpg" alt="">
                         </div>
-                        <h4 class="mb-3"> KITCHEN APPLIENCES</h4>
-                        <p>Think about moving your home from one place to another. When moving to a new house, you need to transfer all your household effects. The circumstance of a home shifting will also force you to root out your well-established kitchen, whether you like it or not, for transferring kitchen items into your new home.</p>
+                        <h4 class="mb-3"> KITCHEN <br>APPLIENCES</h4>
+                        <p>Think about moving your home from one place to another. When you need to transfer your household effect.The circumstance of a home shifting will also force you to root out your well-established kitchen, whether you like it or not, for transferring kitchen items into your new home.</p>
                         <a class="btn-slide mt-2" href="<?php echo base_url("services/kitchen");?>"><i class="fa fa-arrow-right"></i><span>Read More</span></a>
                     </div>
                 </div>
@@ -155,7 +167,7 @@
                             <img class="img-fluid" src="<?php echo base_url();?>\assets\images\premium_photo-1663126312373-b2d5264c2edd.jpeg" alt="">
                         </div>
                         <h4 class="mb-3"> FURNITURE APPLIENCES</h4>
-                        <p>Moving locally can seem less complex than a long-distance relocation, but furniture still requires careful handling. Here's how our local furniture shifting service ensures a smooth transition for your prized possessions</p>
+                        <p>Moving locally can seem less complex than a long-distance relocation, but furniture still requires careful handling. Here's how our local furniture shifting service ensures a smooth transition for your prized possessions It requires careful planning and execution</p>
                         <a class="btn-slide mt-2" href="<?php echo base_url("services/furniture");?>"><i class="fa fa-arrow-right"></i><span>Read More</span></a>
                     </div>
                 </div>
@@ -164,7 +176,7 @@
                         <div class="overflow-hidden mb-4">
                             <img class="img-fluid" src="<?php echo base_url();?>\assets\images\istockphoto-510242145-612x612.jpg" alt="">
                         </div>
-                        <h4 class="mb-3"> VEHICLE APPLIENCES</h4>
+                        <h4 class="mb-3"> VEHICLE <br>APPLIENCES</h4>
                         <p>KPM is an online directory that offers competitive quotes to those individuals that are looking forward to make their car shifting experience a memorable affair to remember. We help those who are looking for reliable vehicle shifting services with the leading vehicle shifting </p>
                         <a class="btn-slide mt-2" href="<?php echo base_url("services/vehicle");?>"><i class="fa fa-arrow-right"></i><span>Read More</span></a>
                     </div>
@@ -180,8 +192,8 @@
     <!-- Service End -->
 
     <!-- Feature Start -->
-    <div class="container-fluid overflow-hidden py-5 px-lg-0">
-        <div class="container feature py-5 px-lg-0">
+    <div class="container-fluid overflow-hidden py-0 px-lg-0">
+        <div class="container feature pb-5 px-lg-0">
             <div class="row g-5 mx-lg-0">
                 <div class="col-lg-6 feature-text wow fadeInUp" data-wow-delay="0.1s">
                     <h6 class="text-secondary text-uppercase mb-3">Our Features</h6>
@@ -218,7 +230,7 @@
 
 
     <!-- Pricing Start -->
-    <div class="container-xxl py-5">
+    <div class="container-xxl pb-5">
         <div class="container py-5">
             <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
                 <h6 class="text-secondary text-uppercase">Pricing Plan</h6>

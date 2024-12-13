@@ -83,7 +83,7 @@
 
         <?= $content ?>
         <!-- Footer Start -->
-    <div class="container-fluid bg-dark text-light footer pt-5 wow fadeIn" data-wow-delay="0.1s" style="margin-top: 6rem;">
+    <div class="container-fluid bg-dark text-light footer pt-0 wow fadeIn" data-wow-delay="0.1s" style="margin-top: 0;">
         <div class="container py-5">
             <div class="row g-5">
                 <div class="col-lg-3 col-md-6">
@@ -152,7 +152,7 @@
         <script src="<?php echo base_url();?>/assets/lib/owlcarousel/owl.carousel.min.js"></script>
 
         <!-- Template Javascript -->
-        <script src="<?php echo base_url();?>/assets/js/main.js"></script>8
+        <script src="<?php echo base_url();?>/assets/js/main.js"></script>
     </body>
 </html>
 

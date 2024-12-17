@@ -282,6 +282,7 @@
 .price-item,
 .team-item {
     box-shadow: 0 0 45px rgba(0, 0, 0, .07);
+    
 }
 
 .service-item img,
@@ -335,16 +336,31 @@
     left: -100%;
     z-index: 1;
 }
+
+
+
+
+/* .service-item{
+    background-color:red; 
+   
+} */
+
+/* div.service-item :hover{
+    background-color: #F8F2F0;
+} */
+
 .service-item:hover a.btn-slide i,
 .price-item:hover a.btn-slide i,
 .team-item:hover div.btn-slide i {
     border-radius: 0;
+   
 }
 
 .service-item:hover a.btn-slide span,
 .price-item:hover a.btn-slide span,
 .team-item:hover div.btn-slide span {
     left: 0;
+    
 }
 
 .service-item a.btn-slide:hover i,
@@ -352,6 +368,8 @@
 .price-item a.btn-slide:hover i,
 .price-item a.btn-slide:hover span {
     background: var(--secondary);
+    
+    
 }
 
 

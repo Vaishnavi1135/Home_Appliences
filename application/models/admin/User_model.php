@@ -38,10 +38,11 @@ class User_Model extends CI_Model
         return $this->db->where('id',$data['id'])->update($this->table,$data);
     }
 
-    public function delete($id=0)
+    public function delete($data,$id=0)
     {
-        return $this->db->where('id',$data['id'])->delete($this->table);
-        
+        // return $this->db->where('id',$data['id'])->delete($this->table);
+
+    return $this->db->where('id', $id)->delete($this->table);
     }
 
     public function checklogin($data){

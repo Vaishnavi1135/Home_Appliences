@@ -23,7 +23,7 @@
             </div>
         </div>
         <div class="owl-carousel-item position-relative">
-            <img class="img-fluid" src="<?php echo base_url();?>/assets/img/carousel-2.jpg" style="height:1519; width:855;" alt="">
+            <img class="img-fluid" src="<?php echo base_url();?>/assets/img/carousel-2.jpg" alt="">
             <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center" style="background: rgba(6, 3, 21, .5);">
                 <div class="container">
                     <div class="row justify-content-start">
@@ -54,27 +54,26 @@
 
     <!-- Carousel End -->
 
-
     <!-- About Start -->
     <div class="container-fluid overflow-hidden py-3 px-lg-0 pt-0 pb-0">
         <div class="container about py-5 px-lg-0">
-            <div class="row g-5 mx-lg-0" style="background-color:#FBCEB1;">
+            <div class="row g-5 mx-lg-0 mb-5 pb-5" style="background-color:#FFF5EE;">
                 <div class="col-lg-6 ps-lg-0 wow fadeInLeft" data-wow-delay="0.1s" style="min-height: 400px;">
-                    <div class="position-relative h-100">
-                        <img class="position-absolute img-fluid w-100 h-100" src="<?php echo base_url();?>/assets/img/about.jpg" style="object-fit: cover;" alt="">
+                <div class="position-relative h-100" style="background-image: url('<?php echo base_url();?>/assets/img/about.jpg');">
+                 <img class="position-absolute img-fluid w-100 h-100" src="<?php echo base_url();?>/assets/img/about.jpg" style="object-fit: cover;" alt="">
                     </div>
                 </div>
                 <div class="col-lg-6 about-text wow fadeInUp" data-wow-delay="0.3s">
                     <h6 class="text-secondary text-uppercase mb-3">About Us</h6>
                     <h1 class="mb-5">Unlock a World of Seamless Moving Solutions</h1>
                     <p class="mb-5">ShiftingBazar knows moving can be difficult. We're here to make your move enjoyable. We made moving easy with our wide range of services and trusted packers & movers. Our specialists will help you move locally or internationally. We'll pack, load, transport, and unpack. Trust us to transport your valuables to your new home carefully. ShiftingBazar offers hassle-free moving solutions today.</p>
-                    <div class="row g-4 mb-5">
-                        <div class="col-sm-6 wow fadeIn" data-wow-delay="0.5s">
+                    <div class="row g-4 mb-5 " >
+                        <div class="col-sm-6 wow fadeIn pt-3 pb-3 " data-wow-delay="0.5s"  >
                             <i class="fa fa-globe fa-3x text-primary mb-3"></i>
                             <h5>Global Coverage</h5>
                             <p class="m-0">ShiftingBazar knows moving can be difficult. We're here to make your move enjoyable. We made moving easy with our wide range of services and trusted packers & movers. Our specialists will help you move locally or internationally. We'll pack, load, transport, and unpack. Trust us to transport your valuables to your new home carefully. ShiftingBazar offers hassle-free moving solutions today.</p>
                         </div>
-                        <div class="col-sm-6 wow fadeIn" data-wow-delay="0.7s">
+                        <div class="col-sm-6 wow fadeIn pt-3 pb-3 " data-wow-delay="0.7s" >
                             <i class="fa fa-shipping-fast fa-3x text-primary mb-3"></i>
                             <h5>On Time Delivery</h5>
                             <p class="m-0">On Time Delivery brings our customers personalized service and the newest in dispatch and tracking technology. The result? The most efficient and communicative support team to ensure your deliveries always arrive on time.</p>
@@ -89,9 +88,9 @@
 
 
     <!-- Fact Start -->
-    <div class="container-xxl pb-5">
+    <div class="container-xxl pb-5" >
         <div class="container py-5">
-            <div class="row g-5">
+            <div class="row g-5" >
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
                     <h6 class="text-secondary text-uppercase mb-3">Some Facts</h6>
                     <h1 class="mb-5">#1 Place To Manage All Of Your Shfting</h1>
@@ -134,14 +133,15 @@
 
 
     <!-- Service Start -->
-    <div class="container-xxl pb-5" >
+    <div class="row g-5 mx-lg-0 mb-5 pb-5" style="background-color:#fef5e7;">
+    <div class="container-xxl pb-5">
         <div class="container py-5">
             <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
                 <h6 class="text-secondary text-uppercase">Our Services</h6>
                 <h1 class="mb-5">Explore Our Services</h1>
             </div>
             <div class="row g-3">
-                <div class="col-md-6 col-lg-3 wow fadeInUp" data-wow-delay="0.3s">
+                <div class="col-md-6 col-lg-3 wow fadeInUp" data-wow-delay="0.3s" style="background-color:white">
                     <div class="service-item p-4">
                         <div class="overflow-hidden mb-4">
                             <img class="img-fluid" src="<?php echo base_url();?>\assets\images\how-to-pack-electronics-for-a-diy-shift-1.jpg" alt="">
@@ -151,7 +151,7 @@
                         <a class="btn-slide mt-2" href="<?php echo base_url("services/electronic");?>"><i class="fa fa-arrow-right"></i><span>Read More</span></a>
                     </div>
                 </div>
-                <div class="col-md-6 col-lg-3 wow fadeInUp" data-wow-delay="0.5s">
+                <div class="col-md-6 col-lg-3 wow fadeInUp" data-wow-delay="0.5s" style="background-color:white">
                     <div class="service-item p-4">
                         <div class="overflow-hidden mb-4">
                             <img class="img-fluid" src="<?php echo base_url();?>\assets\images\modular-kitchen-accessories-for-modern-homes.jpg" alt="">
@@ -161,7 +161,7 @@
                         <a class="btn-slide mt-2" href="<?php echo base_url("services/kitchen");?>"><i class="fa fa-arrow-right"></i><span>Read More</span></a>
                     </div>
                 </div>
-                <div class="col-md-6 col-lg-3 wow fadeInUp" data-wow-delay="0.7s">
+                <div class="col-md-6 col-lg-3 wow fadeInUp" data-wow-delay="0.7s" style="background-color:white">
                     <div class="service-item p-4">
                         <div class="overflow-hidden mb-4">
                             <img class="img-fluid" src="<?php echo base_url();?>\assets\images\premium_photo-1663126312373-b2d5264c2edd.jpeg" alt="">
@@ -171,7 +171,7 @@
                         <a class="btn-slide mt-2" href="<?php echo base_url("services/furniture");?>"><i class="fa fa-arrow-right"></i><span>Read More</span></a>
                     </div>
                 </div>
-                <div class="col-md-6 col-lg-3 wow fadeInUp" data-wow-delay="0.7s">
+                <div class="col-md-6 col-lg-3 wow fadeInUp" data-wow-delay="0.7s" style="background-color:white">
                     <div class="service-item p-4">
                         <div class="overflow-hidden mb-4">
                             <img class="img-fluid" src="<?php echo base_url();?>\assets\images\istockphoto-510242145-612x612.jpg" alt="">
@@ -181,12 +181,16 @@
                         <a class="btn-slide mt-2" href="<?php echo base_url("services/vehicle");?>"><i class="fa fa-arrow-right"></i><span>Read More</span></a>
                     </div>
                 </div>
-
-
-                
             </div>
         </div>
     </div>
+</div>
+<!-- <script>
+    $(document).ready(function(){
+  $(".col-md-6").hover(function(){
+    $(this).css("background-color","white");
+  })});
+</script> -->
     <!-- Service End -->
 
     <!-- Service End -->
@@ -346,65 +350,190 @@
 
     <!-- Testimonial Start -->
     <div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
-        <div class="container py-5">
-            <div class="text-center">
-                <h6 class="text-secondary text-uppercase">Testimonial</h6>
-                <h1 class="mb-0">Our Clients Say!</h1>
+    <div class="container py-5">
+        <div class="text-center">
+            <h6 class="text-secondary text-uppercase">Testimonial</h6>
+            <h1 class="mb-0">Our Clients Say!</h1>
+        </div>
+        <!-- Owl Carousel with arrows -->
+        <div class="owl-carousel testimonial-carousel wow fadeInUp" data-wow-delay="0.1s">
+            <!-- Testimonial Item 1 -->
+            <div class="testimonial-item p-4 my-5">
+                <i class="fa fa-quote-right fa-3x text-light position-absolute top-0 end-0 mt-n3 me-4"></i>
+                <div class="d-flex align-items-end mb-4">
+                    <img class="img-fluid flex-shrink-0" src="<?php echo base_url();?>/assets/img/images (2).jpeg" style="width: 80px; height: 80px; object-fit: cover;">
+                    <div class="ms-4">
+                        <h5 class="mb-1">Priya</h5>
+                    </div>
+                </div>
+                <p class="mb-0">"Porter's team was punctual, caring, and highly professional. Their self-sufficiency and humility impressed me, along with great customer support. Thank you!"</p>
             </div>
-            <div class="owl-carousel testimonial-carousel wow fadeInUp" data-wow-delay="0.1s">
-                <div class="testimonial-item p-4 my-5">
-                    <i class="fa fa-quote-right fa-3x text-light position-absolute top-0 end-0 mt-n3 me-4"></i>
-                    <div class="d-flex align-items-end mb-4">
-                        <img class="img-fluid flex-shrink-0" src="<?php echo base_url();?>/assets/img/images (2).jpeg" style="width: 80px; height: 80px;">
-                        <div class="ms-4">
-                            <h5 class="mb-1">Priya</h5>
-                        </div>
+
+            <!-- Testimonial Item 2 -->
+            <div class="testimonial-item p-4 my-5">
+                <i class="fa fa-quote-right fa-3x text-light position-absolute top-0 end-0 mt-n3 me-4"></i>
+                <div class="d-flex align-items-end mb-4">
+                    <img class="img-fluid flex-shrink-0" src="<?php echo base_url();?>/assets/img/images (5).jpeg" style="width: 80px; height: 80px; object-fit: cover;">
+                    <div class="ms-4">
+                        <h5 class="mb-1">Sita</h5>
                     </div>
-                    <p class="mb-0">"Porter's team was punctual, caring, and highly professional. Their self-sufficiency and humility impressed me, along with great customer support. Thank you!"
-                    </p>
                 </div>
-                <div class="testimonial-item p-4 my-5">
-                    <i class="fa fa-quote-right fa-3x text-light position-absolute top-0 end-0 mt-n3 me-4"></i>
-                    <div class="d-flex align-items-end mb-4">
-                        <img class="img-fluid flex-shrink-0" src="<?php echo base_url();?>/assets/img/images (5).jpeg" style="width: 80px; height: 80px;">
-                        <div class="ms-4">
-                            <h5 class="mb-1">Sita</h5>
-                            
-                        </div>
+                <p class="mb-0">"Smooth experience with Porter's packers and movers! The team was fantastic, handling every detail. Highly recommend their services!"</p>
+            </div>
+
+            <!-- Testimonial Item 3 -->
+            <div class="testimonial-item p-4 my-5">
+                <i class="fa fa-quote-right fa-3x text-light position-absolute top-0 end-0 mt-n3 me-4"></i>
+                <div class="d-flex align-items-end mb-4">
+                    <img class="img-fluid flex-shrink-0" src="<?php echo base_url();?>/assets/img/images (4).jpeg" style="width: 80px; height: 80px; object-fit: cover;">
+                    <div class="ms-4">
+                        <h5 class="mb-1">Rohit</h5>
                     </div>
-                    <p class="mb-0">"Smooth experience with Porter's packers and movers! The team was fantastic, handling every detail. Highly recommend their services!"
-                    </p>
                 </div>
-                <div class="testimonial-item p-4 my-5">
-                    <i class="fa fa-quote-right fa-3x text-light position-absolute top-0 end-0 mt-n3 me-4"></i>
-                    <div class="d-flex align-items-end mb-4">
-                        <img class="img-fluid flex-shrink-0" src="<?php echo base_url();?>/assets/img/images (4).jpeg" style="width: 80px; height: 80px;">
-                        <div class="ms-4">
-                            <h5 class="mb-1">Rohit</h5>
-                            
-                        </div>
+                <p class="mb-0">"Grateful for the punctuality and enthusiasm of the team. They handled items gently, took great care, and placed everything perfectly."</p>
+            </div>
+
+            <!-- Testimonial Item 4 -->
+            <div class="testimonial-item p-4 my-5">
+                <i class="fa fa-quote-right fa-3x text-light position-absolute top-0 end-0 mt-n3 me-4"></i>
+                <div class="d-flex align-items-end mb-4">
+                    <img class="img-fluid flex-shrink-0" src="<?php echo base_url();?>/assets/img/images (6).jpeg" style="width: 80px; height: 80px; object-fit: cover;">
+                    <div class="ms-4">
+                        <h5 class="mb-1">Yashwant</h5>
                     </div>
-                    <p class="mb-0">"Grateful for the punctuality and enthusiasm of the team. They handled items gently, took great care, and placed everything perfectly."
-                    </p>
                 </div>
-                <div class="testimonial-item p-4 my-5">
-                    <i class="fa fa-quote-right fa-3x text-light position-absolute top-0 end-0 mt-n3 me-4"></i>
-                    <div class="d-flex align-items-end mb-4">
-                        <img class="img-fluid flex-shrink-0" src="<?php echo base_url();?>/assets/img/images (6).jpeg" style="width: 80px; height: 80px;">
-                        <div class="ms-4">
-                            <h5 class="mb-1">Yashwant</h5>
-                           
-                        </div>
-                    </div>
-                    <p class="mb-0">"Top-notch service! Packing, dismantling, handling, transportation, and re-assembling were excellent. Shifting homes felt incredibly easy. Kudos to the team!"
-                    </p>
-                </div>
+                <p class="mb-0">"Top-notch service! Packing, dismantling, handling, transportation, and re-assembling were excellent. Shifting homes felt incredibly easy. Kudos to the team!"</p>
             </div>
         </div>
     </div>
+</div>
+
+<!-- Owl Carousel Navigation Arrows -->
+<style>
+/* Additional Styling */
+.testimonial-item {
+    position: relative;
+    background-color: #f9f9f9; /* Light background */
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    padding: 20px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.testimonial-item:hover {
+    transform: scale(1.05); /* Slight scale on hover */
+}
+
+.testimonial-item img {
+    border-radius: 50%; /* Circular image */
+    object-fit: cover; /* Ensure the image fits nicely */
+}
+
+.testimonial-item p {
+    font-style: italic;
+    color: #333; /* Dark text for readability */
+    line-height: 1.6;
+}
+
+.testimonial-item h5 {
+    font-weight: bold;
+    color: #007bff; /* Blue color for the name */
+}
+
+/* Customize the navigation arrows */
+.owl-nav {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+}
+
+.owl-prev, .owl-next {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border-radius: 50%;
+    padding: 10px;
+    font-size: 20px;
+    z-index: 10;
+    transition: background-color 0.3s;
+}
+
+.owl-prev:hover, .owl-next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+</style>
+
+<!-- Owl Carousel JS (if needed) -->
+<script>
+$(document).ready(function() {
+    $(".testimonial-carousel").owlCarousel({
+        loop: true,
+        margin: 30,
+        nav: true, /* Enable navigation arrows */
+        dots: false,
+        autoplay: true,
+        autoplayTimeout: 3000,
+        autoplayHoverPause: true,
+        navText: [
+            '<i class="fa fa-arrow-left"></i>',
+            '<i class="fa fa-arrow-right"></i>'
+        ],
+        responsive: {
+            0: {
+                items: 1
+            },
+            768: {
+                items: 2
+            },
+            992: {
+                items: 3
+            }
+        }
+    });
+});
+</script>
+
     <!-- Testimonial End -->
 
     <!-- Back to Top -->
 
-    
-    
+        <!-- <div class="container-fluid p-0 pb-5">
+        <div class="owl-carousel header-carousel position-relative mb-5">
+            <div class="owl-carousel-item position-relative">
+                <img class="img-fluid" src="<?php echo base_url();?>\assets\images\bidkar-transport-shiroli-midc-kolhapur-packers-and-movers-all-india--0gqsxt00cs.jpg" alt="">
+                <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center" style="background: rgba(6, 3, 21, .5);">
+                    <div class="container"> 
+                        <div class="row justify-content-start">
+                            <div class="col-10 col-lg-8">
+                                <h5 class="text-white text-uppercase mb-3 animated slideInDown">Packing and Moving Solution</h5>
+                                <h1 class="display-3 text-white animated slideInDown mb-4">#1 Place For Your <span class="text-primary">Shifting</span> Solution</h1>
+                                <p class="fs-5 fw-medium text-white mb-4 pb-2">Let our Team make you moving convenient and easy.</p>
+                                <a href="<?php echo base_url("home/track");?>" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Read More</a>
+                                <a href="<?php echo base_url("home/free_quote");?>" class="btn btn-secondary py-md-3 px-md-5 animated slideInRight">Free Quote</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="owl-carousel-item position-relative">
+                <img class="img-fluid" src="<?php echo base_url();?>/assets/img/carousel-2.jpg" alt="">
+                <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center" style="background: rgba(6, 3, 21, .5);">
+                    <div class="container">
+                        <div class="row justify-content-start">
+                            <div class="col-10 col-lg-8">
+                                <h5 class="text-white text-uppercase mb-3 animated slideInDown">Packing and Moving Solution</h5>
+                                <h1 class="display-3 text-white animated slideInDown mb-4">#1 Place For Your <span class="text-primary">Shifting</span> Solution</h1>
+                                <p class="fs-5 fw-medium text-white mb-4 pb-2">Let our Team make you moving convenient and easy.</p>
+                                <a href="<?php echo base_url("home/track");?>" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Read More</a>
+                                <a href="<?php echo base_url("home/free_quote");?>" class="btn btn-secondary py-md-3 px-md-5 animated slideInRight">Free Quote</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> -->
+
+   

@@ -75,10 +75,18 @@
     </div>
 </section>
 <script>
-  $(function () {
+    $(function () {
    
-    $('#example1').DataTable();
-  });
+   $('#example1').DataTable({
+     "paging": true,
+     "lengthChange": true,
+     "searching": true,
+     "ordering": true,
+     "info": true,
+     "autoWidth": false,
+     "responsive": true,
+   });
+ });
 </script>
 
 

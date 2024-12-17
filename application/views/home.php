@@ -41,10 +41,10 @@
     </div>
     <!-- Carousel navigation arrows -->
     <div class="carousel-nav">
-        <button class="owl-prev" style="position: absolute; top: 50%; left: 0; transform: translateY(-50%); background: rgba(0, 0, 0, 0.5); color: white; border: none; padding: 10px;">
+        <button class="owl-prev" style="position: absolute; top: 50%; left: 4%; transform: translateY(-50%); background:transparent; border: round;color: white;padding: 10px;">
             <i class="fa fa-chevron-left"></i>
         </button>
-        <button class="owl-next" style="position: absolute; top: 50%; right: 0; transform: translateY(-50%); background: rgba(0, 0, 0, 0.5); color: white; border: none; padding: 10px;">
+        <button class="owl-next" style="position: absolute; top: 50%; right: 5%; transform: translateY(-50%); background: rgba(0, 0, 0, 0.5); color: white; border: round; padding: 10px;">
             <i class="fa fa-chevron-right"></i>
         </button>
     </div>
@@ -133,7 +133,7 @@
 
 
     <!-- Service Start -->
-    <div class="row g-5 mx-lg-0 mb-5 pb-5" style="background-color:#fef5e7;">
+    <div class="row g-5 mx-lg-0 mb-5 pb-5" style="background-color:;">
     <div class="container-xxl pb-5">
         <div class="container py-5">
             <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
@@ -141,7 +141,7 @@
                 <h1 class="mb-5">Explore Our Services</h1>
             </div>
             <div class="row g-3">
-                <div class="col-md-6 col-lg-3 wow fadeInUp" data-wow-delay="0.3s" style="background-color:white">
+                <div class="col-md-6 col-lg-3 wow fadeInUp" data-wow-delay="0.3s" >
                     <div class="service-item p-4">
                         <div class="overflow-hidden mb-4">
                             <img class="img-fluid" src="<?php echo base_url();?>\assets\images\how-to-pack-electronics-for-a-diy-shift-1.jpg" alt="">
@@ -151,17 +151,17 @@
                         <a class="btn-slide mt-2" href="<?php echo base_url("services/electronic");?>"><i class="fa fa-arrow-right"></i><span>Read More</span></a>
                     </div>
                 </div>
-                <div class="col-md-6 col-lg-3 wow fadeInUp" data-wow-delay="0.5s" style="background-color:white">
+                <div class="col-md-6 col-lg-3 wow fadeInUp" data-wow-delay="0.5s">
                     <div class="service-item p-4">
                         <div class="overflow-hidden mb-4">
                             <img class="img-fluid" src="<?php echo base_url();?>\assets\images\modular-kitchen-accessories-for-modern-homes.jpg" alt="">
                         </div>
-                        <h4 class="mb-3"> KITCHEN <br>APPLIENCES</h4>
-                        <p>Think about moving your home from one place to another. When you need to transfer your household effect.The circumstance of a home shifting will also force you to root out your well-established kitchen, whether you like it or not, for transferring kitchen items into your new home.</p>
+                        <h4 class="mb-2"> KITCHEN <br>APPLIENCES</h4>
+                        <p>Think about moving your home from one place to another. When you need to transfer your household effect.The circumstance of a home shifting will also force you to root out your well-established kitchen,whether you like it or not,for transferring kitchen items to your new home.Disposing don’t need move</p>
                         <a class="btn-slide mt-2" href="<?php echo base_url("services/kitchen");?>"><i class="fa fa-arrow-right"></i><span>Read More</span></a>
                     </div>
                 </div>
-                <div class="col-md-6 col-lg-3 wow fadeInUp" data-wow-delay="0.7s" style="background-color:white">
+                <div class="col-md-6 col-lg-3 wow fadeInUp" data-wow-delay="0.7s" >
                     <div class="service-item p-4">
                         <div class="overflow-hidden mb-4">
                             <img class="img-fluid" src="<?php echo base_url();?>\assets\images\premium_photo-1663126312373-b2d5264c2edd.jpeg" alt="">
@@ -171,7 +171,7 @@
                         <a class="btn-slide mt-2" href="<?php echo base_url("services/furniture");?>"><i class="fa fa-arrow-right"></i><span>Read More</span></a>
                     </div>
                 </div>
-                <div class="col-md-6 col-lg-3 wow fadeInUp" data-wow-delay="0.7s" style="background-color:white">
+                <div class="col-md-6 col-lg-3 wow fadeInUp" data-wow-delay="0.7s" >
                     <div class="service-item p-4">
                         <div class="overflow-hidden mb-4">
                             <img class="img-fluid" src="<?php echo base_url();?>\assets\images\istockphoto-510242145-612x612.jpg" alt="">

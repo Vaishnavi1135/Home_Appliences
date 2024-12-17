@@ -340,14 +340,12 @@
 
 
 
-/* .service-item{
-    background-color:red; 
+.service-item{
+    background-color:#f8e6df; 
    
-} */
+}
 
-/* div.service-item :hover{
-    background-color: #F8F2F0;
-} */
+
 
 .service-item:hover a.btn-slide i,
 .price-item:hover a.btn-slide i,

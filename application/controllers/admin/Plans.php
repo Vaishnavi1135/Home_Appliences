@@ -93,5 +93,69 @@ class Plans extends CI_Controller
         
         }
     }
+
+    //..server side data table....
+	public function get_plans()
+
+	{
+
+         echo "<pre>";print_r($this->input->post());die();
+		$draw = $this->input->post('draw');
+		$start = $this->input->post('start');
+		$length = $this->input->post('length');
+		$searchValue = $this->input->post('search')['value'];
+		$sortIndex =$this->input->post('order')[0]['column'];
+		$sortby =$this->input->post('order')[0]['dir'];
+		$sortColumn=null;
+		$sortColumns = array(
+			'0' => 'id',
+			'1' => 'patient_id',
+			'2' => 'firstname',
+			'3' => 'lastname',
+			'4' => 'email',
+			'5' => 'home_phone',
+			'6' => 'mobile',
+			'7' => 'home_address',
+			'8' => 'sex',
+			'9' => 'blood_group',
+			'10' => 'date_of_birth',
+			'11' => 'created_date',
+			'12' => 'status',
+		
+		);
+		$sortColumn = isset($sortColumns[$sortIndex]) ? $sortColumns[$sortIndex] : '';
+		$patientsData = $this->patient_model->read_patients_datatable($length, $start, $searchValue,$sortColumn,$sortby,$sortColumns);
+		$filteredRecords = $this->patient_model->getSearchRecordsCount($length, $start, $searchValue, $sortby, $sortColumns);
+		$totalRecords = $this->patient_model->read_total_count();
+		$data = array();
+		foreach ($patientsData as $key => $row) {
+			$dt = array();
+			$dt[] = ++$key;
+			$dt[] = $row->patient_id;
+			$dt[] = $row->firstname;
+			$dt[] = $row->lastname;
+			$dt[] = $row->email;
+			$dt[] =  substr($row->home_phone,-10);
+			$dt[] =  substr($row->mobile,-10);
+			$dt[] = $row->home_address;
+			$dt[] = $row->sex;
+			$dt[] = $row->blood_group;
+			$dt[] = $row->date_of_birth;
+			$dt[] = $row->created_date;
+			$dt[] = $row->status == 1 ? display('Active') : display('Inactive');
+			$dt[] = "<a href='" . base_url('practice/patient/profile/' . encrypt($row->patient_id)) . "' class='btn btn-xs btn-success'><i class='fa fa-eye'></i></a>
+					<a href='" . base_url('practice/patient/edit/' . encrypt($row->patient_id)) . "' class='btn btn-xs btn-primary'><i class='fa fa-edit'></i></a>
+					<a href='" . base_url('practice/patient/prescription/create'. '?pid=' . encrypt($row->patient_id)) . "' class='btn btn-xs btn-warning' title='Create Prescription'><i class='fa fa-plus'></i></a> ";
+			$data[] = $dt;
+		}
+		$response = array(
+			"draw" => $draw,
+			"recordsTotal" => $totalRecords,
+			"recordsFiltered" => $filteredRecords,
+			"data" => $data,
+		);
+		echo json_encode($response);
+	}
 }
+
 ?>

@@ -337,12 +337,13 @@
     z-index: 1;
 }
 
-
-
-
 .service-item{
     background-color:#f8e6df; 
    
+}
+
+.service-item:hover{
+    background-color:#ffffff; 
 }
 
 

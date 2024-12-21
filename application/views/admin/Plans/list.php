@@ -1,4 +1,5 @@
 
+
 <section class="content">
     <div class="container1">
         <div class="row">
@@ -19,7 +20,9 @@
                     </div>
                     <!-- /.card-header -->
                     <div class="card-body">
-                    <table id="example1" class="table table-bordered table-striped">
+                    <table id="example1" class=" serverside-datatable table table-bordered table-striped">
+                    <table width="100%" class="serverside-datatable table table-striped table-bordered table-hover" id="patient_table" url="<?php echo base_url('admin/plans/get_plans'); ?>">
+
                         <thead>
                             <tr>
                             <th>Sr.No</th>
@@ -84,5 +87,43 @@
     });
   });
 </script>
+<script>
+    // $('.serverside-datatable').each(function () {
+        alert();
+        dataTable = $('#example1').DataTable({
+            responsive: true,
+            dom: "<'row'<'col-sm-4'l><'col-sm-4 text-center'B><'col-sm-4'f>>t<'row'<'col-sm-6'i><'col-sm-6'p>>",
+            "lengthMenu": [
+                [10, 25, 50, 99999],
+                [10, 25, 50, "All"]
+            ],
+            buttons: [
+                { extend: 'copy', className: 'btn-sm' },
+                { extend: 'csv', title: 'ExampleFile', className: 'btn-sm' },
+                { extend: 'excel', title: 'ExampleFile', className: 'btn-sm', title: 'exportTitle' },
+                { extend: 'pdf', title: 'ExampleFile', className: 'btn-sm' },
+                { extend: 'print', className: 'btn-sm' }
+            ],
+            "processing": true,
+            "serverSide": true,
+            "ajax": {
+                "url": $(this).attr('url'),
+                "type": "POST",
+            },
+            initComplete: function () {
+                // Add the 'avoid_reload' class to the length menu dropdown
+                $(this).closest('.dataTables_wrapper').find('div.dataTables_length select').addClass('avoid_reload');
+            }
+
+        });
+    //});
+    $(document).ready(function(){
+        $.ajax({url:'<?= base_url('admin/plans/get_plans')?>', success: function(result){
+    $("#div1").html(result);
+  }});
+    
+});
+</script>
+
 
 

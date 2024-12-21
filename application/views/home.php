@@ -499,41 +499,25 @@ $(document).ready(function() {
 
     <!-- Back to Top -->
 
-        <!-- <div class="container-fluid p-0 pb-5">
-        <div class="owl-carousel header-carousel position-relative mb-5">
-            <div class="owl-carousel-item position-relative">
-                <img class="img-fluid" src="<?php echo base_url();?>\assets\images\bidkar-transport-shiroli-midc-kolhapur-packers-and-movers-all-india--0gqsxt00cs.jpg" alt="">
-                <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center" style="background: rgba(6, 3, 21, .5);">
-                    <div class="container"> 
-                        <div class="row justify-content-start">
-                            <div class="col-10 col-lg-8">
-                                <h5 class="text-white text-uppercase mb-3 animated slideInDown">Packing and Moving Solution</h5>
-                                <h1 class="display-3 text-white animated slideInDown mb-4">#1 Place For Your <span class="text-primary">Shifting</span> Solution</h1>
-                                <p class="fs-5 fw-medium text-white mb-4 pb-2">Let our Team make you moving convenient and easy.</p>
-                                <a href="<?php echo base_url("home/track");?>" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Read More</a>
-                                <a href="<?php echo base_url("home/free_quote");?>" class="btn btn-secondary py-md-3 px-md-5 animated slideInRight">Free Quote</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="owl-carousel-item position-relative">
-                <img class="img-fluid" src="<?php echo base_url();?>/assets/img/carousel-2.jpg" alt="">
-                <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center" style="background: rgba(6, 3, 21, .5);">
-                    <div class="container">
-                        <div class="row justify-content-start">
-                            <div class="col-10 col-lg-8">
-                                <h5 class="text-white text-uppercase mb-3 animated slideInDown">Packing and Moving Solution</h5>
-                                <h1 class="display-3 text-white animated slideInDown mb-4">#1 Place For Your <span class="text-primary">Shifting</span> Solution</h1>
-                                <p class="fs-5 fw-medium text-white mb-4 pb-2">Let our Team make you moving convenient and easy.</p>
-                                <a href="<?php echo base_url("home/track");?>" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Read More</a>
-                                <a href="<?php echo base_url("home/free_quote");?>" class="btn btn-secondary py-md-3 px-md-5 animated slideInRight">Free Quote</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div> -->
-
-   
+<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+  <ol class="carousel-indicators">
+    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+  </ol>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img class="d-block w-100" src="<?php echo base_url();?>/assets/img/carousel-2.jpg" alt="First slide">
+    </div>
+    <div class="carousel-item">
+      <img class="d-block w-100" src="<?php echo base_url();?>/assets/img/carousel-2.jpg" alt="Second slide">
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div

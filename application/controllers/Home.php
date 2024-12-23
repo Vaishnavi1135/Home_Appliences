@@ -31,6 +31,13 @@ class Home extends CI_Controller
         $this->load->view("main_template",$data);
     }
 
+    public function free_quote2()
+    {
+        $data['title'] = "Kolhapur Packers and Movers";
+        $data['content'] = $this->load->view("free_quote2",$data,true);
+        $data['active'] = "Home";
+        $this->load->view("main_template",$data);
+    }
 
 
     

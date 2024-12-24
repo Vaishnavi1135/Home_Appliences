@@ -343,12 +343,72 @@
                   <p>Add New</p>
                 </a>
               </li>
+
+
               
             </ul>
+
+            <li class="nav-item">
+            <a href="#" class="nav-link <?=$active=='Drivers'?'active':''?>">
+              <i class="nav-icon fas fa-user"></i>
+             
+              <p>Drivers</p>
+               
+               <i class="fas fa-angle-left right"></i>
+               </a>
+            <ul class="nav nav-treeview">
+            <li class="nav-item">
+                <a href="<?= base_url("admin/driver/add");?>" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>add_driver</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="<?= base_url("admin/driver/edit");?>" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>edit_driver</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="<?= base_url("admin/users");?>" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>0-5 Ton</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="<?= base_url("admin/users/add");?>" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>5-10 Ton</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="<?= base_url("admin/users/add");?>" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>10-15 Ton</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="<?= base_url("admin/users/add");?>" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>15-20 Ton</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="<?= base_url("admin/users/add");?>" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>20-25 Ton</p>
+                </a>
+              </li>
+              
+              <li class="nav-item">
+                <a href="<?= base_url("admin/users/add");?>" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>25-30 Ton</p>
+                </a>
+              </li>
+              
+              
           </li>
-          
-         
-         
         </ul>
       </nav>
       <!-- /.sidebar-menu -->

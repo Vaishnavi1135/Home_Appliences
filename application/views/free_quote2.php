@@ -3,7 +3,7 @@
 <div class="container">
         <div class="row g-6">
             <div class="col-lg-6 wow fadeInUp pb-5" data-wow-delay="0.1s">
-                <img class="img-fluid mb-8" src="https://via.placeholder.com/400" alt="Food Delivery">
+                <img class="img-fluid mb-8" src="<?php echo base_url();?>\assets\images\food-delivery.png" alt="Food Delivery">
             </div>
             <div class="col-lg-6 mt-5 pb-5">
                 <h3 class="text-danger text-uppercase mt-3" style="font-style: italic;">Get A Free Quote...!!</h3>

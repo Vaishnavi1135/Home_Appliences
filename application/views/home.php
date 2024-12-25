@@ -1,10 +1,68 @@
 
 
 
-    
+<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script> -->
+
+<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img class="d-block w-100" src="<?php echo base_url();?>\assets\images\bidkar-transport-shiroli-midc-kolhapur-packers-and-movers-all-india--0gqsxt00cs.jpg" alt="First slide">
+            <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center" style="background: rgba(6, 3, 21, .5);">
+                <div class="container">
+                    <div class="row justify-content-start">
+                        <div class="col-10 col-lg-8">
+                            <h5 class="text-white text-uppercase mb-3 animated slideInDown">Packing and Moving Solution</h5>
+                            <h1 class="display-3 text-white animated slideInDown mb-4">#1 Place For Your <span class="text-primary">Shifting</span> Solution</h1>
+                            <p class="fs-5 fw-medium text-white mb-4 pb-2">Let our Team make you moving convenient and easy.</p>
+                            <a href="<?php echo base_url("home/track");?>" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Read More</a>
+                            <a href="<?php echo base_url("home/free_quote");?>" class="btn btn-secondary py-md-3 px-md-5 animated slideInRight">Free Quote</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <img class="d-block w-100" src="<?php echo base_url();?>/assets/img/carousel-2.jpg" alt="Second slide">
+            <!-- <div class="carousel-caption d-none d-md-block"> -->
+            <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center" style="background: rgba(6, 3, 21, .5);">
+                <div class="container"> 
+                    <div class="row justify-content-start">
+                        <div class="col-10 col-lg-8">
+                            <h5 class="text-white text-uppercase mb-3 animated slideInDown">Packing and Moving Solution</h5>
+                            <h1 class="display-3 text-white animated slideInDown mb-4">#1 Place For Your <span class="text-primary">Shifting</span> Solution</h1>
+                            <p class="fs-5 fw-medium text-white mb-4 pb-2">Let our Team make you moving convenient and easy.</p>
+                            <a href="<?php echo base_url("home/track");?>" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Read More</a>
+                            <a href="<?php echo base_url("home/free_quote");?>" class="btn btn-secondary py-md-3 px-md-5 animated slideInRight">Free Quote</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+               
+               <!-- </div> -->
+        </div>
+        
+    </div>
+    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+    </a>
+</div>
 
     <!-- Carousel Start -->
-    <div class="container-fluid p-0 pb-0">
+    <!-- <div class="container-fluid p-0 pb-0">
     <div class="owl-carousel header-carousel position-relative mb-0">
         <div class="owl-carousel-item position-relative">
             <img class="img-fluid" src="<?php echo base_url();?>\assets\images\bidkar-transport-shiroli-midc-kolhapur-packers-and-movers-all-india--0gqsxt00cs.jpg"  alt="">
@@ -38,9 +96,9 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
     <!-- Carousel navigation arrows -->
-    <div class="carousel-nav">
+    <!-- <div class="carousel-nav">
         <button class="owl-prev" style="position: absolute; top: 50%; left: 4%; transform: translateY(-50%); background:transparent; border: round;color: white;padding: 10px;">
             <i class="fa fa-chevron-left"></i>
         </button>
@@ -48,7 +106,7 @@
             <i class="fa fa-chevron-right"></i>
         </button>
     </div>
-</div>
+</div> -->
 
 
 
@@ -499,25 +557,4 @@ $(document).ready(function() {
 
     <!-- Back to Top -->
 
-<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-  <ol class="carousel-indicators">
-    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-  </ol>
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img class="d-block w-100" src="<?php echo base_url();?>/assets/img/carousel-2.jpg" alt="First slide">
-    </div>
-    <div class="carousel-item">
-      <img class="d-block w-100" src="<?php echo base_url();?>/assets/img/carousel-2.jpg" alt="Second slide">
-    </div>
-  </div>
-  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="sr-only">Previous</span>
-  </a>
-  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="sr-only">Next</span>
-  </a>
-</div
+    

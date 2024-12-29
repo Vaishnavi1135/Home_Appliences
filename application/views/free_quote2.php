@@ -8,7 +8,8 @@
             <div class="col-lg-6 mt-5 pb-5">
                 <h3 class="text-danger text-uppercase mt-3" style="font-style: italic;">Get A Free Quote...!!</h3>
                 <div class="bg-light text-center p-5 wow fadeIn mt-5 pt-5" data-wow-delay="0.5s">
-                    <form id="sendOTPForm">
+                <?php echo form_open("home/save");?>
+                <?php echo form_hidden('id',0); ?>
                         <div class="row g-3">
                             <div class="col-12 col-sm-12">
                                 <input type="date" class="form-control border-0" placeholder="Date" style="height: 55px;">
@@ -23,16 +24,16 @@
                                 <input type="number" name="phone" class="form-control border-0" placeholder="Phone No" style="height: 55px;" required>
                             </div>
                             <div class="col-12">
-                                <button type="submit" class="btn btn-primary w-100 py-3">GET OTP</button>
+                                <button type="submit" href="<?php echo base_url("home/save");?>" class="btn btn-primary w-100 py-3">GET OTP</button>
                             </div>
                         </div>
-                    </form>
+                        <?php echo form_close(); ?>
                 </div>
             </div>
         </div>
     </div>
 
-    <script>
+    <!-- <script>
         document.addEventListener('DOMContentLoaded', () => {
             const sendOTPForm = document.getElementById('sendOTPForm');
 
@@ -92,4 +93,4 @@
                 });
             });
         }
-    </script>
+    </script> -->

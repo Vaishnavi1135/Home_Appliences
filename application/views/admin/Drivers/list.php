@@ -14,7 +14,7 @@
 
                     <div class="card-header">
                         <h3 class="card-title">Driver</h3>
-                        <div style="float:right"><a href="<?= base_url('admin/driver/add/')?>" class="btn btn-sm btn-primary">Add New</a></div>
+                        <div style="float:right"><a href="<?= base_url('admin/drivers/add/')?>" class="btn btn-sm btn-primary">Add New</a></div>
 
                     </div>
                     <!-- /.card-header -->
@@ -38,24 +38,24 @@
                         <tbody>
                         <?php 
                             $count=1;
-                            foreach($drivers as $driver){
+                            foreach($driver as $drivers){
 
                            ?> 
                         
                             <tr>
                             <td><?= $count++?></td>
-                                <td><?= $driver->name?></td>
-                                <td><?= $driver->license_no?></td>
-                                <td><?= $driver->adhar_no?></td>
-                                <td><?= $driver->exp_date?></td>
-                                <td><?= $driver->phone?></td>
-                                <td><?= $driver->created_at?></td>
-                                <td><?= $driver->updated_at?></td>
-                                <td><?= $driver->status==1 ? "Active" : "Inactive"?></td>
-                                <td><?= $driver->created_by?></td>
+                                <td><?= $drivers->name?></td>
+                                <td><?= $drivers->license_no?></td>
+                                <td><?= $drivers->adhar_no?></td>
+                                <td><?= $drivers->exp_date?></td>
+                                <td><?= $drivers->phone?></td>
+                                <td><?= $drivers->created_at?></td>
+                                <td><?= $drivers->updated_at?></td>
+                                <td><?= $drivers->status==1 ? "Active" : "Inactive"?></td>
+                                <td><?= $drivers->created_by?></td>
                                 <td>
-                                <a   href="<?= base_url('admin/driver/edit/'. $driver->id)?>" class="btn btn-sm btn-primary"><i class="fa fa-solid fa-edit"></i></a>
-                                <a  href="<?= base_url('admin/driver/delete/'. $driver->id)?>" onclick="return confirm('Are you sure want to delete?')" class="btn btn-sm btn-danger"><i class="fa fa-solid fa-trash"></i></a>
+                                <a   href="<?= base_url('admin/drivers/edit/'. $driver->id)?>" class="btn btn-sm btn-primary"><i class="fa fa-solid fa-edit"></i></a>
+                                <a  href="<?= base_url('admin/drivers/delete/'. $driver->id)?>" onclick="return confirm('Are you sure want to delete?')" class="btn btn-sm btn-danger"><i class="fa fa-solid fa-trash"></i></a>
 
                                 </td>
                                 

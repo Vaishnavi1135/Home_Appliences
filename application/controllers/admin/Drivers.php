@@ -1,5 +1,5 @@
 <?php 
-class Driver extends CI_Controller
+class Drivers extends CI_Controller
 {
     public function __construct()
     {
@@ -14,31 +14,31 @@ class Driver extends CI_Controller
     public function index()
     {
         $Driver = $this->Driver_model->read();
-        $data['title'] = "Admin : Driver";
-        $data['page_heading'] = "Driver";
-        $data['Driver'] = $Driver;
-        $data['active'] = "Driver";
-        $data['content'] = $this->load->view("admin/Driver/list",$data,true);
+        $data['title'] = "Admin : Drivers";
+        $data['page_heading'] = "Drivers";
+        $data['active'] = "Drivers";
+        $data['Drivers'] = $Driver;
+        $data['content'] = $this->load->view("admin/Drivers/list",$data,true);
         $this->load->view("admin/admin_template",$data);
     }
 
     public function add()
     {
         $data['Drivers'] = array();
-        $data['title'] = "Admin : Driver";
-        $data['page_heading'] = "Driver/Add";
+        $data['title'] = "Admin : Drivers";
+        $data['page_heading'] = "Drivers/Add";
         $data['active'] = "Drivers";
-        $data['content'] = $this->load->view("admin/Driver/add_driver",$data,true);
+        $data['content'] = $this->load->view("admin/Drivers/add_driver",$data,true);
         $this->load->view("admin/admin_template",$data);
     }
 
     public function edit($id=0)
     {
         $data['Drivers'] =  $this->Driver_model->read_by_id($id);
-        $data['title'] = "Admin : Driver";
-        $data['page_heading'] = "Driver/edit";
-        $data['active'] = "Driver";
-        $data['content'] = $this->load->view("admin/Driver/edit_Driver",$data,true);
+        $data['title'] = "Admin : Drivers";
+        $data['page_heading'] = "Drivers/edit";
+        $data['active'] = "Drivers";
+        $data['content'] = $this->load->view("admin/Drivers/edit_Driver",$data,true);
         $this->load->view("admin/admin_template",$data);  
     }
 

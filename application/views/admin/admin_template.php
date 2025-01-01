@@ -358,19 +358,13 @@
                </a>
             <ul class="nav nav-treeview">
             <li class="nav-item">
-                <a href="<?= base_url("admin/driver/add");?>" class="nav-link">
+                <a href="<?= base_url("admin/drivers/add");?>" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>add_driver</p>
+                  <p>Add New</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="<?= base_url("admin/driver/edit");?>" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>edit_driver</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="<?= base_url("admin/driver");?>" class="nav-link">
+                <a href="<?= base_url("admin/drivers");?>" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>List</p>
                 </a>

@@ -75,41 +75,41 @@ class Home extends CI_Controller
     }
 }
 
-public function save()
-{
-    $data=array(
-        'id'=>$this->input->post('id'),
-        'date'=>$this->input->post('date'),
-        'name'=>$this->input->post('name'),
-        'email'=>$this->input->post('email'),
-        'phone'=>$this->input->post('phone'),
-        'status'=>1,
-    );
-    $res = 0;
-    if($this->input->post('id')==0){
-        $data['created_at'] =date('Y-m-d H:i:s');
-        $data['created_by'] = $this->session->userdata('id');
-        $res = $this->Driver_model->create($data);
-        if($res){
-            $this->session->set_flashdata('status',' Added successfully..!');
-            redirect('admin/Driver');
+// public function save()
+// {
+//     $data=array(
+//         'id'=>$this->input->post('id'),
+//         'date'=>$this->input->post('date'),
+//         'name'=>$this->input->post('name'),
+//         'email'=>$this->input->post('email'),
+//         'phone'=>$this->input->post('phone'),
+//         'status'=>1,
+//     );
+//     $res = 0;
+//     if($this->input->post('id')==0){
+//         $data['created_at'] =date('Y-m-d H:i:s');
+//         $data['created_by'] = $this->session->userdata('id');
+//         $res = $this->Driver_model->create($data);
+//         if($res){
+//             $this->session->set_flashdata('status',' Added successfully..!');
+//             redirect('admin/Driver');
         
-        }
+//         }
         
-    }else{
-        $data['updated_at'] =date('Y-m-d H:i:s');
-        $data['updated_by'] = $this->session->userdata('id');
-        $res = $this->Driver_model->update($data);
-        if($res){
-            $this->session->set_flashdata('status','Updated successfully..!');
-            redirect('admin/users');
+//     }else{
+//         $data['updated_at'] =date('Y-m-d H:i:s');
+//         $data['updated_by'] = $this->session->userdata('id');
+//         $res = $this->Driver_model->update($data);
+//         if($res){
+//             $this->session->set_flashdata('status','Updated successfully..!');
+//             redirect('admin/users');
         
         
-        }
-    }
+//         }
+//     }
     
 
-}
+// }
 
 
 

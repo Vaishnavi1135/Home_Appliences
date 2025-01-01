@@ -16,7 +16,7 @@
                         <form>
                             <div class="row g-3">
                             <div class="col-12 col-sm-12">
-                            <select class="form-select border-0" style="height: 55px;">
+                            <select class="form-select border-0" style="height: 55px;" >
                                         <option selected>Select Services</option>
                                         <option value="1">Packers</option>
                                         <option value="2">Movers</option>
@@ -25,11 +25,11 @@
                                 </div>
                                 
                                 <div class="col-12 col-sm-12">
-                                    <input type="text" class="form-control border-0" placeholder="Location From" style="height: 55px;">
+                                    <input type="text" class="form-control border-0" placeholder="Location From" style="height: 55px;" >
                                 </div>
 
                                 <div class="col-12 col-sm-12">
-                                    <input type="text" class="form-control border-0" placeholder="Location To" style="height: 55px;">
+                                    <input type="text" class="form-control border-0" placeholder="Location To" style="height: 55px;" >
                                 </div>
                                 
                             

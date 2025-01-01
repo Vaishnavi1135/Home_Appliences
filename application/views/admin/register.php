@@ -143,13 +143,7 @@
 <script>
   function seterror(id,error){
     
-    // element = document.getElementsByName(id);
-    // el= $(element).next(".formerror")[0];
-    // el.innerHTML = error;
-    // el .style.color = "red";
    
-    // //element.getElementsByClassName('formerror')[0].innerHTML = error;
-
  // Get the input element by name
  let element = document.getElementsByName(id)[0];
   

@@ -370,6 +370,12 @@
                 </a>
               </li>
               <li class="nav-item">
+                <a href="<?= base_url("admin/driver");?>" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>List</p>
+                </a>
+              </li>
+              <li class="nav-item">
                 <a href="<?= base_url("admin/users");?>" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>0-5 Ton</p>

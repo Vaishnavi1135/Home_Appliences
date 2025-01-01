@@ -10,11 +10,11 @@
                     <!-- /.card-header -->
                     <div class="card-body">
                     <?php echo form_open("admin/driver/save",'');?>
-                    <?php echo form_hidden('id',$driver->id); ?>
+                    <!-- <?php echo form_hidden('id',$driver->id); ?> -->
                     <div class="row">
                             <div class="col-md-12 form-group">
-                                <label for="driver_name">Name</label>
-                                <input type="text" class="form-control" name="driver_name" id="driver_name" >
+                                <label for="name">Name</label>
+                                <input type="text" class="form-control" name="name" id="name" >
                             </div>
                         </div>
 

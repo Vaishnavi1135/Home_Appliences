@@ -1,5 +1,5 @@
 <?php
-class Driver_Model extends CI_Model
+class Drivers_Model extends CI_Model
 {
     
     private $table = "driver";

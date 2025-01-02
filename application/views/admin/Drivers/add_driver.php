@@ -7,7 +7,7 @@
                     </div>
                     <!-- /.card-header -->
                     <div class="card-body">
-                        <?php echo form_open("admin/driver/save",'');?>
+                        <?php echo form_open("admin/drivers/save",'');?>
                         <?php echo form_hidden('id',0); ?>
                         <div class="row">
                             <div class="col-md-12 form-group">

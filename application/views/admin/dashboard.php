@@ -11,7 +11,7 @@
               <div class="info-box-content">
                 <span class="info-box-text">Total Order</span>
                 <span class="info-box-number">
-                  $238.00
+                  238.00
                   <small></small>
                 </span>
               </div>
@@ -57,7 +57,7 @@
 
               <div class="info-box-content">
                 <span class="info-box-text">Total Order</span>
-                <span class="info-box-number">$238.00</span>
+                <span class="info-box-number">238.00</span>
               </div>
               <!-- /.info-box-content -->
             </div>
@@ -99,7 +99,7 @@
                 <div class="row">
                   <div class="col-md-8">
                     <p class="text-center">
-                      <strong>Sales: 1 Jan, 2014 - 30 Jul, 2014</strong>
+                      <strong>Shiftings: 1 Jan, 2014 - 30 Jul, 2014</strong>
                     </p>
 
                     <div class="chart">
@@ -160,7 +160,7 @@
                   <div class="col-sm-3 col-6">
                     <div class="description-block border-right">
                       <span class="description-percentage text-success"><i class="fas fa-caret-up"></i> 17%</span>
-                      <h5 class="description-header">$35,210.43</h5>
+                      <h5 class="description-header">35,210.43</h5>
                       <span class="description-text">TOTAL REVENUE</span>
                     </div>
                     <!-- /.description-block -->
@@ -169,7 +169,7 @@
                   <div class="col-sm-3 col-6">
                     <div class="description-block border-right">
                       <span class="description-percentage text-warning"><i class="fas fa-caret-left"></i> 0%</span>
-                      <h5 class="description-header">$10,390.90</h5>
+                      <h5 class="description-header">10,390.90</h5>
                       <span class="description-text">TOTAL COST</span>
                     </div>
                     <!-- /.description-block -->
@@ -178,7 +178,7 @@
                   <div class="col-sm-3 col-6">
                     <div class="description-block border-right">
                       <span class="description-percentage text-success"><i class="fas fa-caret-up"></i> 20%</span>
-                      <h5 class="description-header">$24,813.53</h5>
+                      <h5 class="description-header">24,813.53</h5>
                       <span class="description-text">TOTAL PROFIT</span>
                     </div>
                     <!-- /.description-block -->
@@ -210,7 +210,7 @@
             <!-- MAP & BOX PANE -->
             <div class="card">
               <div class="card-header">
-                <h3 class="card-title">US-Visitors Report</h3>
+                <h3 class="card-title">Indian-Visitors Report</h3>
 
                 <div class="card-tools">
                   <button type="button" class="btn btn-tool" data-card-widget="collapse">
@@ -769,7 +769,7 @@
                     </div>
                     <div class="product-info">
                       <a href="javascript:void(0)" class="product-title">Samsung TV
-                        <span class="badge badge-warning float-right">$1800</span></a>
+                        <span class="badge badge-warning float-right">1800</span></a>
                       <span class="product-description">
                         Samsung 32" 1080p 60Hz LED Smart HDTV.
                       </span>
@@ -782,7 +782,7 @@
                     </div>
                     <div class="product-info">
                       <a href="javascript:void(0)" class="product-title">Bicycle
-                        <span class="badge badge-info float-right">$700</span></a>
+                        <span class="badge badge-info float-right">700</span></a>
                       <span class="product-description">
                         26" Mongoose Dolomite Men's 7-speed, Navy Blue.
                       </span>
@@ -796,7 +796,7 @@
                     <div class="product-info">
                       <a href="javascript:void(0)" class="product-title">
                         Xbox One <span class="badge badge-danger float-right">
-                        $350
+                        350
                       </span>
                       </a>
                       <span class="product-description">
@@ -811,7 +811,7 @@
                     </div>
                     <div class="product-info">
                       <a href="javascript:void(0)" class="product-title">PlayStation 4
-                        <span class="badge badge-success float-right">$399</span></a>
+                        <span class="badge badge-success float-right">399</span></a>
                       <span class="product-description">
                         PlayStation 4 500GB Console (PS4)
                       </span>

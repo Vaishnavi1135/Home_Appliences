@@ -32,7 +32,6 @@
         </div>
         <div class="carousel-item">
             <img class="d-block w-100" src="<?php echo base_url();?>/assets/img/carousel-2.jpg" alt="Second slide">
-            <!-- <div class="carousel-caption d-none d-md-block"> -->
             <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center" style="background: rgba(6, 3, 21, .5);">
                 <div class="container"> 
                     <div class="row justify-content-start">
@@ -47,7 +46,6 @@
                 </div>
             </div>
                
-               <!-- </div> -->
         </div>
         
     </div>
@@ -61,7 +59,7 @@
     </a>
 </div>
 
-    <!-- Carousel Start -->
+    <!--Carousel Start -->
     <!-- <div class="container-fluid p-0 pb-0">
     <div class="owl-carousel header-carousel position-relative mb-0">
         <div class="owl-carousel-item position-relative">
@@ -96,9 +94,9 @@
                 </div>
             </div>
         </div>
-    </div> -->
-    <!-- Carousel navigation arrows -->
-    <!-- <div class="carousel-nav">
+    </div>
+     
+    <div class="carousel-nav">
         <button class="owl-prev" style="position: absolute; top: 50%; left: 4%; transform: translateY(-50%); background:transparent; border: round;color: white;padding: 10px;">
             <i class="fa fa-chevron-left"></i>
         </button>
@@ -110,7 +108,6 @@
 
 
 
-    <!-- Carousel End -->
 
     <!-- About Start -->
     <div class="container-fluid overflow-hidden py-3 px-lg-0 pt-0 pb-0">

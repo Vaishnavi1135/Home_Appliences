@@ -37,7 +37,7 @@
                         </thead>
                         <tbody>
                         <?php 
-                            if (!empty($driver) && is_array($driver)) {
+                            // if (!empty($drivers) && is_array($drivers)) {
                                 $count = 1;
                                 foreach ($drivers as $driver) {
                             ?>
@@ -63,9 +63,9 @@
                             }
                             ?>
 
-                            <?php
-                            }
-                            ?>
+                            <!-- <?php
+                            
+                            ?> -->
                             
                         </tbody>
                         

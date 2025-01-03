@@ -43,7 +43,7 @@
                         <div class="row">
                             <div class="col-md-12 form-group">
                                 <label for="passsword">Confirm Password</label>
-                                <input type="confirmpassword" class="form-control" name="confirmpassword" id="confirmpassword">
+                                <input type="passsword" class="form-control" name="confirmpassword" id="confirmpassword">
                             </div>
                         </div>
 

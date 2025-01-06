@@ -1,4 +1,4 @@
-<div class="container-xxl py-5">
+<div class="container-xxl ">
         <div class="container py-5">
             <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
                 <h6 class="text-secondary text-uppercase">Pricing Plan</h6>

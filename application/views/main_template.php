@@ -119,10 +119,10 @@
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <h4 class="text-light mb-4">Quick Links</h4>
-                    <a class="btn btn-link" href="">About Us</a>
-                    <a class="btn btn-link" href="">Services</a>
-                    <a class="btn btn-link" href="">Pages</a>
-                    <a class="btn btn-link" href="">Contact</a>
+                    <a class="btn btn-link" href="<?php echo base_url('about');?>">About Us</a>
+                    <a class="btn btn-link" href="<?php echo base_url('services');?>">Services</a>
+                    <a class="btn btn-link" href="<?php echo base_url('pages');?>">Pages</a>
+                    <a class="btn btn-link" href="<?php echo base_url('contact');?>">Contact</a>
                    
                 </div>
                 <div class="col-lg-3 col-md-6">

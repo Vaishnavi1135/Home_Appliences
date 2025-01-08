@@ -1,4 +1,10 @@
+<style>
+    .button-container {
+  display: flex;
+  gap: 10px; 
+}
 
+</style>
 <section class="content">
     <div class="container1">
         <div class="row">
@@ -52,9 +58,10 @@
                                     <td><?= $drivers->status == 1 ? "Active" : "Inactive" ?></td>
                                     <td><?= $drivers->created_by ?></td>
                                     <td>
-                                <a   href="<?= base_url('admin/drivers/edit/'. $driver->id)?>" class="btn btn-sm btn-primary"><i class="fa fa-solid fa-edit"></i></a>
-                                <a  href="<?= base_url('admin/drivers/delete/'. $driver->id)?>" onclick="return confirm('Are you sure want to delete?')" class="btn btn-sm btn-danger"><i class="fa fa-solid fa-trash"></i></a>
-
+                            <div class="button-container">
+                                <a   href="<?= base_url('admin/drivers/edit/'. $drivers->id)?>" class="btn btn-sm btn-primary"><i class="fa fa-solid fa-edit"></i></a>
+                                <a  href="<?= base_url('admin/drivers/delete/'. $drivers->id)?>" onclick="return confirm('Are you sure want to delete?')" class="btn btn-sm btn-danger"><i class="fa fa-solid fa-trash"></i></a>
+                            </div>
                                 </td>
                                 
                             </tr>

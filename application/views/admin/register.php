@@ -88,12 +88,13 @@
 
         <div class="input-group mb-3">
           <input type="password" class="form-control" placeholder="Password" name="password" id="password" >
+          <div class="input-group-append">
             <div class="input-group-text">
               <span class="fas fa-lock"></span>
             </div>
           </div>
           <span class="formerror"> </span>
-          <div class="input-group-append">
+         
         </div>
 
         <?php echo form_error('password', '<div class="error" style="color:red;">','</div>');?>
@@ -142,6 +143,9 @@
 <!-- AdminLTE App -->
 <script src="<?=base_url()?>/assets/dist/js/adminlte.min.js"></script>
 <script>
+
+
+
   function seterror(id,error){
     
    
@@ -163,7 +167,9 @@ let el = element ? element.closest('.input-group').querySelector('.formerror') :
 
 document.getElementById("register_user").addEventListener("submit", function(event){
   event.preventDefault();
-  validateForm(this);
+  if(validateForm(this)){
+    this.submit();
+  }
 });
 function validateForm(frm){
   console.log(frm.name.value);

@@ -369,44 +369,6 @@
                   <p>List</p>
                 </a>
               </li>
-              <li class="nav-item">
-                <a href="<?= base_url("admin/users");?>" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>0-5 Ton</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="<?= base_url("admin/users/add");?>" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>5-10 Ton</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="<?= base_url("admin/users/add");?>" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>10-15 Ton</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="<?= base_url("admin/users/add");?>" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>15-20 Ton</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="<?= base_url("admin/users/add");?>" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>20-25 Ton</p>
-                </a>
-              </li>
-              
-              <li class="nav-item">
-                <a href="<?= base_url("admin/users/add");?>" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>25-30 Ton</p>
-                </a>
-              </li>
-              
               
           </li>
         </ul>
@@ -458,7 +420,7 @@
 <!-- ./wrapper -->
 
 <!-- DataTables  & Plugins -->
-<script src="<?= base_url()?>/assets/plugins/datatables/jquery.dataTables.min.js"></script>
+<!-- <script src="<?= base_url()?>/assets/plugins/datatables/jquery.dataTables.min.js"></script> -->
   <script src="<?= base_url()?>/assets/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
   <script src="<?= base_url()?>/assets/plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
   <script src="<?= base_url()?>/assets/plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
@@ -489,7 +451,7 @@
 <script src="<?= base_url()?>/assets/plugins/chart.js/Chart.min.js"></script>
 
 <!-- AdminLTE for demo purposes -->
-<script src="<?= base_url()?>/assets/dist/js/demo.js"></script>
+<!-- <script src="<?= base_url()?>/assets/dist/js/demo.js"></script> -->
 <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
 <script src="<?= base_url()?>/assets/dist/js/pages/dashboard2.js"></script>
 </body>

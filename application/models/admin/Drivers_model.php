@@ -40,20 +40,20 @@ class Drivers_Model extends CI_Model
         return $this->db->where('id', $id)->delete($this->table);
     }
 
-    public function get_all_drivers() {
-        return $this->db->get('drivers')->result();
-    }
+    // public function get_all_drivers() {
+    //     return $this->db->get('drivers')->result();
+    // }
 
-    public function get_filtered_drivers($capacity) {
-        $this->db->where('capacity', $capacity); // Filter by capacity
-        return $this->db->get('drivers')->result();
-    }
+    // public function get_filtered_drivers($capacity) {
+    //     $this->db->where('capacity', $capacity); // Filter by capacity
+    //     return $this->db->get('drivers')->result();
+    // }
 
-    public function get_capacity_options() {
-        $this->db->select('DISTINCT capacity');
-        $this->db->order_by('capacity', 'ASC');
-        return $this->db->get('drivers')->result_array();
-    }
+    // public function get_capacity_options() {
+    //     $this->db->select('DISTINCT capacity');
+    //     $this->db->order_by('capacity', 'ASC');
+    //     return $this->db->get('drivers')->result_array();
+    // }
 
 
 

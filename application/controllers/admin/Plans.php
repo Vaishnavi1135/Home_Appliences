@@ -87,7 +87,6 @@ class Plans extends CI_Controller
             if($res){
                 $this->session->set_flashdata('status',' Deleted successfully..!');
                 redirect('admin/plans');
-            
             }
             
         

@@ -47,8 +47,6 @@ class Drivers extends CI_Controller
 
     public function save()
     {
-       
-        
 
         $data=array(
             'id'=>$this->input->post('id'),
@@ -68,7 +66,6 @@ class Drivers extends CI_Controller
             if($res){
                 $this->session->set_flashdata('status',' Added successfully..!');
                 redirect('admin/drivers');
-            
             }
             
         }else{
@@ -78,12 +75,8 @@ class Drivers extends CI_Controller
             if($res){
                 $this->session->set_flashdata('status','Updated successfully..!');
                 redirect('admin/drivers');
-            
-            
             }
         }
-        
-
     }
 
     public function delete($id=0)
@@ -93,32 +86,30 @@ class Drivers extends CI_Controller
         $res = 0;
         if($this->input->post('id')==0){
             $data['created_at'] =date('Y-m-d H:i:s');
-            $res = $this->Drivers_model->delete($data);
+            $res = $this->drivers_model->delete($data);
             if($res){
                 $this->session->set_flashdata('status',' Deleted successfully..!');
-            
+                redirect('admin/drivers');
             }
-            
-        
         }
     }
 
-    public function filter() {
-        $capacity_filter = $this->input->get('capacity_filter'); // Get the filter value
+    // public function filter() {
+    //     $capacity_filter = $this->input->get('capacity_filter'); // Get the filter value
     
-        $this->load->model('Drivers_Model');
-        if ($capacity_filter) {
-            // Apply the filter
-            $data['drivers'] = $this->Drivers_Model->get_filtered_drivers($capacity_filter);
-        } else {
-            // Fetch all drivers
-            $data['drivers'] = $this->Drivers_Model->get_all_drivers();
-        }
+    //     $this->load->model('Drivers_Model');
+    //     if ($capacity_filter) {
+    //         // Apply the filter
+    //         $data['drivers'] = $this->Drivers_Model->get_filtered_drivers($capacity_filter);
+    //     } else {
+    //         // Fetch all drivers
+    //         $data['drivers'] = $this->Drivers_Model->get_all_drivers();
+    //     }
     
-        // Pass capacity options for dropdown
-        $data['capacity_options'] = $this->Drivers_Model->get_capacity_options();
-        $this->load->view('admin/drivers/list', $data);
-    }
+    //     // Pass capacity options for dropdown
+    //     $data['capacity_options'] = $this->Drivers_Model->get_capacity_options();
+    //     $this->load->view('admin/drivers/list', $data);
+    // }
     
 }
 ?>

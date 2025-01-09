@@ -34,12 +34,7 @@
                                 <th>Adhar_No</th>
                                 <th>Exp_Date</th>
                                 <th>Phone</th>
-                                <th>Capacity <select id="capacity" class="form-control">
-                                            <option value="1">1</option>
-                                            <option value="1">1</option>
-                                            <option value="1">1</option>
-                                            <option value="1">1</option>
-                                        </select></th>
+                                <th>Capacity</th>
                                 <th>Created_at</th>
                                 <th>Updated_at</th>
                                 <th>Status</th>
@@ -101,50 +96,3 @@
     });
   });
 </script>
-
-<!-- <script>
-    $(document).ready(function() {
-    // Add a select dropdown for Capacity filter
-    $('#example1 thead tr').clone(true).appendTo('#example1 thead');
-    $('#example1 thead tr:eq(1) th').each(function(i) {
-        if (i === 6) { // 6 = Capacity column index
-            $(this).html('<select class="form-control"><option value="1">0-10 Tons</option><option value="2">10-20 Tons</option></select>');
-        } else {
-            $(this).html('');
-        }
-    });
-
-    var table = $('#example1').DataTable({
-        "paging": true,
-        "lengthChange": true,
-        "searching": true,
-        "ordering": true,
-        "info": true,
-        "autoWidth": false,
-        "responsive": true,
-        initComplete: function() {
-            this.api()
-                .columns(6) // Capacity column index
-                .every(function() {
-                    var column = this;
-                    var select = $('select', column.header());
-                    column
-                        .data()
-                        .unique()
-                        .sort()
-                        .each(function(d, j) {
-                            select.append('<option value="' + d + '">' + d + '</option>');
-                        });
-
-                    select.on('change', function() {
-                        var val = $.fn.dataTable.util.escapeRegex($(this).val());
-                        column.search(val ? '^' + val + '$' : '', true, false).draw();
-                    });
-                });
-        },
-    });
-});
-
-</script> -->
-
-

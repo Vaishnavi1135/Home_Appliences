@@ -87,7 +87,7 @@ class Review extends CI_Controller
             $res = $this->review_model->delete($data);
             if($res){
                 $this->session->set_flashdata('status',' Deleted successfully..!');
-            
+                redirect('admin/review');
             }
             
         

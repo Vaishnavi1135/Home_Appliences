@@ -87,7 +87,7 @@ class Services extends CI_Controller
             $res = $this->services_model->delete($data);
             if($res){
                 $this->session->set_flashdata('status',' Deleted successfully..!');
-            
+                redirect('admin/services');
             }
             
         

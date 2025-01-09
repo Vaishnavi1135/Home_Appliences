@@ -343,17 +343,12 @@
                   <p>Add New</p>
                 </a>
               </li>
-
-
-              
             </ul>
 
             <li class="nav-item">
             <a href="#" class="nav-link <?=$active=='Drivers'?'active':''?>">
               <i class="nav-icon fas fa-user"></i>
-             
               <p>Drivers</p>
-               
                <i class="fas fa-angle-left right"></i>
                </a>
             <ul class="nav nav-treeview">
@@ -369,7 +364,6 @@
                   <p>List</p>
                 </a>
               </li>
-              
           </li>
         </ul>
       </nav>

@@ -43,6 +43,26 @@
                         </div>
                         <div class="row">
                             <div class="col-md-12 form-group">
+                            <label for="capacity">Capacity In Tons</label>
+                            <select 
+                                class="form-control" 
+                                name="capacity" 
+                                id="capacity" 
+                                required>
+                                <option value="">Select Capacity  Of Vehicle</option>
+                                <option value="5">0-10 Tons</option>
+                                <option value="10">10-20 Tons</option>
+                                <option value="15">20-30 Tons</option>
+                                <option value="20">30-40 Tons</option>
+                                <option value="25">40-50 Tons</option>
+                            </select>
+                            <small class="form-text text-muted">
+                            Please enter the capacity in tons (e.g., 10.5, 20, etc.).
+                            </small>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12 form-group">
                                 <input type="submit"  class="btn btn-success" name="submit" id="submit" value="Save">
                                 <input type="reset" class="btn btn-default" name="reset" id="reset" value="Reset">
                                 <input type="button" class="btn btn-danger"  value="Cancel">

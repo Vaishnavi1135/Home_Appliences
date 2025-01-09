@@ -57,6 +57,7 @@ class Drivers extends CI_Controller
             'adhar_no'=>$this->input->post('adhar_no'),
             'exp_date'=>$this->input->post('exp_date'),
             'phone'=>$this->input->post('phone'),
+            'capacity'=>$this->input->post('capacity'),
             'status'=>1,
         );
         $res = 0;
@@ -101,5 +102,23 @@ class Drivers extends CI_Controller
         
         }
     }
+
+    public function filter() {
+        $capacity_filter = $this->input->get('capacity_filter'); // Get the filter value
+    
+        $this->load->model('Drivers_Model');
+        if ($capacity_filter) {
+            // Apply the filter
+            $data['drivers'] = $this->Drivers_Model->get_filtered_drivers($capacity_filter);
+        } else {
+            // Fetch all drivers
+            $data['drivers'] = $this->Drivers_Model->get_all_drivers();
+        }
+    
+        // Pass capacity options for dropdown
+        $data['capacity_options'] = $this->Drivers_Model->get_capacity_options();
+        $this->load->view('admin/drivers/list', $data);
+    }
+    
 }
 ?>

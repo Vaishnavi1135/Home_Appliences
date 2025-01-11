@@ -29,7 +29,7 @@
 
                         <thead>
                             <tr>
-                            <th>Sr.No</th>
+                            <th colspan>Sr.No</th>
                                 <th>Plan_name</th>
                                 <th>Ammount</th>
                                 <th>Services</th>

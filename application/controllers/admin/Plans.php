@@ -95,10 +95,8 @@ class Plans extends CI_Controller
 
     //..server side data table....
 	public function get_plans()
-
 	{
-
-         echo "<pre>";print_r($this->input->post());die();
+        //  echo "<pre>";print_r($this->input->post());die();
 		$draw = $this->input->post('draw');
 		$start = $this->input->post('start');
 		$length = $this->input->post('length');
@@ -115,13 +113,9 @@ class Plans extends CI_Controller
 			'5' => 'updated_at',
 			'6' => 'status',
 			'7' => 'created_by',
-			
-			
-			
-		
 		);
 		$sortColumn = isset($sortColumns[$sortIndex]) ? $sortColumns[$sortIndex] : '';
-		$patientsData = $this->plans_model->read_patients_datatable($length, $start, $searchValue,$sortColumn,$sortby,$sortColumns);
+		$plansData = $this->plans_model->read_plans_datatable($length, $start, $searchValue,$sortColumn,$sortby,$sortColumns);
 		$filteredRecords = $this->plans_model->getSearchRecordsCount($length, $start, $searchValue, $sortby, $sortColumns);
 		$totalRecords = $this->plans_model->read_total_count();
 		$data = array();
@@ -137,8 +131,6 @@ class Plans extends CI_Controller
 			$dt[] = $row->status == 1 ? display('Active') : display('Inactive');
 			$dt[] = "<a href='" . base_url('admin/plans/delete/' . $plans->id). "' class='btn btn-xs btn-success'><i class='fa fa-eye'></i></a>
 					<a href='" . base_url('admin/plans/edit/' . $plans->id) . "' class='btn btn-xs btn-primary'><i class='fa fa-edit'></i></a>";
-					// <a href='" . base_url('practice/patient/prescription/create'. '?pid=' . encrypt($row->patient_id)) . "' class='btn btn-xs btn-warning' title='Create Prescription'><i class='fa fa-plus'></i></a> ";
-			$data[] = $dt;
 		}
 		$response = array(
 			"draw" => $draw,

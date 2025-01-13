@@ -1,4 +1,10 @@
 
+<link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css">
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <!-- DataTables JS -->
+  <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+
 <section class="content">
     <div class="container1">
         <div class="row">
@@ -19,7 +25,9 @@
                     </div>
                     <!-- /.card-header -->
                     <div class="card-body">
-                    <table id="example1" class="table table-bordered table-striped">
+                    <!-- <table id="example1" class="table table-bordered table-striped"> -->
+                    <table width="100%" class="serverside-datatable table table-striped table-bordered table-hover" id="example1" url="<?php echo base_url('admin/services/get_services'); ?>">
+
                         <thead>
                             <tr>
                                 <th>Sr.No</th>
@@ -73,16 +81,45 @@
 <script>
   $(function () {
    
-    $('#example1').DataTable({
-      "paging": true,
-      "lengthChange": true,
-      "searching": true,
-      "ordering": true,
-      "info": true,
-      "autoWidth": false,
-      "responsive": true,
-    });
+    // $('#example1').DataTable({
+    //   "paging": true,
+    //   "lengthChange": true,
+    //   "searching": true,
+    //   "ordering": true,
+    //   "info": true,
+    //   "autoWidth": false,
+    //   "responsive": true,
+    // });
   });
+</script>
+<script>
+    // $('.serverside-datatable').each(function () {
+
+    $(document).ready(function () {
+    // Initialize DataTable
+    $('#example1').DataTable({
+        responsive: true,
+        dom: "<'row'<'col-sm-4'l><'col-sm-4 text-center'B><'col-sm-4'f>>t<'row'<'col-sm-6'i><'col-sm-6'p>>",
+        lengthMenu: [
+            [10, 25, 50, 99999],
+            [10, 25, 50, "All"]
+        ],
+        buttons: [
+            { extend: 'copy', className: 'btn-sm' },
+            { extend: 'csv', title: 'Services', className: 'btn-sm' },
+            { extend: 'excel', title: 'Services', className: 'btn-sm' },
+            { extend: 'pdf', title: 'Services', className: 'btn-sm' },
+            { extend: 'print', className: 'btn-sm' }
+        ],
+        processing: true,
+        serverSide: true,
+        ajax: {
+            url: $('#example1').attr('url'),
+            type: "POST",
+        }
+    });
+});
+
 </script>
 
 

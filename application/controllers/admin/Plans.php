@@ -68,7 +68,7 @@ class Plans extends CI_Controller
             $res = $this->plans_model->update($data);
             if($res){
                 $this->session->set_flashdata('status','Updated successfully..!');
-                redirect('admin/users');
+                redirect('admin/plans');
             
             }
         }
@@ -119,7 +119,9 @@ class Plans extends CI_Controller
 		$filteredRecords = $this->plans_model->getSearchRecordsCount($length, $start, $searchValue, $sortby, $sortColumns);
 		$totalRecords = $this->plans_model->read_total_count();
 		$data = array();
-		foreach ($plans as $key => $row) {
+        $count=0;
+		foreach ($plansData as $key => $row) {
+
 			$dt = array();
 			$dt[] = ++$count;
 			$dt[] = $row->plan_name;
@@ -127,11 +129,12 @@ class Plans extends CI_Controller
 			$dt[] = $row->services;
 			$dt[] = $row->created_at;
 			$dt[] = $row->updated_at;
+            $dt[] = $row->status == 1 ? 'Active' : 'Inactive';
 			$dt[] = $row->created_by;
-			$dt[] = $row->status == 1 ? display('Active') : display('Inactive');
-			$dt[] = "<a href='" . base_url('admin/plans/delete/' . $plans->id). "' class='btn btn-xs btn-success'><i class='fa fa-eye'></i></a>
-					<a href='" . base_url('admin/plans/edit/' . $plans->id) . "' class='btn btn-xs btn-primary'><i class='fa fa-edit'></i></a>";
-		}
+			$dt[] = "<a href='" . base_url('admin/plans/edit/' . $row->id). "' class='btn btn-xs btn-success'><i class='fa fa-edit'></i></a>
+					<a href='" . base_url('admin/plans/delete/' . $row->id) . "' class='btn btn-xs btn-primary'><i class='fa fa-trash'></i></a>";
+            $data[] = $dt;
+        }
 		$response = array(
 			"draw" => $draw,
 			"recordsTotal" => $totalRecords,

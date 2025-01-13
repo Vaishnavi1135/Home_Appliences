@@ -1,4 +1,8 @@
-
+<!-- <style>
+    .dataTables_paginate .paginate_button {
+        margin: 0; /* Removes margin between buttons */
+    }
+</style> -->
 <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css">
   <!-- jQuery -->
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -24,12 +28,11 @@
                     </div>
                     <!-- /.card-header -->
                     <div class="card-body">
-                    <table id="example1" class=" serverside-datatable table table-bordered table-striped">
-                    <!-- <table width="100%" class="serverside-datatable table table-striped table-bordered table-hover" id="patient_table" url="<?php echo base_url('admin/plans/get_plans'); ?>"> -->
+                    <table width="100%" class="serverside-datatable table table-striped table-bordered table-hover" id="example1" url="<?php echo base_url('admin/plans/get_plans'); ?>">
 
                         <thead>
                             <tr>
-                            <th colspan>Sr.No</th>
+                            <th>Sr.No</th>
                                 <th>Plan_name</th>
                                 <th>Ammount</th>
                                 <th>Services</th>

@@ -40,6 +40,9 @@ class Plans_Model extends CI_Model
         return $this->db->where('id', $id)->delete($this->table);
     }
 
+
+	
+
     //..........Server side data table.......
 	public function read_plans_datatable($length, $start, $searchValue,$sortColumn,$sortby,$sortColumns){
 		
@@ -63,8 +66,7 @@ class Plans_Model extends CI_Model
 		
 		$this->db->select("*");
 		$this->db->from($this->table);
-		// $this->db->where('clinic_id', $this->session->userdata('clinic_id'));
-		// $this->db->where('is_deleted',0);
+		
 			$this->db->group_start();
 			foreach ($sortColumns as $column) {
 				$this->db->or_like($column, $searchValue);
@@ -80,8 +82,7 @@ class Plans_Model extends CI_Model
 	}
 	public function read_total_count()
 	{
-		// $this->db->where('is_deleted',0);
-		// $this->db->where('clinic_id', $this->session->userdata('clinic_id'));
+		
 		return $this->db->count_all_results($this->table);
 	}
 

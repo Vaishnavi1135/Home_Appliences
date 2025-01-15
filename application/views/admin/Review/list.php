@@ -19,7 +19,7 @@
                     </div>
                     <!-- /.card-header -->
                     <div class="card-body">
-                    <table id="example1" class="table table-bordered table-striped">
+                    <table width="100%" class="serverside-datatable table table-striped table-bordered table-hover" id="example1" url="<?php echo base_url('admin/review/get_review'); ?>">
                         <thead>
                             <tr>
                                 <th>Sr.No</th>
@@ -73,16 +73,45 @@
 <script>
   $(function () {
    
-    $('#example1').DataTable({
-      "paging": true,
-      "lengthChange": true,
-      "searching": true,
-      "ordering": true,
-      "info": true,
-      "autoWidth": false,
-      "responsive": true,
-    });
+    // $('#example1').DataTable({
+    //   "paging": true,
+    //   "lengthChange": true,
+    //   "searching": true,
+    //   "ordering": true,
+    //   "info": true,
+    //   "autoWidth": false,
+    //   "responsive": true,
+    // });
   });
+</script>
+<script>
+    // $('.serverside-datatable').each(function () {
+
+    $(document).ready(function () {
+    // Initialize DataTable
+    $('#example1').DataTable({
+        responsive: true,
+        dom: "<'row'<'col-sm-4'l><'col-sm-4 text-center'B><'col-sm-4'f>>t<'row'<'col-sm-6'i><'col-sm-6'p>>",
+        lengthMenu: [
+            [10, 25, 50, 99999],
+            [10, 25, 50, "All"]
+        ],
+        buttons: [
+            { extend: 'copy', className: 'btn-sm' },
+            { extend: 'csv', title: 'Review', className: 'btn-sm' },
+            { extend: 'excel', title: 'Review', className: 'btn-sm' },
+            { extend: 'pdf', title: 'Review', className: 'btn-sm' },
+            { extend: 'print', className: 'btn-sm' }
+        ],
+        processing: true,
+        serverSide: true,
+        ajax: {
+            url: $('#example1').attr('url'),
+            type: "POST",
+        }
+    });
+});
+
 </script>
 
 

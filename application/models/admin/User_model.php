@@ -66,6 +66,47 @@ class User_Model extends CI_Model
          ->row();
      }
  
+     public function read_user_datatable($length, $start, $searchValue,$sortColumn,$sortby,$sortColumns){
+		
+		$this->db->select("*");
+		$this->db->from($this->table);
+		// $this->db->where('is_deleted',0);
+		if (!empty($searchValue)) {
+			$columns = $this->db->list_fields($this->table);
+			$this->db->group_start();
+			foreach ($sortColumns as $column) {
+				$this->db->or_like($column, $searchValue);
+			}
+			$this->db->group_end();
+		}
+		$this->db->order_by($sortColumn, $sortby);
+		$this->db->limit($length, $start);
+		$query = $this->db->get()->result();
+		return $query;	
+	}
+	public function getSearchRecordsCount($length, $start, $searchValue, $sortby, $sortColumns){
+		
+		$this->db->select("*");
+		$this->db->from($this->table);
+		
+			$this->db->group_start();
+			foreach ($sortColumns as $column) {
+				$this->db->or_like($column, $searchValue);
+			}
+			$this->db->group_end();
+		
+
+		$query = $this->db->get();
+		$data = $query->result();
+
+		$filteredRecords = $query->num_rows();
+		return $filteredRecords;
+	}
+	public function read_total_count()
+	{
+		
+		return $this->db->count_all_results($this->table);
+	}
 
 
 }

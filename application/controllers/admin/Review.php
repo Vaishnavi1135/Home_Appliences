@@ -80,7 +80,7 @@ class Review extends CI_Controller
     public function delete($id=0)
     {
         $this->db->where('id',$id);
-        $this->db->delete('review');
+        $this->db->delete('reviews');
         $res = 0;
         if($this->input->post('id')==0){
             $data['created_at'] =date('Y-m-d H:i:s');

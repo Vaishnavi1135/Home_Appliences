@@ -110,6 +110,63 @@ class Drivers extends CI_Controller
     //     $data['capacity_options'] = $this->Drivers_Model->get_capacity_options();
     //     $this->load->view('admin/drivers/list', $data);
     // }
+
+
+    public function get_drivers()
+	{
+        //  echo "<pre>";print_r($this->input->post());die();
+		$draw = $this->input->post('draw');
+		$start = $this->input->post('start');
+		$length = $this->input->post('length');
+		$searchValue = $this->input->post('search')['value'];
+		$sortIndex =$this->input->post('order')[0]['column'];
+		$sortby =$this->input->post('order')[0]['dir'];
+		$sortColumn=null;
+		$sortColumns = array(
+			'0' => 'id',
+			'1' => 'name',
+			'2' => 'license_no',
+			'3' => 'adhar_no',
+            '3' => 'exp_date',
+            '3' => 'phone',
+            '3' => 'capacity',
+			'4' => 'created_at',
+			'5' => 'updated_at',
+			'6' => 'status',
+			'7' => 'created_by',
+		);
+		$sortColumn = isset($sortColumns[$sortIndex]) ? $sortColumns[$sortIndex] : '';
+		$driversData = $this->drivers_model->read_drivers_datatable($length, $start, $searchValue,$sortColumn,$sortby,$sortColumns);
+		$filteredRecords = $this->drivers_model->getSearchRecordsCount($length, $start, $searchValue, $sortby, $sortColumns);
+		$totalRecords = $this->drivers_model->read_total_count();
+		$data = array();
+        $count=0;
+		foreach ($driversData as $key => $row) {
+
+			$dt = array();
+			$dt[] = ++$count;
+			$dt[] = $row->name;
+			$dt[] = $row->license_no;
+			$dt[] = $row->adhar_no;
+            $dt[] = $row-> exp_date;
+            $dt[] = $row->phone; 
+            $dt[] = $row->capacity; 
+			$dt[] = $row->created_at;
+			$dt[] = $row->updated_at;
+            $dt[] = $row->status == 1 ? 'Active' : 'Inactive';
+			$dt[] = $row->created_by;
+			$dt[] = "<a href='" . base_url('admin/drivers/edit/' . $row->id). "' class='btn btn-xs btn-success'><i class='fa fa-edit'></i></a>
+					<a href='" . base_url('admin/drivers/delete/' . $row->id) . "' class='btn btn-xs btn-primary'><i class='fa fa-trash'></i></a>";
+            $data[] = $dt;
+        }
+		$response = array(
+			"draw" => $draw,
+			"recordsTotal" => $totalRecords,
+			"recordsFiltered" => $filteredRecords,
+			"data" => $data,
+		);
+		echo json_encode($response);
+	}
     
 }
 ?>

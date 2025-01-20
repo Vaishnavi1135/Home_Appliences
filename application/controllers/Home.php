@@ -5,11 +5,17 @@ class Home extends CI_Controller
     {
         parent :: __construct();
         $this->load->helper('url');
+        $this->load->model(array('admin/services_model','admin/plans_model','admin/review_model'));
+
     }
 
     public function index()
     {
         $data['title'] = "Kolhapur Packers and Movers";
+        $data['services'] =  $this->services_model->read();
+        // echo '<pre>'; print_r($data); die();
+        $data['plans'] =  $this->plans_model->read();
+        $data['review'] =  $this->review_model->read();
         $data['content'] = $this->load->view("home",$data,true);
         $data['active'] = "Home";
         $this->load->view("main_template",$data);

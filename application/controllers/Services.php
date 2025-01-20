@@ -47,6 +47,11 @@ class Services extends CI_Controller
         $this->load->view("main_template",$data);  
     }
 
+    public function view_service()
+    {
+        
+    }
+
     
 }
 ?>

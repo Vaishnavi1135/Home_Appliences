@@ -196,17 +196,23 @@
                 <h1 class="mb-5">Explore Our Services</h1>
             </div>
             <div class="row g-3">
+                <?php foreach ($services as $key => $value) {
+                    
+                 ?>
                 <div class="col-md-6 col-lg-3 wow fadeInUp" data-wow-delay="0.3s" >
                     <div class="service-item p-4">
                         <div class="overflow-hidden mb-4">
-                            <img class="img-fluid" src="<?php echo base_url();?>\assets\images\how-to-pack-electronics-for-a-diy-shift-1.jpg" alt="">
+                            <img class="img-fluid" src="<?php echo base_url('assets/images/'. $value->image);?>" alt="">
                         </div>
-                        <h4 class="mb-3">ELECTRONIC APPLIENCES</h4>
-                        <p> Once the packing materials have been arranged, then a well planned process must be followed for the packing of the electronic items. If you have any plans to shift new house to your new house, then they provides advice that attentions must be shifting.Unforeseen circumstances, etc transports.</p>
-                        <a class="btn-slide mt-2" href="<?php echo base_url("services/electronic");?>"><i class="fa fa-arrow-right"></i><span>Read More</span></a>
+                        <h4 class="mb-3"><?= $value->name?></h4>
+                        <p><?= $value->description?></p>
+                        <a class="btn-slide mt-2" href="<?php echo base_url("services/view_service/ "  );?>"><i class="fa fa-arrow-right"></i><span>Read More</span></a>
                     </div>
                 </div>
-                <div class="col-md-6 col-lg-3 wow fadeInUp" data-wow-delay="0.5s">
+                <?php
+                }
+                ?>
+                <!-- <div class="col-md-6 col-lg-3 wow fadeInUp" data-wow-delay="0.5s">
                     <div class="service-item p-4">
                         <div class="overflow-hidden mb-4">
                             <img class="img-fluid" src="<?php echo base_url();?>\assets\images\modular-kitchen-accessories-for-modern-homes.jpg" alt="">
@@ -235,7 +241,7 @@
                         <p>KPM is an online directory that offers competitive quotes to those individuals that are looking forward to make their car shifting experience a memorable affair to remember. We help those who are looking for reliable vehicle shifting services with the leading vehicle shifting </p>
                         <a class="btn-slide mt-2" href="<?php echo base_url("services/vehicle");?>"><i class="fa fa-arrow-right"></i><span>Read More</span></a>
                     </div>
-                </div>
+                </div> -->
             </div>
         </div>
     </div>
@@ -290,72 +296,103 @@
 
     <!-- Pricing Start -->
     <div class="container-xxl pb-5">
-        <div class="container py-5">
-            <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-                <h6 class="text-secondary text-uppercase">Pricing Plan</h6>
-                <h1 class="mb-5">Perfect Pricing Plan</h1>
+    <!-- Tabs Section -->
+    <div class="container py-3">
+        <ul class="nav nav-tabs" id="pricingTabs" role="tablist">
+            <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="packers-tab" data-bs-toggle="tab" data-bs-target="#packers" type="button" role="tab" aria-controls="packers" aria-selected="true">Packers</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="movers-tab" data-bs-toggle="tab" data-bs-target="#movers" type="button" role="tab" aria-controls="movers" aria-selected="false">Movers</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="packers-movers-tab" data-bs-toggle="tab" data-bs-target="#packers-movers" type="button" role="tab" aria-controls="packers-movers" aria-selected="false">Packers and Movers</button>
+            </li>
+        </ul>
+        <div class="tab-content" id="pricingTabsContent">
+            <!-- Packers Tab Content -->
+            <div class="tab-pane fade show active" id="packers" role="tabpanel" aria-labelledby="packers-tab">
+                <div class="container py-5">
+                    <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+                        <h6 class="text-secondary text-uppercase">Packers</h6>
+                        <h1 class="mb-5">Perfect Pricing Plan for Packers</h1>
+                    </div>
+                    <div class="row g-4">
+                        <?php foreach ($plans as $key => $value) { ?>
+                        <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.3s">
+                            <div class="price-item">
+                                <div class="border-bottom p-4 mb-4">
+                                    <h5 class="text-primary mb-1"><?= $value->plan_name ?></h5>
+                                    <h1 class="display-5 mb-0"><?= $value->ammount ?><small class="align-bottom" style="font-size: 16px; line-height: 40px;">/ kg</small></h1>
+                                </div>
+                                <div class="p-4 pt-0">
+                                    <p><i class="fa fa-check text-success me-3"></i><?= $value->services ?></p>
+                                    <a class="btn-slide mt-2" href=""><i class="fa fa-arrow-right"></i><span>Order Now</span></a>
+                                </div>
+                            </div>
+                        </div>
+                        <?php } ?>
+                    </div>
+                </div>
             </div>
-            <div class="row g-4">
-                <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="price-item">
-                        <div class="border-bottom p-4 mb-4">
-                            <h5 class="text-primary mb-1">Basic Plan</h5>
-                            <h1 class="display-5 mb-0">
-                                <small class="align-top" style="font-size: 22px; line-height: 45px;">$</small>49.00<small
-                                    class="align-bottom" style="font-size: 16px; line-height: 40px;">/ Month</small>
-                            </h1>
+            <!-- Movers Tab Content -->
+            <div class="tab-pane fade" id="movers" role="tabpanel" aria-labelledby="movers-tab">
+                <div class="container py-5">
+                    <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+                        <h6 class="text-secondary text-uppercase">Movers</h6>
+                        <h1 class="mb-5">Perfect Pricing Plan for Movers</h1>
+                    </div>
+                    <div class="row g-4">
+                        <?php foreach ($moversPlans as $key => $value) { ?>
+                        <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.3s">
+                            <div class="price-item">
+                                <div class="border-bottom p-4 mb-4">
+                                    <h5 class="text-primary mb-1"><?= $value->plan_name ?></h5>
+                                    <h1 class="display-5 mb-0"><?= $value->ammount ?><small class="align-bottom" style="font-size: 16px; line-height: 40px;">/ kg</small></h1>
+                                </div>
+                                <div class="p-4 pt-0">
+                                    <p><i class="fa fa-check text-success me-3"></i><?= $value->services ?></p>
+                                    <a class="btn-slide mt-2" href=""><i class="fa fa-arrow-right"></i><span>Order Now</span></a>
+                                </div>
+                            </div>
                         </div>
-                        <div class="p-4 pt-0">
-                            <p><i class="fa fa-check text-success me-3"></i>HTML5 & CSS3</p>
-                            <p><i class="fa fa-check text-success me-3"></i>Bootstrap v5</p>
-                            <p><i class="fa fa-check text-success me-3"></i>FontAwesome Icons</p>
-                            <p><i class="fa fa-check text-success me-3"></i>Responsive Layout</p>
-                            <p><i class="fa fa-check text-success me-3"></i>Cross-browser Support</p>
-                            <a class="btn-slide mt-2" href=""><i class="fa fa-arrow-right"></i><span >Order Now</span></a>
-                        </div>
+                        <?php } ?>
                     </div>
                 </div>
-                <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="price-item">
-                        <div class="border-bottom p-4 mb-4">
-                            <h5 class="text-primary mb-1">Standard Plan</h5>
-                            <h1 class="display-5 mb-0">
-                                <small class="align-top" style="font-size: 22px; line-height: 45px;">$</small>99.00<small
-                                    class="align-bottom" style="font-size: 16px; line-height: 40px;">/ Month</small>
-                            </h1>
-                        </div>
-                        <div class="p-4 pt-0">
-                            <p><i class="fa fa-check text-success me-3"></i>HTML5 & CSS3</p>
-                            <p><i class="fa fa-check text-success me-3"></i>Bootstrap v5</p>
-                            <p><i class="fa fa-check text-success me-3"></i>FontAwesome Icons</p>
-                            <p><i class="fa fa-check text-success me-3"></i>Responsive Layout</p>
-                            <p><i class="fa fa-check text-success me-3"></i>Cross-browser Support</p>
-                            <a class="btn-slide mt-2" href=""><i class="fa fa-arrow-right"></i><span >Order Now</span></a>
-                        </div>
+            </div>
+            <!-- Packers and Movers Tab Content -->
+            <div class="tab-pane fade" id="packers-movers" role="tabpanel" aria-labelledby="packers-movers-tab">
+                <div class="container py-5">
+                    <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+                        <h6 class="text-secondary text-uppercase">Packers and Movers</h6>
+                        <h1 class="mb-5">Perfect Pricing Plan for Packers and Movers</h1>
                     </div>
-                </div>
-                <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.7s">
-                    <div class="price-item">
-                        <div class="border-bottom p-4 mb-4">
-                            <h5 class="text-primary mb-1">Advanced Plan</h5>
-                            <h1 class="display-5 mb-0">
-                                <small class="align-top" style="font-size: 22px; line-height: 45px;">$</small>149.00<small
-                                    class="align-bottom" style="font-size: 16px; line-height: 40px;">/ Month</small>
-                            </h1>
+                    <div class="row g-4">
+                        <?php foreach ($packersAndMoversPlans as $key => $value) { ?>
+                        <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.3s">
+                            <div class="price-item">
+                                <div class="border-bottom p-4 mb-4">
+                                    <h5 class="text-primary mb-1"><?= $value->plan_name ?></h5>
+                                    <h1 class="display-5 mb-0"><?= $value->ammount ?><small class="align-bottom" style="font-size: 16px; line-height: 40px;">/ kg</small></h1>
+                                </div>
+                                <div class="p-4 pt-0">
+                                    <p><i class="fa fa-check text-success me-3"></i><?= $value->services ?></p>
+                                    <a class="btn-slide mt-2" href=""><i class="fa fa-arrow-right"></i><span>Order Now</span></a>
+                                </div>
+                            </div>
                         </div>
-                        <div class="p-4 pt-0">
-                            <p><i class="fa fa-check text-success me-3"></i>HTML5 & CSS3</p>
-                            <p><i class="fa fa-check text-success me-3"></i>Bootstrap v5</p>
-                            <p><i class="fa fa-check text-success me-3"></i>FontAwesome Icons</p>
-                            <p><i class="fa fa-check text-success me-3"></i>Responsive Layout</p>
-                            <p><i class="fa fa-check text-success me-3"></i>Cross-browser Support</p>
-                            <a class="btn-slide mt-2" href=""><i class="fa fa-arrow-right"></i><span >Order Now</span></a>
-                        </div>
+                        <?php } ?>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+    <!-- Existing Pricing Section -->
+    <div class="container py-5">
+        <!-- Existing content can remain here -->
+    </div>
+</div>
+
     <!-- Pricing End -->
 
 
@@ -413,19 +450,25 @@
         <!-- Owl Carousel with arrows -->
         <div class="owl-carousel testimonial-carousel wow fadeInUp" data-wow-delay="0.1s">
             <!-- Testimonial Item 1 -->
+            <?php foreach ($review as $key => $value) {
+                ?>
+
             <div class="testimonial-item p-4 my-5">
                 <i class="fa fa-quote-right fa-3x text-light position-absolute top-0 end-0 mt-n3 me-4"></i>
                 <div class="d-flex align-items-end mb-4">
-                    <img class="img-fluid flex-shrink-0" src="<?php echo base_url();?>/assets/img/images (2).jpeg" style="width: 80px; height: 80px; object-fit: cover;">
+                    <img class="img-fluid flex-shrink-0" src="<?php echo base_url('assets/images/'. $value->image);?>" style="width: 80px; height: 80px; object-fit: cover;">
                     <div class="ms-4">
-                        <h5 class="mb-1">Priya</h5>
+                        <h5 class="mb-1"><?= $value->name ?></h5>
                     </div>
                 </div>
-                <p class="mb-0">"Porter's team was punctual, caring, and highly professional. Their self-sufficiency and humility impressed me, along with great customer support. Thank you!"</p>
+                <p class="mb-0"><?= $value->description ?></p>
             </div>
+            <?php
+            }
+            ?>
 
             <!-- Testimonial Item 2 -->
-            <div class="testimonial-item p-4 my-5">
+            <!-- <div class="testimonial-item p-4 my-5">
                 <i class="fa fa-quote-right fa-3x text-light position-absolute top-0 end-0 mt-n3 me-4"></i>
                 <div class="d-flex align-items-end mb-4">
                     <img class="img-fluid flex-shrink-0" src="<?php echo base_url();?>/assets/img/images (5).jpeg" style="width: 80px; height: 80px; object-fit: cover;">
@@ -434,10 +477,10 @@
                     </div>
                 </div>
                 <p class="mb-0">"Smooth experience with Porter's packers and movers! The team was fantastic, handling every detail. Highly recommend their services!"</p>
-            </div>
+            </div> -->
 
             <!-- Testimonial Item 3 -->
-            <div class="testimonial-item p-4 my-5">
+            <!-- <div class="testimonial-item p-4 my-5">
                 <i class="fa fa-quote-right fa-3x text-light position-absolute top-0 end-0 mt-n3 me-4"></i>
                 <div class="d-flex align-items-end mb-4">
                     <img class="img-fluid flex-shrink-0" src="<?php echo base_url();?>/assets/img/images (4).jpeg" style="width: 80px; height: 80px; object-fit: cover;">
@@ -446,10 +489,10 @@
                     </div>
                 </div>
                 <p class="mb-0">"Grateful for the punctuality and enthusiasm of the team. They handled items gently, took great care, and placed everything perfectly."</p>
-            </div>
+            </div> -->
 
             <!-- Testimonial Item 4 -->
-            <div class="testimonial-item p-4 my-5">
+            <!-- <div class="testimonial-item p-4 my-5">
                 <i class="fa fa-quote-right fa-3x text-light position-absolute top-0 end-0 mt-n3 me-4"></i>
                 <div class="d-flex align-items-end mb-4">
                     <img class="img-fluid flex-shrink-0" src="<?php echo base_url();?>/assets/img/images (6).jpeg" style="width: 80px; height: 80px; object-fit: cover;">
@@ -458,7 +501,7 @@
                     </div>
                 </div>
                 <p class="mb-0">"Top-notch service! Packing, dismantling, handling, transportation, and re-assembling were excellent. Shifting homes felt incredibly easy. Kudos to the team!"</p>
-            </div>
+            </div> -->
         </div>
     </div>
 </div>

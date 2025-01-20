@@ -12,6 +12,7 @@ class Dashboard extends CI_Controller
     }
 
     public function index()
+    
     {
         $data['title'] = "Admin : Dashboard";
         $data['page_heading'] = "Dashboard";

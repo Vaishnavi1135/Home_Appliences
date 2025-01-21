@@ -59,55 +59,6 @@
     </a>
 </div>
 
-    <!--Carousel Start -->
-    <!-- <div class="container-fluid p-0 pb-0">
-    <div class="owl-carousel header-carousel position-relative mb-0">
-        <div class="owl-carousel-item position-relative">
-            <img class="img-fluid" src="<?php echo base_url();?>\assets\images\bidkar-transport-shiroli-midc-kolhapur-packers-and-movers-all-india--0gqsxt00cs.jpg"  alt="">
-            <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center" style="background: rgba(6, 3, 21, .5);">
-                <div class="container"> 
-                    <div class="row justify-content-start">
-                        <div class="col-10 col-lg-8">
-                            <h5 class="text-white text-uppercase mb-3 animated slideInDown">Packing and Moving Solution</h5>
-                            <h1 class="display-3 text-white animated slideInDown mb-4">#1 Place For Your <span class="text-primary">Shifting</span> Solution</h1>
-                            <p class="fs-5 fw-medium text-white mb-4 pb-2">Let our Team make you moving convenient and easy.</p>
-                            <a href="<?php echo base_url("home/track");?>" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Read More</a>
-                            <a href="<?php echo base_url("home/free_quote");?>" class="btn btn-secondary py-md-3 px-md-5 animated slideInRight">Free Quote</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="owl-carousel-item position-relative">
-            <img class="img-fluid" src="<?php echo base_url();?>/assets/img/carousel-2.jpg" alt="">
-            <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center" style="background: rgba(6, 3, 21, .5);">
-                <div class="container">
-                    <div class="row justify-content-start">
-                        <div class="col-10 col-lg-8">
-                            <h5 class="text-white text-uppercase mb-3 animated slideInDown">Packing and Moving Solution</h5>
-                            <h1 class="display-3 text-white animated slideInDown mb-4">#1 Place For Your <span class="text-primary">Shifting</span> Solution</h1>
-                            <p class="fs-5 fw-medium text-white mb-4 pb-2">Let our Team make you moving convenient and easy.</p>
-                            <a href="<?php echo base_url("home/track");?>" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Read More</a>
-                            <a href="<?php echo base_url("home/free_quote");?>" class="btn btn-secondary py-md-3 px-md-5 animated slideInRight">Free Quote</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-     
-    <div class="carousel-nav">
-        <button class="owl-prev" style="position: absolute; top: 50%; left: 4%; transform: translateY(-50%); background:transparent; border: round;color: white;padding: 10px;">
-            <i class="fa fa-chevron-left"></i>
-        </button>
-        <button class="owl-next" style="position: absolute; top: 50%; right: 5%; transform: translateY(-50%); background: rgba(0, 0, 0, 0.5); color: white; border: round; padding: 10px;">
-            <i class="fa fa-chevron-right"></i>
-        </button>
-    </div>
-</div> -->
-
-
-
 
     <!-- About Start -->
     <div class="container-fluid overflow-hidden py-3 px-lg-0 pt-0 pb-0">
@@ -298,17 +249,57 @@
     <div class="container-xxl pb-5">
     <!-- Tabs Section -->
     <div class="container py-3">
-        <ul class="nav nav-tabs" id="pricingTabs" role="tablist">
-            <li class="nav-item" role="presentation">
-                <button class="nav-link active" id="packers-tab" data-bs-toggle="tab" data-bs-target="#packers" type="button" role="tab" aria-controls="packers" aria-selected="true">Packers</button>
+
+    <ul class="nav nav-tabs" id="pricingTabs" role="tablist">
+            <li class="nav-item">
+                <a class="nav-link active" id="packers-tab" data-toggle="tab" href="#packers" role="tab" aria-controls="packers" aria-selected="true">Packers</a>
             </li>
-            <li class="nav-item" role="presentation">
-                <button class="nav-link" id="movers-tab" data-bs-toggle="tab" data-bs-target="#movers" type="button" role="tab" aria-controls="movers" aria-selected="false">Movers</button>
+            <li class="nav-item">
+                <a class="nav-link" id="movers-tab" data-toggle="tab" href="#movers" role="tab" aria-controls="movers" aria-selected="false">Movers</a>
             </li>
-            <li class="nav-item" role="presentation">
-                <button class="nav-link" id="packers-movers-tab" data-bs-toggle="tab" data-bs-target="#packers-movers" type="button" role="tab" aria-controls="packers-movers" aria-selected="false">Packers and Movers</button>
+            <li class="nav-item">
+                <a class="nav-link" id="packers-movers-tab" data-toggle="tab" href="#packers-movers" role="tab" aria-controls="packers-movers" aria-selected="false">Packers and Movers</a>
             </li>
         </ul>
+        <div class="tab-content" id="pricingTabsContent">
+            <!-- Packers Tab Content -->
+            <div class="tab-pane fade show active" id="packers" role="tabpanel" aria-labelledby="packers-tab">
+                <div class="container py-5">
+                    <h6 class="text-secondary text-uppercase">Packers</h6>
+                    <h1 class="mb-5">Perfect Pricing Plan for Packers</h1>
+                    <!-- Packers Content -->
+                </div>
+            </div>
+            <!-- Movers Tab Content -->
+            <div class="tab-pane fade" id="movers" role="tabpanel" aria-labelledby="movers-tab">
+                <div class="container py-5">
+                    <h6 class="text-secondary text-uppercase">Movers</h6>
+                    <h1 class="mb-5">Perfect Pricing Plan for Movers</h1>
+                    <!-- Movers Content -->
+                </div>
+            </div>
+            <!-- Packers and Movers Tab Content -->
+            <div class="tab-pane fade" id="packers-movers" role="tabpanel" aria-labelledby="packers-movers-tab">
+                <div class="container py-5">
+                    <h6 class="text-secondary text-uppercase">Packers and Movers</h6>
+                    <h1 class="mb-5">Perfect Pricing Plan for Packers and Movers</h1>
+                    <!-- Packers and Movers Content -->
+                </div>
+            </div>
+        </div>
+        <!-- <ul class="nav nav-tabs" id="pricingTabs" role="tablist">
+            <li class="nav-item" role="presentation">
+                <button class="nav-link active" href="#packers" id="packers-tab" data-bs-toggle="tab" data-bs-target="#packer" type="button" role="tab" aria-controls="packers" aria-selected="true">Packers</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" href="#movers" id="" data-bs-toggle="tab" data-bs-target="#mover" type="button" role="tab" aria-controls="movers" aria-selected="false">Movers</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" href="#packers_movers" id="" data-bs-toggle="tab" data-bs-target="#packers_movers" type="button" role="tab" aria-controls="packers-movers" aria-selected="false">Packers and Movers</button>
+            </li>
+        </ul> -->
+        <!-- <div class="tab-pane fade" id="smtp_details">
+                    <div class="panel-body"> -->
         <div class="tab-content" id="pricingTabsContent">
             <!-- Packers Tab Content -->
             <div class="tab-pane fade show active" id="packers" role="tabpanel" aria-labelledby="packers-tab">
@@ -361,7 +352,7 @@
                 </div>
             </div>
             <!-- Packers and Movers Tab Content -->
-            <div class="tab-pane fade" id="packers-movers" role="tabpanel" aria-labelledby="packers-movers-tab">
+            <div class="tab-pane fade" id="packers_movers" role="tabpanel" aria-labelledby="packers-movers-tab">
                 <div class="container py-5">
                     <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
                         <h6 class="text-secondary text-uppercase">Packers and Movers</h6>
@@ -392,6 +383,8 @@
         <!-- Existing content can remain here -->
     </div>
 </div>
+
+
 
     <!-- Pricing End -->
 

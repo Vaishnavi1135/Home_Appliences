@@ -404,7 +404,7 @@
 
   <!-- Main Footer -->
   <footer class="main-footer">
-    <strong>Copyright &copy; 2024-2025 <a href="https://adminlte.io">KPM.io</a>.</strong>
+    <strong>Copyright &copy; 2024-2025 <a href="">KPM.io</a>.</strong>
     All rights reserved.
     <div class="float-right d-none d-sm-inline-block">
       <b>Version</b> 3.2.0

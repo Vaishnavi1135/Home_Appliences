@@ -245,7 +245,7 @@
 
 
     <!-- Pricing Start -->
-    <div class="container-xxl pb-5">
+    <!-- <div class=" pb-5"> -->
 
     <style>
         /* Style for tabs */
@@ -365,90 +365,8 @@
                 </div>
             </div>
         </div>
-<!--        
-        <div class="tab-content" id="pricingTabsContent">
-           
-            <div class="tab-pane fade show active" id="packers" role="tabpanel" aria-labelledby="packers-tab">
-                <div class="container py-5">
-                    <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-                        <h6 class="text-secondary text-uppercase">Packers</h6>
-                        <h1 class="mb-5">Perfect Pricing Plan for Packers</h1>
-                    </div>
-                    <div class="row g-4">
-                        <?php foreach ($plans as $key => $value) { ?>
-                        <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.3s">
-                            <div class="price-item">
-                                <div class="border-bottom p-4 mb-4">
-                                    <h5 class="text-primary mb-1"><?= $value->plan_name ?></h5>
-                                    <h1 class="display-5 mb-0"><?= $value->ammount ?><small class="align-bottom" style="font-size: 16px; line-height: 40px;">/ kg</small></h1>
-                                </div>
-                                <div class="p-4 pt-0">
-                                    <p><i class="fa fa-check text-success me-3"></i><?= $value->services ?></p>
-                                    <a class="btn-slide mt-2" href=""><i class="fa fa-arrow-right"></i><span>Order Now</span></a>
-                                </div>
-                            </div>
-                        </div>
-                        <?php } ?>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="tab-pane fade" id="movers" role="tabpanel" aria-labelledby="movers-tab">
-                <div class="container py-5">
-                    <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-                        <h6 class="text-secondary text-uppercase">Movers</h6>
-                        <h1 class="mb-5">Perfect Pricing Plan for Movers</h1>
-                    </div>
-                    <div class="row g-4">
-                        <?php foreach ($moversPlans as $key => $value) { ?>
-                        <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.3s">
-                            <div class="price-item">
-                                <div class="border-bottom p-4 mb-4">
-                                    <h5 class="text-primary mb-1"><?= $value->plan_name ?></h5>
-                                    <h1 class="display-5 mb-0"><?= $value->ammount ?><small class="align-bottom" style="font-size: 16px; line-height: 40px;">/ kg</small></h1>
-                                </div>
-                                <div class="p-4 pt-0">
-                                    <p><i class="fa fa-check text-success me-3"></i><?= $value->services ?></p>
-                                    <a class="btn-slide mt-2" href=""><i class="fa fa-arrow-right"></i><span>Order Now</span></a>
-                                </div>
-                            </div>
-                        </div>
-                        <?php } ?>
-                    </div>
-                </div>
-            </div>
-          
-            <div class="tab-pane fade" id="packers_movers" role="tabpanel" aria-labelledby="packers-movers-tab">
-                <div class="container py-5">
-                    <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-                        <h6 class="text-secondary text-uppercase">Packers and Movers</h6>
-                        <h1 class="mb-5">Perfect Pricing Plan for Packers and Movers</h1>
-                    </div>
-                    <div class="row g-4">
-                        <?php foreach ($packersAndMoversPlans as $key => $value) { ?>
-                        <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.3s">
-                            <div class="price-item">
-                                <div class="border-bottom p-4 mb-4">
-                                    <h5 class="text-primary mb-1"><?= $value->plan_name ?></h5>
-                                    <h1 class="display-5 mb-0"><?= $value->ammount ?><small class="align-bottom" style="font-size: 16px; line-height: 40px;">/ kg</small></h1>
-                                </div>
-                                <div class="p-4 pt-0">
-                                    <p><i class="fa fa-check text-success me-3"></i><?= $value->services ?></p>
-                                    <a class="btn-slide mt-2" href=""><i class="fa fa-arrow-right"></i><span>Order Now</span></a>
-                                </div>
-                            </div>
-                        </div>
-                        <?php } ?>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    
-    <div class="container py-5">
        
-    </div>
-</div> -->
+</div>
 
 
 

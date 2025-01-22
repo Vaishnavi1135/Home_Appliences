@@ -68,7 +68,7 @@ class Services extends CI_Controller
             $res = $this->services_model->update($data);
             if($res){
                 $this->session->set_flashdata('status','Updated successfully..!');
-                redirect('admin/users');
+                redirect('admin/services');
             
             
             }
@@ -124,7 +124,7 @@ class Services extends CI_Controller
 
 			$dt = array();
 			$dt[] = ++$count;
-			$dt[] = $row->image;
+            $dt[] = '<img src="' . base_url('assets/images/' . $row->image) . '" height="100px" width="100px">';
 			$dt[] = $row->name;
 			$dt[] = $row->description;
 			$dt[] = $row->created_at;

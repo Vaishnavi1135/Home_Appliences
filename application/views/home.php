@@ -6,7 +6,7 @@
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script> -->
-
+<!-- 
 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
     <ol class="carousel-indicators">
         <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -56,7 +56,81 @@
         <span class="carousel-control-next-icon" aria-hidden="true"></span>
         <span class="sr-only">Next</span>
     </a>
-</div>
+</div> -->
+
+<style>
+    html,
+    body {
+      position: relative;
+      height: 100%;
+    }
+
+    body {
+      background: #eee;
+      font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+      font-size: 14px;
+      color: #000;
+      margin: 0;
+      padding: 0;
+    }
+
+    swiper-container {
+      width: 100%;
+      height: 100%;
+    }
+
+    swiper-slide {
+      background-position: center;
+      background-size: cover;
+    }
+
+    swiper-slide img {
+      display: block;
+      width: 100%;
+    }
+  </style>
+
+
+
+
+  <swiper-container class="mySwiper" pagination="true" pagination-clickable="true" space-between="30" effect="fade"
+    navigation="true">
+   
+    <swiper-slide>
+      <img src="<?php echo base_url();?>\assets\images\bidkar-transport-shiroli-midc-kolhapur-packers-and-movers-all-india--0gqsxt00cs.jpg" alt="First slide" />
+      <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center" style="background: rgba(6, 3, 21, .5);">
+                <div class="container">
+                    <div class="row justify-content-start">
+                        <div class="col-10 col-lg-8">
+                            <h5 class="text-white text-uppercase mb-3 animated slideInDown">Packing and Moving Solution</h5>
+                            <h1 class="display-3 text-white animated slideInDown mb-4">#1 Place For Your <span class="text-primary">Shifting</span> Solution</h1>
+                            <p class="fs-5 fw-medium text-white mb-4 pb-2">Let our Team make you moving convenient and easy.</p>
+                            <a href="<?php echo base_url("home/track");?>" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Read More</a>
+                            <a href="<?php echo base_url("home/free_quote");?>" class="btn btn-secondary py-md-3 px-md-5 animated slideInRight">Free Quote</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </swiper-slide>
+    <swiper-slide>
+      <img src="<?php echo base_url();?>/assets/img/carousel-2.jpg" alt="Second slide" />
+      <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center" style="background: rgba(6, 3, 21, .5);">
+                <div class="container"> 
+                    <div class="row justify-content-start">
+                        <div class="col-10 col-lg-8">
+                            <h5 class="text-white text-uppercase mb-3 animated slideInDown">Packing and Moving Solution</h5>
+                            <h1 class="display-3 text-white animated slideInDown mb-4">#1 Place For Your <span class="text-primary">Shifting</span> Solution</h1>
+                            <p class="fs-5 fw-medium text-white mb-4 pb-2">Let our Team make you moving convenient and easy.</p>
+                            <a href="<?php echo base_url("home/track");?>" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Read More</a>
+                            <a href="<?php echo base_url("home/free_quote");?>" class="btn btn-secondary py-md-3 px-md-5 animated slideInRight">Free Quote</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </swiper-slide>
+  </swiper-container>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+
 
 
     <!-- About Start -->
@@ -179,6 +253,7 @@
                         </div>
                     </div>
                 </div>
+                
                 <div class="col-lg-6">
                     <div class="row g-4 align-items-center">
                         <div class="col-sm-6">
@@ -193,18 +268,26 @@
                                 <p class="text-white mb-0">Complete Shftings</p>
                             </div>
                         </div>
+                       
+                        <?php foreach ($review as $key => $value) 
+                        {
+                        ?>
                         <div class="col-sm-6">
                             <div class="bg-success p-4 wow fadeIn" data-wow-delay="0.7s">
                                 <i class="fa fa-star fa-2x text-white mb-3"></i>
-                                <h2 class="text-white mb-2" data-toggle="counter-up">1234</h2>
+                                <h2 class="text-white mb-2" data-toggle="counter-up"><?= $value->id ?></h2>
                                 <p class="text-white mb-0">Customer Reviews</p>
                             </div>
                         </div>
+                        <?php
+                         }           
+                        ?>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+    
     <!-- Fact End -->
 
 
@@ -304,6 +387,7 @@
                                     <h1 class="display-5 mb-0"><?= $value->ammount ?><small class="align-bottom" style="font-size: 16px; line-height: 40px;">/ kg</small></h1>
                                 </div>
                                 <div class="p-4 pt-0">
+                                    <p><i class="fa fa-check text-success me-3"></i><?= $value->services ?></p>
                                     <p><i class="fa fa-check text-success me-3"></i><?= $value->services ?></p>
                                     <a class="btn-slide mt-2" href=""><i class="fa fa-arrow-right"></i><span>Order Now</span></a>
                                 </div>

@@ -23,9 +23,13 @@
                             <div class="col-12 col-sm-12">
                                 <input type="number" name="phone" class="form-control border-0" placeholder="Phone No" style="height: 55px;" required>
                             </div>
-                            <div class="col-12">
-                                <button type="submit" href="<?php echo base_url("quote/save");?>" class="btn btn-primary w-100 py-3">GET OTP</button>
+                            <div class="col-12 col-sm-12">
+                               <input type="text" class="form-control border-0" placeholder="Address" style="height: 55px;">
                             </div>
+                            <div class="col-12">
+                                <button type="submit" href="<?php echo base_url("quote/save");?>" class="btn btn-primary w-100 py-3">Submit</button>
+                            </div>
+                            
                         </div>
                         <?php echo form_close(); ?>
                 </div>

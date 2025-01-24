@@ -58,7 +58,7 @@
                                 
                                 <input type="submit" class="btn btn-success" name="submit" id="submit" value="Save">
                                 <input type="reset" class="btn btn-default" name="reset" id="reset" value="Reset">
-                                <input type="button" class="btn btn-danger"  value="Cancel">
+                                <input type="button" class="btn btn-danger"  value="Cancel" onclick="window.location.href='<?= base_url('admin/users/') ?>'">
                             </div>
                         </div>
                         <?php echo form_close(); ?>

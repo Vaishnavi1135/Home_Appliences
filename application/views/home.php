@@ -513,7 +513,7 @@
             <h1 class="mb-0">Our Clients Say!</h1>
         </div>
         <!-- Owl Carousel with arrows -->
-        <div class="owl-carousel testimonial-carousel wow fadeInUp" data-wow-delay="0.1s">
+        <div class="owl-carousel testimonial-carousel wow fadeInUp " data-wow-delay="0.1s" >
             <!-- Testimonial Item 1 -->
             <?php foreach ($review as $key => $value) {
                 ?>

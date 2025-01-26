@@ -25,6 +25,7 @@
                         <thead>
                             <tr>
                                 <th>Sr.No</th>
+                                <th>Image</th>
                                 <th>Name</th>
                                 <th>Email</th>
                                 <th>Phone.No</th>
@@ -44,6 +45,7 @@
                             <tr>
                                 
                                 <td><?= $count++?></td>
+                                <td><img src="<?php echo base_url();?>assets/images/<?= $user->image?>" height='80px' width='80px'></td>
                                 <td><?= $user->name?></td>
                                 <td><?= $user->email?></td>
                                 <td><?= $user->phone?></td>

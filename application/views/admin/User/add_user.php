@@ -12,19 +12,16 @@
                         <?php echo form_hidden('id',0); ?>
                         <div class="row">
                             <div class="col-md-12 form-group">
+                                <label for="image">Image</label>
+                                <input type="file" class="form-control" name="image" id="image" >
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12 form-group">
                                 <label for="name">Name</label>
                                 <input type="text" class="form-control" name="name" id="name" >
                             </div>
                         </div>
-
-                        <!-- <div class="row">
-                            <div class="col-md-12 form-group">
-                                <label for="lname">Last Name</label>
-                                <input type="text" class="form-control" name="lname" id="lname" >
-                            </div>
-                        </div> -->
-
-                        
 
                         <div class="row">
                             <div class="col-md-12 form-group">

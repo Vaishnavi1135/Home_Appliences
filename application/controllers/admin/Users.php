@@ -52,6 +52,7 @@ class Users extends CI_Controller
     {
         $data=array(
             'id'=>$this->input->post('id'),
+            'image'=>$this->input->post('image'),
             'name'=>$this->input->post('name'),
             'email'=>$this->input->post('email'),
             'password'=>md5($this->input->post('password')),
@@ -135,13 +136,14 @@ class Users extends CI_Controller
 		$sortColumn=null;
 		$sortColumns = array(
 			'0' => 'id',
-			'1' => 'name',
-			'2' => 'email',
-			'3' => 'phone',
-			'4' => 'created_at',
-			'5' => 'updated_at',
-			'6' => 'status',
-			'7' => 'created_by',
+            '1' => 'image',
+			'2' => 'name',
+			'3' => 'email',
+			'4' => 'phone',
+			'5' => 'created_at',
+			'6' => 'updated_at',
+			'7' => 'status',
+			'8' => 'created_by',
 		);
 		$sortColumn = isset($sortColumns[$sortIndex]) ? $sortColumns[$sortIndex] : '';
 		$userData = $this->user_model->read_user_datatable($length, $start, $searchValue,$sortColumn,$sortby,$sortColumns);
@@ -153,6 +155,7 @@ class Users extends CI_Controller
 
 			$dt = array();
 			$dt[] = ++$count;
+            $dt[] = '<img src="' . base_url('assets/images/' . $row->image) . '" height="80px" width="80px">';
 			$dt[] = $row->name;
 			$dt[] = $row->email;
 			$dt[] = $row->phone;

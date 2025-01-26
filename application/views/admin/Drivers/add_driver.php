@@ -50,11 +50,11 @@
                                 id="capacity" 
                                 required>
                                 <option value="">Select Capacity  Of Vehicle</option>
-                                <option value="5">0-10 Tons</option>
-                                <option value="10">10-20 Tons</option>
-                                <option value="15">20-30 Tons</option>
-                                <option value="20">30-40 Tons</option>
-                                <option value="25">40-50 Tons</option>
+                                <option value="5">0-0.1Tons</option>
+                                <option value="10">0.1-0.2 Tons</option>
+                                <option value="15">0.2-0.3 Tons</option>
+                                <option value="20">0.3-0.4 Tons</option>
+                                <option value="25">0.4-0.5 Tons</option>
                             </select>
                             <small class="form-text text-muted">
                             Please enter the capacity in tons (e.g., 10.5, 20, etc.).

@@ -16,6 +16,12 @@
                         <?php echo form_hidden('id',$user->id); ?>
                         <div class="row">
                             <div class="col-md-12 form-group">
+                                <label for="image">Image</label>
+                                <input type="file" class="form-control" name="image" id="image" value="<?=$user->image?>" >
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12 form-group">
                                 <label for="name"> Name</label>
                                 <input type="text" name="name" class="form-control" id="name" value="<?=$user->name?>">
                             </div>

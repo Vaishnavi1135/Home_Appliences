@@ -304,7 +304,7 @@
                       <div class="form-group row">
                         <label for="inputName" class="col-sm-2 col-form-label">Name</label>
                         <div class="col-sm-10">
-                          <input type="email" class="form-control" id="inputName" placeholder="Name">
+                          <input type="email" class="form-control" id="inputName" placeholder="Name" >
                         </div>
                       </div>
                       <div class="form-group row">
@@ -313,24 +313,21 @@
                           <input type="email" class="form-control" id="inputEmail" placeholder="Email">
                         </div>
                       </div>
+
                       <div class="form-group row">
-                        <label for="inputName2" class="col-sm-2 col-form-label">Name</label>
+                        <label for="password" class="col-sm-2 col-form-label">Password</label>
                         <div class="col-sm-10">
-                          <input type="text" class="form-control" id="inputName2" placeholder="Name">
+                          <input type="password" class="form-control" id="password" placeholder="password">
                         </div>
                       </div>
+                      
                       <div class="form-group row">
-                        <label for="inputExperience" class="col-sm-2 col-form-label">Experience</label>
+                        <label for="inputPhone" class="col-sm-2 col-form-label">Phone No</label>
                         <div class="col-sm-10">
-                          <textarea class="form-control" id="inputExperience" placeholder="Experience"></textarea>
+                          <input type="tel" class="form-control" id="inputPhone" placeholder="Phone">
                         </div>
                       </div>
-                      <div class="form-group row">
-                        <label for="inputSkills" class="col-sm-2 col-form-label">Skills</label>
-                        <div class="col-sm-10">
-                          <input type="text" class="form-control" id="inputSkills" placeholder="Skills">
-                        </div>
-                      </div>
+                     
                       <div class="form-group row">
                         <div class="offset-sm-2 col-sm-10">
                           <div class="checkbox">

@@ -13,7 +13,7 @@
                         <div class="row">
                             <div class="col-md-12 form-group">
                                 <label for="image">Image</label>
-                                <input type="file" class="form-control" name="image" id="image" value="<?=$reviews->image?>" >
+                                <input type="file" class="form-control" name="image" id="image" value="<?=$users->image?>" >
                             </div>
                         </div>
 
@@ -30,6 +30,12 @@
                                 <input type="text" class="form-control" name="description" id="description" value="<?=$reviews->description?>">
                             </div>
                         </div>
+                        <!-- <div class="row">
+                            <div class="col-md-12 form-group">
+                                <label for="rating">Rating</label>
+                                <input type="text" class="form-control" name="rating" id="rating" value="<?=$reviews->rating?>">
+                            </div>
+                        </div> -->
                         <div class="row">
                             <div class="col-md-12 form-group">
                                 <input type="submit" class="btn btn-success" name="submit" id="submit" value="Save">

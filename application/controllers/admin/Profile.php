@@ -16,6 +16,7 @@ class Profile extends CI_Controller
         //$users = $this->user_model->read();
         //$data['profile'] = $profile;
         $data['title'] = "Admin : Users";
+        // $data['users'] =  $this->users_model->read();
         $data['page_heading'] = "Users";
         $data['active'] = "Users";
         $data['content'] = $this->load->view("admin/profile",$data,true);

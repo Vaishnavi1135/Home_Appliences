@@ -260,7 +260,7 @@
                 <!-- DIRECT CHAT -->
                 <div class="card direct-chat direct-chat-warning">
                   <div class="card-header">
-                    <h3 class="card-title">Direct Chat</h3>
+                    <h3 class="card-title">Trackers</h3>
 
                     <div class="card-tools">
                       <span title="3 New Messages" class="badge badge-warning">3</span>
@@ -633,6 +633,8 @@
             <!-- /.card -->
           </div>
           <!-- /.col -->
+
+          <!--/ Latest Order End -->
 
           <div class="col-md-4">
             <!-- Info Boxes Style 2 -->

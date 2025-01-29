@@ -30,6 +30,14 @@
                                 <textarea class="form-control" name="description" id="description"></textarea>
                             </div>
                         </div>
+
+                        <div class="row">
+                            <div class="col-md-12 form-group">
+                                <label for="rating">Rating</label>
+                                <input type="number" class="form-control" name="rating" id="rating" min="1" max="5">
+                            </div>
+                        </div>
+
                         <div class="row">
                             <div class="col-md-12 form-group">
                                 <input type="submit" class="btn btn-success" name="submit" id="submit" value="Save">

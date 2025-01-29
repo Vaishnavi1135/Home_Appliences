@@ -35,6 +35,7 @@
                                 <th>Exp_Date</th>
                                 <th>Phone</th>
                                 <th>Capacity</th>
+                                <th>Type</th>
                                 <th>Created_at</th>
                                 <th>Updated_at</th>
                                 <th>Status</th>
@@ -55,6 +56,7 @@
                                     <td><?= $drivers->exp_date ?></td>
                                     <td><?= $drivers->phone ?></td>
                                     <td><?= $drivers->capacity ?></td>
+                                    <td><?= $drivers->type ?></td>
                                     <td><?= $drivers->created_at ?></td>
                                     <td><?= $drivers->updated_at ?></td>
                                     <td><?= $drivers->status == 1 ? "Active" : "Inactive" ?></td>

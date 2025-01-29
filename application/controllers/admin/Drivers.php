@@ -56,6 +56,7 @@ class Drivers extends CI_Controller
             'exp_date'=>$this->input->post('exp_date'),
             'phone'=>$this->input->post('phone'),
             'capacity'=>$this->input->post('capacity'),
+            'type'=>$this->input->post('type'),
             'status'=>1,
         );
         $res = 0;
@@ -94,22 +95,7 @@ class Drivers extends CI_Controller
         }
     }
 
-    // public function filter() {
-    //     $capacity_filter = $this->input->get('capacity_filter'); // Get the filter value
     
-    //     $this->load->model('Drivers_Model');
-    //     if ($capacity_filter) {
-    //         // Apply the filter
-    //         $data['drivers'] = $this->Drivers_Model->get_filtered_drivers($capacity_filter);
-    //     } else {
-    //         // Fetch all drivers
-    //         $data['drivers'] = $this->Drivers_Model->get_all_drivers();
-    //     }
-    
-    //     // Pass capacity options for dropdown
-    //     $data['capacity_options'] = $this->Drivers_Model->get_capacity_options();
-    //     $this->load->view('admin/drivers/list', $data);
-    // }
 
 
     public function get_drivers()
@@ -127,13 +113,14 @@ class Drivers extends CI_Controller
 			'1' => 'name',
 			'2' => 'license_no',
 			'3' => 'adhar_no',
-            '3' => 'exp_date',
-            '3' => 'phone',
-            '3' => 'capacity',
-			'4' => 'created_at',
-			'5' => 'updated_at',
-			'6' => 'status',
-			'7' => 'created_by',
+            '4' => 'exp_date',
+            '5' => 'phone',
+            '6' => 'capacity',
+            '7' => 'type',
+			'8' => 'created_at',
+			'9' => 'updated_at',
+			'10' => 'status',
+			'11' => 'created_by',
 		);
 		$sortColumn = isset($sortColumns[$sortIndex]) ? $sortColumns[$sortIndex] : '';
 		$driversData = $this->drivers_model->read_drivers_datatable($length, $start, $searchValue,$sortColumn,$sortby,$sortColumns);
@@ -151,6 +138,7 @@ class Drivers extends CI_Controller
             $dt[] = $row-> exp_date;
             $dt[] = $row->phone; 
             $dt[] = $row->capacity; 
+            $dt[] = $row->type; 
 			$dt[] = $row->created_at;
 			$dt[] = $row->updated_at;
             $dt[] = $row->status == 1 ? 'Active' : 'Inactive';

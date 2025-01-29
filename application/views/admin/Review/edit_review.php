@@ -30,12 +30,12 @@
                                 <input type="text" class="form-control" name="description" id="description" value="<?=$reviews->description?>">
                             </div>
                         </div>
-                        <!-- <div class="row">
+                        <div class="row">
                             <div class="col-md-12 form-group">
                                 <label for="rating">Rating</label>
-                                <input type="text" class="form-control" name="rating" id="rating" value="<?=$reviews->rating?>">
+                                <input type="number" class="form-control" name="rating" id="rating" value="<?=$reviews->rating?>" min="1" max="5">
                             </div>
-                        </div> -->
+                        </div>
                         <div class="row">
                             <div class="col-md-12 form-group">
                                 <input type="submit" class="btn btn-success" name="submit" id="submit" value="Save">

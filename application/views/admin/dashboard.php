@@ -537,48 +537,54 @@
 
             <!-- TABLE: LATEST ORDERS -->
             <div class="card">
-              <div class="card-header border-transparent">
-                <h3 class="card-title">Latest Orders</h3>
-
-                <div class="card-tools">
-                  <button type="button" class="btn btn-tool" data-card-widget="collapse">
-                    <i class="fas fa-minus"></i>
-                  </button>
-                  <button type="button" class="btn btn-tool" data-card-widget="remove">
-                    <i class="fas fa-times"></i>
-                  </button>
-                </div>
-              </div>
-              <!-- /.card-header -->
-              <div class="card-body p-0">
-                <div class="table-responsive">
-                  <table class="table m-0">
-                    <thead>
-                    <tr>
-                      <th>Order ID</th>
-                      <th>Type</th>
-                      <th>Status</th>
-                      <th>Popularity</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <tr>
-                      <td><a href="pages/examples/invoice.html">OR9842</a></td>
-                      <td>Home Shifting</td>
-                      <td><span class="badge badge-success">Shipped</span></td>
-                      <td>
-                        <div class="sparkbar" data-color="#00a65a" data-height="20">90,80,90,-70,61,-83,63</div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td><a href="pages/examples/invoice.html">OR1848</a></td>
-                      <td>Office Shifting</td>
-                      <td><span class="badge badge-warning">Pending</span></td>
-                      <td>
-                        <div class="sparkbar" data-color="#f39c12" data-height="20">90,80,-90,70,61,-83,68</div>
-                      </td>
-                    </tr>
-                    <tr>
+  <div class="card-header border-transparent">
+    <h3 class="card-title">Orders</h3>
+    <div class="card-tools">
+      <button type="button" class="btn btn-tool" data-card-widget="collapse">
+        <i class="fas fa-minus"></i>
+      </button>
+      <button type="button" class="btn btn-tool" data-card-widget="remove">
+        <i class="fas fa-times"></i>
+      </button>
+    </div>
+  </div>
+  
+  <div class="card-body p-0">
+    <ul class="nav nav-tabs" id="orderTabs" role="tablist">
+      <li class="nav-item">
+        <a class="nav-link active" id="latest-orders-tab" data-toggle="tab" href="#latest-orders" role="tab">Latest Orders</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" id="ongoing-orders-tab" data-toggle="tab" href="#ongoing-orders" role="tab">Ongoing Orders</a>
+      </li>
+    </ul>
+    
+    <div class="tab-content p-3" id="orderTabsContent">
+      <div class="tab-pane fade show active" id="latest-orders" role="tabpanel">
+        <div class="table-responsive">
+          <table class="table m-0">
+            <thead>
+              <tr>
+                <th>Order ID</th>
+                <th>Type</th>
+                <th>Status</th>
+                <th>Popularity</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><a href="pages/examples/invoice.html">OR9842</a></td>
+                <td>Home Shifting</td>
+                <td><span class="badge badge-success">Shipped</span></td>
+                <td><div class="sparkbar" data-color="#00a65a" data-height="20">90,80,90,-70,61,-83,63</div></td>
+              </tr>
+              <tr>
+                <td><a href="pages/examples/invoice.html">OR1848</a></td>
+                <td>Office Shifting</td>
+                <td><span class="badge badge-warning">Pending</span></td>
+                <td><div class="sparkbar" data-color="#f39c12" data-height="20">90,80,-90,70,61,-83,68</div></td>
+              </tr>
+              <tr>
                       <td><a href="pages/examples/invoice.html">OR7429</a></td>
                       <td>Mall Shifting</td>
                       <td><span class="badge badge-danger">Delivered</span></td>
@@ -618,18 +624,88 @@
                         <div class="sparkbar" data-color="#00a65a" data-height="20">90,80,90,-70,61,-83,63</div>
                       </td>
                     </tr>
-                    </tbody>
-                  </table>
-                </div>
-                <!-- /.table-responsive -->
-              </div>
-              <!-- /.card-body -->
-              <div class="card-footer clearfix">
-                <a href="javascript:void(0)" class="btn btn-sm btn-info float-left">Place New Order</a>
-                <a href="javascript:void(0)" class="btn btn-sm btn-secondary float-right">View All Orders</a>
-              </div>
-              <!-- /.card-footer -->
-            </div>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      
+      <div class="tab-pane fade" id="ongoing-orders" role="tabpanel">
+        <div class="table-responsive">
+          <table class="table m-0">
+            <thead>
+              <tr>
+                <th>Order ID</th>
+                <th>Type</th>
+                <th>Status</th>
+                <th>Popularity</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><a href="pages/examples/invoice.html">OR9842</a></td>
+                <td>Home Shifting</td>
+                <td><span class="badge badge-success">Shipped</span></td>
+                <td><div class="sparkbar" data-color="#00a65a" data-height="20">90,80,90,-70,61,-83,63</div></td>
+              </tr>
+              <tr>
+                <td><a href="pages/examples/invoice.html">OR1848</a></td>
+                <td>Office Shifting</td>
+                <td><span class="badge badge-warning">Pending</span></td>
+                <td><div class="sparkbar" data-color="#f39c12" data-height="20">90,80,-90,70,61,-83,68</div></td>
+              </tr>
+              <tr>
+                      <td><a href="pages/examples/invoice.html">OR7429</a></td>
+                      <td>Mall Shifting</td>
+                      <td><span class="badge badge-danger">Delivered</span></td>
+                      <td>
+                        <div class="sparkbar" data-color="#f56954" data-height="20">90,-80,90,70,-61,83,63</div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><a href="pages/examples/invoice.html">OR7429</a></td>
+                      <td>Showroom shifting</td>
+                      <td><span class="badge badge-info">Processing</span></td>
+                      <td>
+                        <div class="sparkbar" data-color="#00c0ef" data-height="20">90,80,-90,70,-61,83,63</div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><a href="pages/examples/invoice.html">OR1848</a></td>
+                      <td>Hotel Shifting</td>
+                      <td><span class="badge badge-warning">Pending</span></td>
+                      <td>
+                        <div class="sparkbar" data-color="#f39c12" data-height="20">90,80,-90,70,61,-83,68</div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><a href="pages/examples/invoice.html">OR7429</a></td>
+                      <td>Office Shifting</td>
+                      <td><span class="badge badge-danger">Delivered</span></td>
+                      <td>
+                        <div class="sparkbar" data-color="#f56954" data-height="20">90,-80,90,70,-61,83,63</div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><a href="pages/examples/invoice.html">OR9842</a></td>
+                      <td>Dairy Shifting</td>
+                      <td><span class="badge badge-success">Shipped</span></td>
+                      <td>
+                        <div class="sparkbar" data-color="#00a65a" data-height="20">90,80,90,-70,61,-83,63</div>
+                      </td>
+                    </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="card-footer clearfix">
+    <a href="javascript:void(0)" class="btn btn-sm btn-info float-left">Place New Order</a>
+    <a href="javascript:void(0)" class="btn btn-sm btn-secondary float-right">View All Orders</a>
+  </div>
+</div>
+
             <!-- /.card -->
           </div>
           <!-- /.col -->

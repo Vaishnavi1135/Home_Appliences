@@ -49,7 +49,9 @@ class Review extends CI_Controller
             'image'=>$this->input->post('image'),
             'name'=>$this->input->post('name'),
             'description'=>$this->input->post('description'),
+            'rating'=>$this->input->post('rating'),
             'status'=>1,
+           
         );
         $res = 0;
         if($this->input->post('id')==0){
@@ -109,10 +111,11 @@ class Review extends CI_Controller
 			'1' => 'image',
 			'2' => 'name',
 			'3' => 'description',
-			'4' => 'created_at',
-			'5' => 'updated_at',
-			'6' => 'status',
-			'7' => 'created_by',
+            '4' => 'rating',
+			'5' => 'created_at',
+			'6' => 'updated_at',
+			'7' => 'status',
+			'8' => 'created_by',
 		);
 		$sortColumn = isset($sortColumns[$sortIndex]) ? $sortColumns[$sortIndex] : '';
 		$reviewData = $this->review_model->read_review_datatable($length, $start, $searchValue,$sortColumn,$sortby,$sortColumns);
@@ -127,6 +130,7 @@ class Review extends CI_Controller
             $dt[] = '<img src="' . base_url('assets/images/' . $row->image) . '" height="100px" width="100px">';
 			$dt[] = $row->name;
 			$dt[] = $row->description;
+            $dt[] = $row->rating;
 			$dt[] = $row->created_at;
 			$dt[] = $row->updated_at;
             $dt[] = $row->status == 1 ? 'Active' : 'Inactive';

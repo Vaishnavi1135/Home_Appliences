@@ -61,6 +61,28 @@
                             </small>
                             </div>
                         </div>
+
+                        <div class="row">
+                            <div class="col-md-12 form-group">
+                            <label for="type">Type</label>
+                            <select 
+                                class="form-control" 
+                                name="type" 
+                                id="type" 
+                                required>
+                                <option value="">Select Type  Of Vehicle</option>
+                                <option value="2">2V</option>
+                                <option value="3">3V</option>
+                                <option value="4">4V</option>
+                                <option value="6">6V</option>
+                            </select>
+                            <small class="form-text text-muted">
+                            Please select the type in villers.
+                            </small>
+                            </div>
+                        </div>
+
+                        
                         <div class="row">
                             <div class="col-md-12 form-group">
                                 <input type="submit"  class="btn btn-success" name="submit" id="submit" value="Save">

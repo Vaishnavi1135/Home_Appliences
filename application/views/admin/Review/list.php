@@ -26,6 +26,7 @@
                                 <th>Image</th>
                                 <th>Name</th>
                                 <th>Description</th>
+                                <th>Rating</th>
                                 <th>Created_at</th>
                                 <th>Updated_at</th>
                                 <th>Status</th>
@@ -45,6 +46,7 @@
                                 <td><img src="<?php echo base_url();?>assets/images/<?= $review->image?>" height='100px' width='100px'></td>
                                 <td><?= $review->name?></td>
                                 <td><?= $review->description?></td>
+                                <td><?= $review->rating?></td>
                                 <td><?= $review->created_at?></td>
                                 <td><?= $review->updated_at?></td>
                                 <td><?= $review->status==1 ? "Active" : "Inactive"?></td>

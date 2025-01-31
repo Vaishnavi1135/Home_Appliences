@@ -25,6 +25,13 @@
 
                 <div class="row">
                     <div class="col-md-12 form-group">
+                        <label for="chassis_no">Chassis Number</label>
+                        <input type="text" class="form-control" name="chassis_no" id="chassis_no" value="<?= $drivers->chassis_no ?>" >
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-12 form-group">
                         <label for="adhar_no">Aadhar Number</label>
                         <input type="number" class="form-control" name="adhar_no" id="adhar_no" value="<?= $drivers->adhar_no ?>" >
                     </div>

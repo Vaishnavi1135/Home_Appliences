@@ -110,7 +110,17 @@
         ajax: {
             url: $('#example1').attr('url'),
             type: "POST",
-        }
+        },
+        columnDefs: [
+            {
+                targets: 4, // Assuming the rating is the 5th column (index 4)
+                render: function (data, type, row) {
+                    let filledStars = '<i class="fas fa-star text-warning"></i>'.repeat(data);
+                    let emptyStars = '<i class="far fa-star text-muted"></i>'.repeat(5 - data);
+                    return filledStars + emptyStars; // Combine active and inactive stars
+                }
+            }
+        ]
     });
 });
 

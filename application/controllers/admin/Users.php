@@ -59,6 +59,7 @@ class Users extends CI_Controller
             // 'confirmpassword'=>md5($this->input->post('confirmpassword')),
             'phone'=>$this->input->post('phone'),
             'status'=>1,
+            //'role'=> 'driver',
         );
 
             
@@ -84,8 +85,52 @@ class Users extends CI_Controller
             }
         }
         
-
+        $userData = [
+            'name'     => $this->input->post('name'),
+            'email'    => $this->input->post('email'),
+            'password' => password_hash($this->input->post('password'), PASSWORD_BCRYPT),
+            'phone'    => $this->input->post('phone'),
+            'role'     => 'driver',  // Assigning driver role
+            'status'   => 1,
+        ];
+    
+        // Start database transaction to ensure atomicity
+        $this->db->trans_start();
+    
+        if ($this->input->post('id') == 0) {
+            // Insert into drivers table
+            $driverData['created_at'] = date('Y-m-d H:i:s');
+            $driverData['created_by'] = $this->session->userdata('id');
+            $driver_id = $this->drivers_model->create($driverData);
+    
+            // Insert into users table
+            $userData['created_at'] = date('Y-m-d H:i:s');
+            $userData['created_by'] = $this->session->userdata('id');
+            $user_id = $this->user_model->create($userData);
+        } else {
+            // Update existing driver details
+            $driverData['updated_at'] = date('Y-m-d H:i:s');
+            $this->drivers_model->update($driverData);
+    
+            // Update user data as well
+            $userData['updated_at'] = date('Y-m-d H:i:s');
+            $this->user_model->update($userData);
+        }
+    
+        // Complete transaction
+        $this->db->trans_complete();
+    
+        if ($this->db->trans_status() === FALSE) {
+            $this->session->set_flashdata('error', 'Something went wrong!');
+        } else {
+            $this->session->set_flashdata('status', 'Driver saved successfully as a user!');
+        }
+    
+        redirect('admin/drivers');
     }
+
+    
+
 
     public function delete($id=0)
     {

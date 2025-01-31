@@ -13,7 +13,7 @@
                         <div class="row">
                             <div class="col-md-12 form-group">
                                 <label for="image">Image</label>
-                                <input type="file" class="form-control" name="image" id="image" value="<?=$users->image?>" >
+                                <input type="file" class="form-control" name="image" id="image" value="<?=$reviews->image?>" >
                             </div>
                         </div>
 

@@ -107,6 +107,7 @@ class Review extends CI_Controller
 		$sortby =$this->input->post('order')[0]['dir'];
 		$sortColumn=null;
 		$sortColumns = array(
+
 			'0' => 'id',
 			'1' => 'image',
 			'2' => 'name',
@@ -125,6 +126,12 @@ class Review extends CI_Controller
         $count=0;
 		foreach ($reviewData as $key => $row) {
 
+           // $stars = str_repeat('<i class="fas fa-star text-warning"></i>', $row->rating);
+
+           //$filledStars = str_repeat('<i class="fas fa-star text-warning"></i>', $row->rating); // Active stars
+          // $emptyStars = str_repeat('<i class="far fa-star text-muted"></i>', 5 - $row->rating); // Inactive stars
+          // $stars = $filledStars . $emptyStars; // Combine both
+
 			$dt = array();
 			$dt[] = ++$count;
             $dt[] = '<img src="' . base_url('assets/images/' . $row->image) . '" height="100px" width="100px">';
@@ -138,6 +145,7 @@ class Review extends CI_Controller
 			$dt[] = "<a href='" . base_url('admin/review/edit/' . $row->id). "' class='btn btn-xs btn-success'><i class='fa fa-edit'></i></a>
 					<a href='" . base_url('admin/review/delete/' . $row->id) . "' class='btn btn-xs btn-primary'><i class='fa fa-trash'></i></a>";
             $data[] = $dt;
+
         }
 		$response = array(
 			"draw" => $draw,

@@ -31,6 +31,7 @@
                                 <th>Sr.No</th>
                                 <th>Name</th>
                                 <th>License_No</th>
+                                <th>Chassis_No</th>
                                 <th>Adhar_No</th>
                                 <th>Exp_Date</th>
                                 <th>Phone</th>
@@ -52,6 +53,7 @@
                                     <td><?= $count++ ?></td>
                                     <td><?= $drivers->name ?></td>
                                     <td><?= $drivers->license_no ?></td>
+                                    <!-- <td><?= $drivers->chassis_no ?></td> -->
                                     <td><?= $drivers->adhar_no ?></td>
                                     <td><?= $drivers->exp_date ?></td>
                                     <td><?= $drivers->phone ?></td>

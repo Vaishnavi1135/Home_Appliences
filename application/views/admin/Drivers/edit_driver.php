@@ -23,12 +23,12 @@
                     </div>
                 </div>
 
-                <div class="row">
+                <!-- <div class="row">
                     <div class="col-md-12 form-group">
                         <label for="chassis_no">Chassis Number</label>
                         <input type="text" class="form-control" name="chassis_no" id="chassis_no" value="<?= $drivers->chassis_no ?>" >
                     </div>
-                </div>
+                </div> -->
 
                 <div class="row">
                     <div class="col-md-12 form-group">

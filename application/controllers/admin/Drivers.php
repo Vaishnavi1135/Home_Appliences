@@ -52,7 +52,7 @@ class Drivers extends CI_Controller
             'id'=>$this->input->post('id'),
             'name'=>$this->input->post('name'),
             'license_no'=>$this->input->post('license_no'),
-            'chassis_no'=>$this->input->post('chassis_no'),
+            // 'chassis_no'=>$this->input->post('chassis_no'),
             'adhar_no'=>$this->input->post('adhar_no'),
             'exp_date'=>$this->input->post('exp_date'),
             'phone'=>$this->input->post('phone'),
@@ -156,7 +156,7 @@ class Drivers extends CI_Controller
 			'0' => 'id',
 			'1' => 'name',
 			'2' => 'license_no',
-            '3' => 'chassis_no',
+            // '3' => 'chassis_no',
 			'4' => 'adhar_no',
             '5' => 'exp_date',
             '6' => 'phone',
@@ -179,7 +179,7 @@ class Drivers extends CI_Controller
 			$dt[] = ++$count;
 			$dt[] = $row->name;
 			$dt[] = $row->license_no;
-            $dt[] = $row->chassis_no;
+            // $dt[] = $row->chassis_no;
 			$dt[] = $row->adhar_no;
             $dt[] = $row-> exp_date;
             $dt[] = $row->phone; 

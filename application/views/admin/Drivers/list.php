@@ -31,7 +31,7 @@
                                 <th>Sr.No</th>
                                 <th>Name</th>
                                 <th>License_No</th>
-                                <th>Chassis_No</th>
+                                <!-- <th>Chassis_No</th> -->
                                 <th>Adhar_No</th>
                                 <th>Exp_Date</th>
                                 <th>Phone</th>

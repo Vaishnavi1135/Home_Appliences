@@ -79,6 +79,7 @@ class Drivers extends CI_Controller
                 redirect('admin/drivers');
             }
         }
+        //save driver as a user
 
         $userData = [
             'name'     => $this->input->post('name'),
@@ -89,7 +90,6 @@ class Drivers extends CI_Controller
             'status'   => 1,
         ];
     
-        // Start database transaction to ensure atomicity
         $this->db->trans_start();
     
         if ($this->input->post('id') == 0) {
@@ -120,6 +120,8 @@ class Drivers extends CI_Controller
         } else {
             $this->session->set_flashdata('status', 'Driver saved successfully as a user!');
         }
+
+        /*end of save driver as a user */
     
         redirect('admin/drivers');
     }

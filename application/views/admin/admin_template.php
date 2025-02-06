@@ -366,6 +366,13 @@
               </li>
           </li>
         </ul>
+        <li class="nav-item">
+            <a href="#" class="nav-link <?=$active=='Bookings'?'active':''?>">
+              <i class="fas fa-calendar-alt"></i>
+              <p>Bookings</p>
+               </a>
+          </li>
+
       </nav>
       <!-- /.sidebar-menu -->
     </div>

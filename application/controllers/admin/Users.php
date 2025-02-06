@@ -58,8 +58,9 @@ class Users extends CI_Controller
             'password'=>md5($this->input->post('password')),
             // 'confirmpassword'=>md5($this->input->post('confirmpassword')),
             'phone'=>$this->input->post('phone'),
+            'role'=> $this->input->post('role'),
             'status'=>1,
-            //'role'=> 'driver',
+            
         );
 
             
@@ -185,10 +186,11 @@ class Users extends CI_Controller
 			'2' => 'name',
 			'3' => 'email',
 			'4' => 'phone',
-			'5' => 'created_at',
-			'6' => 'updated_at',
-			'7' => 'status',
-			'8' => 'created_by',
+            '5' => 'role',
+			'6' => 'created_at',
+			'7' => 'updated_at',
+			'8' => 'status',
+			'9' => 'created_by',
 		);
 		$sortColumn = isset($sortColumns[$sortIndex]) ? $sortColumns[$sortIndex] : '';
 		$userData = $this->user_model->read_user_datatable($length, $start, $searchValue,$sortColumn,$sortby,$sortColumns);
@@ -204,6 +206,7 @@ class Users extends CI_Controller
 			$dt[] = $row->name;
 			$dt[] = $row->email;
 			$dt[] = $row->phone;
+            $dt[] = $row->role;
 			$dt[] = $row->created_at;
 			$dt[] = $row->updated_at;
             $dt[] = $row->status == 1 ? 'Active' : 'Inactive';

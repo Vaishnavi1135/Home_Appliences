@@ -29,6 +29,7 @@
                                 <th>Name</th>
                                 <th>Email</th>
                                 <th>Phone.No</th>
+                                <th>Role</th>
                                 <th>Created_at</th>
                                 <th>Updated_at</th>
                                 <th>Status</th>
@@ -49,6 +50,7 @@
                                 <td><?= $user->name?></td>
                                 <td><?= $user->email?></td>
                                 <td><?= $user->phone?></td>
+                                <td><?= $user->role?></td>
                                 <td><?= $user->created_at?></td>
                                 <td><?= $user->updated_at?></td>
                                 <td><?= $user->status==1 ? "Active" : "Inactive"?></td>

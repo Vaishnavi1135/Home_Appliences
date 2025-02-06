@@ -50,6 +50,23 @@
                                 <input type="tel" class="form-control"  name="phone" id="phone">
                             </div>
                         </div>
+
+                        <div class="row">
+                            <div class="col-md-12 form-group">
+                                <label for="role">Role</label>
+                                <?php
+                                $options = array(
+                                    '1' => 'Admin',
+                                    '2' => 'Driver',
+                                    '3' => 'Staff',
+                                    '4' => 'Customer'
+                                );
+
+                                echo form_dropdown('role', $options, '', ['class' => 'form-control', 'id' => 'role']);
+                                ?>
+                            </div>
+                        </div>
+
                         <div class="row">
                             <div class="col-md-12 form-group">
                                 

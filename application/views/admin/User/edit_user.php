@@ -57,9 +57,24 @@
                                 <input type="tel"  pattern="^[789][0-9]{9}$"  name="phone" class="form-control" id="phone" value="<?=$user->phone?>">
                             </div>
                         </div>
+
                         <div class="row">
                             <div class="col-md-12 form-group">
-                                
+                                <label for="role">Role</label>
+                                <?php
+                                $options = array(
+                                    'admin' => 'Admin',
+                                    'driver' => 'Driver',
+                                    'staff' => 'Staff',
+                                    'customer' => 'Customer'
+                                );
+
+                                echo form_dropdown('role', $options, '', ['class' => 'form-control', 'id' => 'role']);
+                                ?>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12 form-group">
                                 <input type="submit"  href="<?php echo base_url('admin/users');?>" class="btn btn-success" name="submit" id="submit" value="Save">
                                 <input type="reset" class="btn btn-default" name="reset" id="reset" value="Reset">
                                 <input type="button" class="btn btn-danger"  value="Cancel">

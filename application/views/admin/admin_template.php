@@ -366,12 +366,34 @@
               </li>
           </li>
         </ul>
-        <li class="nav-item">
+        
+          <li class="nav-item">
             <a href="#" class="nav-link <?=$active=='Bookings'?'active':''?>">
-              <i class="fas fa-calendar-alt"></i>
+            <i class="fas fa-calendar-alt"></i>
               <p>Bookings</p>
+               <i class="fas fa-angle-left right"></i>
                </a>
+            <ul class="nav nav-treeview">
+            <li class="nav-item">
+                <a href="<?= base_url("admin/bookings/add");?>" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>List</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="<?= base_url("admin/bookings");?>" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>View Booking</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="<?= base_url("admin/bookings");?>" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Add Booking</p>
+                </a>
+              </li>
           </li>
+        </ul>
 
       </nav>
       <!-- /.sidebar-menu -->

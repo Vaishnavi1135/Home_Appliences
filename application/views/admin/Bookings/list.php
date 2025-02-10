@@ -44,7 +44,10 @@
                                 <tr>
                                     <td><?= $count++ ?></td>
                                     <td><?= $booking->name ?></td>
-                                    <td><?= $booking->name ?></td>
+                                    <td><?= $booking->Phone ?></td>
+                                    <td><?= $booking->Plan ?></td>
+                                    <td><?= $booking->cost ?></td>
+                                    <td><?= $booking->status ?></td>
                                     <td>
                             <div class="button-container">
                                 <a   href="<?= base_url('admin/drivers/edit/'. $drivers->id)?>" class="btn btn-sm btn-primary"><i class="fa fa-solid fa-edit"></i></a>

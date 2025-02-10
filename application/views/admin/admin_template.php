@@ -375,7 +375,7 @@
                </a>
             <ul class="nav nav-treeview">
             <li class="nav-item">
-                <a href="<?= base_url("admin/bookings/add");?>" class="nav-link">
+                <a href="<?= base_url("admin/bookings");?>" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>List</p>
                 </a>
@@ -387,7 +387,7 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a href="<?= base_url("admin/bookings");?>" class="nav-link">
+                <a href="<?= base_url("admin/bookings/add");?>" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Add Booking</p>
                 </a>

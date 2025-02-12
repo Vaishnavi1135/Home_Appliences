@@ -46,9 +46,11 @@ class Bookings extends CI_Controller
     {
         $data=array(
             'id'=>$this->input->post('id'),
-            'id'=>$this->input->post('id'),
-            'id'=>$this->input->post('id'),
-            'id'=>$this->input->post('id'),
+            'name'=>$this->input->post('name'),
+            'phone'=>$this->input->post('phone'),
+            'plan'=>$this->input->post('plan'),
+            'cost'=>$this->input->post('cost'),
+            'status'=>$this->input->post('status'),
            
         );
         $res = 0;

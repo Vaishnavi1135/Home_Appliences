@@ -43,15 +43,15 @@
                                     ?>
                                 <tr>
                                     <td><?= $count++ ?></td>
-                                    <td><?= $booking->name ?></td>
-                                    <td><?= $booking->Phone ?></td>
-                                    <td><?= $booking->Plan ?></td>
-                                    <td><?= $booking->cost ?></td>
-                                    <td><?= $booking->status ?></td>
+                                    <td><?= $bookings->name ?></td>
+                                    <td><?= $bookings->phone ?></td>
+                                    <td><?= $bookings->plan ?></td>
+                                    <td><?= $bookings->cost ?></td>
+                                    <td><?= $bookings->status ?></td>
                                     <td>
                             <div class="button-container">
-                                <a   href="<?= base_url('admin/drivers/edit/'. $drivers->id)?>" class="btn btn-sm btn-primary"><i class="fa fa-solid fa-edit"></i></a>
-                                <a  href="<?= base_url('admin/drivers/delete/'. $drivers->id)?>" onclick="return confirm('Are you sure want to delete?')" class="btn btn-sm btn-danger"><i class="fa fa-solid fa-trash"></i></a>
+                                <a   href="<?= base_url('admin/bookings/edit/'. $bookings->id)?>" class="btn btn-sm btn-primary"><i class="fa fa-solid fa-edit"></i></a>
+                                <a  href="<?= base_url('admin/bookings/delete/'. $bookings->id)?>" onclick="return confirm('Are you sure want to delete?')" class="btn btn-sm btn-danger"><i class="fa fa-solid fa-trash"></i></a>
                             </div>
                                 </td>
                                 

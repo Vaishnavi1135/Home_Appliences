@@ -108,13 +108,12 @@ class Bookings extends CI_Controller
 		$sortColumn=null;
 		$sortColumns = array(
 			'0' => 'id',
-			'1' => 'image',
-			'2' => 'name',
-			'3' => 'description',
-			'4' => 'created_at',
-			'5' => 'updated_at',
-			'6' => 'status',
-			'7' => 'created_by',
+			'1' => 'name',
+			'2' => 'phone',
+			'3' => 'plan',
+			'4' => 'cost',
+			'5' => 'status',
+			
 		);
 		$sortColumn = isset($sortColumns[$sortIndex]) ? $sortColumns[$sortIndex] : '';
 		$bookingsData = $this->bookings_model->read_bookings_datatable($length, $start, $searchValue,$sortColumn,$sortby,$sortColumns);
@@ -126,15 +125,14 @@ class Bookings extends CI_Controller
 
 			$dt = array();
 			$dt[] = ++$count;
-            $dt[] = '<img src="' . base_url('assets/images/' . $row->image) . '" height="100px" width="100px">';
 			$dt[] = $row->name;
-			$dt[] = $row->description;
-			$dt[] = $row->created_at;
-			$dt[] = $row->updated_at;
-            $dt[] = $row->status == 1 ? 'Active' : 'Inactive';
-			$dt[] = $row->created_by;
+			$dt[] = $row->phone;
+			$dt[] = $row->plan;
+			$dt[] = $row->cost;
+            $dt[] = $row->status;
 			$dt[] = "<a href='" . base_url('admin/bookings/edit/' . $row->id). "' class='btn btn-xs btn-success'><i class='fa fa-edit'></i></a>
-					<a href='" . base_url('admin/bookings/delete/' . $row->id) . "' class='btn btn-xs btn-primary'><i class='fa fa-trash'></i></a>";
+					<a href='" . base_url('admin/bookings/delete/' . $row->id) . "' class='btn btn-xs btn-primary'><i class='fa fa-trash'></i></a>
+                    <a href='" . base_url('admin/bookings/view/' . $row->id) . "' class='btn btn-xs btn-danger'><i class='fa fa-eye'></i></a>";
             $data[] = $dt;
         }
 		$response = array(

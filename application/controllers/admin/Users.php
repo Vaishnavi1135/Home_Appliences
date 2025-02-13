@@ -9,7 +9,7 @@ class Users extends CI_Controller
         parent :: __construct();
         $this->load->helper('url');
         $this->load->model(array('admin/user_model'));
-        if(!$this->session->userdata('isUserLoggedIn')){
+        if(!$this->session->userdata('isUserLoggedIn') && ($this->session->userdata('role')!==1)){
             redirect('admin/login');
         }
     }
@@ -86,48 +86,7 @@ class Users extends CI_Controller
             }
         }
         
-        // $userData = [
-        //     'name'     => $this->input->post('name'),
-        //     'email'    => $this->input->post('email'),
-        //     'password' => password_hash($this->input->post('password'), PASSWORD_BCRYPT),
-        //     'phone'    => $this->input->post('phone'),
-        //     'role'     => 'driver',  
-        //     'status'   => 1,
-        // ];
-    
         
-        // $this->db->trans_start();
-    
-        // if ($this->input->post('id') == 0) {
-           
-        //     $driverData['created_at'] = date('Y-m-d H:i:s');
-        //     $driverData['created_by'] = $this->session->userdata('id');
-        //     $driver_id = $this->drivers_model->create($driverData);
-    
-           
-        //     $userData['created_at'] = date('Y-m-d H:i:s');
-        //     $userData['created_by'] = $this->session->userdata('id');
-        //     $user_id = $this->user_model->create($userData);
-        // } else {
-            
-        //     $driverData['updated_at'] = date('Y-m-d H:i:s');
-        //     $this->drivers_model->update($driverData);
-    
-            
-        //     $userData['updated_at'] = date('Y-m-d H:i:s');
-        //     $this->user_model->update($userData);
-        // }
-    
-        
-        // $this->db->trans_complete();
-    
-        // if ($this->db->trans_status() === FALSE) {
-        //     $this->session->set_flashdata('error', 'Something went wrong!');
-        // } else {
-        //     $this->session->set_flashdata('status', 'Driver saved successfully as a user!');
-        // }
-    
-        // redirect('admin/drivers');
     }
 
     

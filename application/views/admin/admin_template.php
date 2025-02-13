@@ -380,12 +380,7 @@
                   <p>List</p>
                 </a>
               </li>
-              <li class="nav-item">
-                <a href="<?= base_url("admin/bookings");?>" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>View Booking</p>
-                </a>
-              </li>
+              
               <li class="nav-item">
                 <a href="<?= base_url("admin/bookings/add");?>" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>

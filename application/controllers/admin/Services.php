@@ -6,7 +6,7 @@ class Services extends CI_Controller
         parent :: __construct();
         $this->load->helper('url');
         $this->load->model(array('admin/services_model'));
-        if(!$this->session->userdata('isUserLoggedIn')){
+        if(!$this->session->userdata('isUserLoggedIn') && ($this->session->userdata('role')!==1)){
             redirect('admin/login');
         }
     }

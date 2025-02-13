@@ -34,6 +34,7 @@
                                 <th>Plan</th>
                                 <th>Cost</th>
                                 <th>Status</th>
+                                <th>Action</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -50,8 +51,10 @@
                                     <td><?= $bookings->status ?></td>
                                     <td>
                             <div class="button-container">
-                                <a   href="<?= base_url('admin/bookings/edit/'. $bookings->id)?>" class="btn btn-sm btn-primary"><i class="fa fa-solid fa-edit"></i></a>
-                                <a  href="<?= base_url('admin/bookings/delete/'. $bookings->id)?>" onclick="return confirm('Are you sure want to delete?')" class="btn btn-sm btn-danger"><i class="fa fa-solid fa-trash"></i></a>
+                                <a href="<?= base_url('admin/bookings/edit/'. $bookings->id)?>" class="btn btn-sm btn-primary"><i class="fa fa-solid fa-edit"></i></a>
+                                <a href="<?= base_url('admin/bookings/delete/'. $bookings->id)?>" onclick="return confirm('Are you sure want to delete?')" class="btn btn-sm btn-danger"><i class="fa fa-solid fa-trash"></i></a>
+                                <a href="<?= base_url('admin/bookings/edit/'. $bookings->id)?>" class="btn btn-sm btn-primary"><i class="fa-solid fa-eye"></i></a>
+
                             </div>
                                 </td>
                                 
@@ -85,12 +88,9 @@
     // });
   });
 </script>
-
 <script>
-    // $('.serverside-datatable').each(function () {
 
     $(document).ready(function () {
-    // Initialize DataTable
     $('#example1').DataTable({
         responsive: true,
         dom: "<'row'<'col-sm-4'l><'col-sm-4 text-center'B><'col-sm-4'f>>t<'row'<'col-sm-6'i><'col-sm-6'p>>",
@@ -100,9 +100,9 @@
         ],
         buttons: [
             { extend: 'copy', className: 'btn-sm' },
-            { extend: 'csv', title: 'Drivers', className: 'btn-sm' },
-            { extend: 'excel', title: 'Drivers', className: 'btn-sm' },
-            { extend: 'pdf', title: 'Drivers', className: 'btn-sm' },
+            { extend: 'csv', title: 'Bookings', className: 'btn-sm' },
+            { extend: 'excel', title: 'Bookings', className: 'btn-sm' },
+            { extend: 'pdf', title: 'Bookings', className: 'btn-sm' },
             { extend: 'print', className: 'btn-sm' }
         ],
         processing: true,

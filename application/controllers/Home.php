@@ -19,6 +19,8 @@ class Home extends CI_Controller
         $data['content'] = $this->load->view("home",$data,true);
         $data['active'] = "Home";
         $this->load->view("main_template",$data);
+        //$this->load->view("theme_view");
+        //return view('theme_view');
     }
 
     public function free_quote()

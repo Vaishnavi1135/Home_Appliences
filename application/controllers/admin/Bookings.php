@@ -54,27 +54,27 @@ class Bookings extends CI_Controller
            
         );
         $res = 0;
-        if($this->input->post('id')==0){
-            $data['created_at'] =date('Y-m-d H:i:s');
-            $data['created_by'] = $this->session->userdata('id');
-            $res = $this->bookings_model->create($data);
-            if($res){
-                $this->session->set_flashdata('status',' Added successfully..!');
-                redirect('admin/bookings');
+        // if($this->input->post('id')==0){
+        //     $data['created_at'] =date('Y-m-d H:i:s');
+        //     $data['created_by'] = $this->session->userdata('id');
+        //     $res = $this->bookings_model->create($data);
+        //     if($res){
+        //         $this->session->set_flashdata('status',' Added successfully..!');
+        //         redirect('admin/bookings');
             
-            }
+        //     }
             
-        }else{
-            $data['updated_at'] =date('Y-m-d H:i:s');
-            $data['updated_by'] = $this->session->userdata('id');
-            $res = $this->bookings_model->update($data);
-            if($res){
-                $this->session->set_flashdata('status','Updated successfully..!');
-                redirect('admin/bookings');
+        // }else{
+        //     $data['updated_at'] =date('Y-m-d H:i:s');
+        //     $data['updated_by'] = $this->session->userdata('id');
+        //     $res = $this->bookings_model->update($data);
+        //     if($res){
+        //         $this->session->set_flashdata('status','Updated successfully..!');
+        //         redirect('admin/bookings');
             
             
-            }
-        }
+        //     }
+        // }
         
 
     }
@@ -143,5 +143,8 @@ class Bookings extends CI_Controller
 		);
 		echo json_encode($response);
 	}
+
+   
 }
+
 ?>

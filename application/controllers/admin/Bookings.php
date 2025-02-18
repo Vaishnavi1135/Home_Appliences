@@ -54,27 +54,27 @@ class Bookings extends CI_Controller
            
         );
         $res = 0;
-        // if($this->input->post('id')==0){
-        //     $data['created_at'] =date('Y-m-d H:i:s');
-        //     $data['created_by'] = $this->session->userdata('id');
-        //     $res = $this->bookings_model->create($data);
-        //     if($res){
-        //         $this->session->set_flashdata('status',' Added successfully..!');
-        //         redirect('admin/bookings');
+        if($this->input->post('id')==0){
+            $data['created_at'] =date('Y-m-d H:i:s');
+            $data['created_by'] = $this->session->userdata('id');
+            $res = $this->bookings_model->create($data);
+            if($res){
+                $this->session->set_flashdata('status',' Added successfully..!');
+                redirect('admin/bookings');
             
-        //     }
+            }
             
-        // }else{
-        //     $data['updated_at'] =date('Y-m-d H:i:s');
-        //     $data['updated_by'] = $this->session->userdata('id');
-        //     $res = $this->bookings_model->update($data);
-        //     if($res){
-        //         $this->session->set_flashdata('status','Updated successfully..!');
-        //         redirect('admin/bookings');
+        }else{
+            $data['updated_at'] =date('Y-m-d H:i:s');
+            $data['updated_by'] = $this->session->userdata('id');
+            $res = $this->bookings_model->update($data);
+            if($res){
+                $this->session->set_flashdata('status','Updated successfully..!');
+                redirect('admin/bookings');
             
             
-        //     }
-        // }
+            }
+        }
         
 
     }
@@ -82,7 +82,7 @@ class Bookings extends CI_Controller
     public function delete($id=0)
     {
         $this->db->where('id',$id);
-        $this->db->delete('bookings');
+        $this->db->delete('booking');
         $res = 0;
         if($this->input->post('id')==0){
             $data['created_at'] =date('Y-m-d H:i:s');
@@ -113,6 +113,9 @@ class Bookings extends CI_Controller
 			'3' => 'plan',
 			'4' => 'cost',
 			'5' => 'status',
+            '6' => 'created_at',
+			'7' => 'updated_at',
+ 			'8' => 'created_by',
 			
 		);
 		$sortColumn = isset($sortColumns[$sortIndex]) ? $sortColumns[$sortIndex] : '';
@@ -130,7 +133,10 @@ class Bookings extends CI_Controller
 			$dt[] = $row->plan;
 			$dt[] = $row->cost;
             $dt[] = $row->status;
-			$dt[] = "<a href='" . base_url('admin/bookings/edit/' . $row->id). "' class='btn btn-xs btn-success'><i class='fa fa-edit'></i></a>
+            $dt[] = $row->created_at;
+			$dt[] = $row->updated_at;
+            $dt[] = $row->created_by;
+			$dt[] = "
 					<a href='" . base_url('admin/bookings/delete/' . $row->id) . "' class='btn btn-xs btn-primary'><i class='fa fa-trash'></i></a>
                     <a href='" . base_url('admin/bookings/view/' . $row->id) . "' class='btn btn-xs btn-danger'><i class='fa fa-eye'></i></a>";
             $data[] = $dt;

@@ -11,21 +11,23 @@
             background-color: #f4f4f4;
             padding: 20px;
             text-align: center;
+            
         }
         .container {
             max-width: 800px;
             margin: 0 auto;
-            background: white;
+            background: #343a40;
             padding: 20px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             border-radius: 8px;
+            color:white;
         }
         .order-info {
             display: flex;
             justify-content: space-between;
             padding: 15px;
             border: 1px solid #ddd;
-            background: #f9f9f9;
+            background: #343a40;
             border-radius: 8px;
             margin-bottom: 20px;
         }
@@ -37,6 +39,7 @@
             font-weight: bold;
             color: #28a745;
             margin: 10px 0;
+           
         }
         .timeline {
             display: flex;
@@ -57,11 +60,12 @@
         }
         .step {
             position: relative;
-            background: white;
+            background: #343a40;
             padding: 10px;
             border-radius: 8px;
             text-align: center;
             flex: 1;
+            border: 1px solid #ddd;
         }
         .step .icon {
             width: 30px;
@@ -93,10 +97,10 @@
             <div><strong>ORDER PLACED</strong><br>May 30, 2021</div>
             <div><strong>TOTAL</strong><br>$2365.00 USD</div>
             <div><strong>SHIP TO</strong><br>John Doe</div>
-            <div><strong>ORDER #</strong><br>#1606</div>
+            <div><strong>ORDER </strong><br>#1606</div>
         </div>
 
-        <h2 class="status">Order Status: <span style="color: green;">Ocean Transit</span></h2>
+        <h2 class="status">Order Status <span style="color: green;"></span></h2>
         <p>Estimated Delivery: <strong>July 29 - Aug 8</strong></p>
 
         <div class="timeline">
@@ -108,10 +112,10 @@
                 <div class="icon">📦</div>
                 <p>In Production<br><strong>May 31, 2021</strong></p>
             </div>
-            <div class="step active">
+            <!-- <div class="step active">
                 <div class="icon">🚢</div>
                 <p>Ocean Transit<br><strong>June 29, 2021</strong></p>
-            </div>
+            </div> -->
             <div class="step">
                 <div class="icon">🚚</div>
                 <p>Shipping Final Mile<br><strong>July 26 - 29</strong></p>

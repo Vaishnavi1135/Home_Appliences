@@ -38,6 +38,12 @@
                             </div>
                         </div>
                         
+                        <div class="row">
+                            <div class="col-md-12 form-group">
+                                <label for="status">status</label>
+                                <input type="text" class="form-control" name="status" id="status" >
+                            </div>
+                        </div>
 
                         
 

@@ -34,6 +34,9 @@
                                 <th>Plan</th>
                                 <th>Cost</th>
                                 <th>Status</th>
+                                <th>Created_at</th>
+                                <th>Updated_at</th>
+                                <th>Created_by</th>
                                 <th>Action</th>
                             </tr>
                         </thead>
@@ -49,6 +52,9 @@
                                     <td><?= $bookings->plan ?></td>
                                     <td><?= $bookings->cost ?></td>
                                     <td><?= $bookings->status ?></td>
+                                    <td><?= $drivers->created_at ?></td>
+                                    <td><?= $drivers->updated_at ?></td>
+                                    <td><?= $drivers->created_by ?></td>
                                     <td>
                             <div class="button-container">
                                 <a href="<?= base_url('admin/bookings/edit/'. $bookings->id)?>" class="btn btn-sm btn-primary"><i class="fa fa-solid fa-edit"></i></a>

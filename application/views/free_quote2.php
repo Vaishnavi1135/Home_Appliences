@@ -11,11 +11,11 @@
                 <?php echo form_open("quote/save");?>
                 <?php echo form_hidden('id',0); ?>
                         <div class="row g-3">
-                            <div class="col-12 col-sm-12">
+                            <!-- <div class="col-12 col-sm-12">
                                 <input type="date" class="form-control border-0" placeholder="Date" style="height: 55px;">
-                            </div>
+                            </div> -->
                             <div class="col-12 col-sm-12">
-                                <input type="text" class="form-control border-0" placeholder="Name" style="height: 55px;">
+                                <input type="text" id="name" name="name" class="form-control border-0" placeholder="Name" style="height: 55px;">
                             </div>
                             <div class="col-12 col-sm-12">
                                 <input type="email" id="email" name="email" class="form-control border-0" placeholder="Email" style="height: 55px;" required>
@@ -25,6 +25,9 @@
                             </div>
                             <div class="col-12 col-sm-12">
                                <input type="text" class="form-control border-0" placeholder="Address" style="height: 55px;">
+                            </div>
+                            <div class="col-12 col-sm-12">
+                                 <textarea id="items" name="items" class="form-control border-0" placeholder="List items to be shifted" style="height: 100px;" required></textarea>
                             </div>
                             <div class="col-12">
                                 <button type="submit" href="<?php echo base_url("quote/save");?>" class="btn btn-primary w-100 py-3">Submit</button>

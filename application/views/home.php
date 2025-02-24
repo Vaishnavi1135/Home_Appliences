@@ -58,6 +58,7 @@
     </a>
 </div> -->
 
+ <!-- Slider start -->
 <style>
     html,
     body {
@@ -88,17 +89,9 @@
       display: block;
       width: 100%;
     }
-
-
-
   </style>
-
-
-
-
   <swiper-container class="mySwiper" pagination="true" pagination-clickable="true" space-between="30" effect="fade"
     navigation="true">
-   
     <swiper-slide>
       <img src="<?php echo base_url();?>\assets\images\bidkar-transport-shiroli-midc-kolhapur-packers-and-movers-all-india--0gqsxt00cs.jpg" alt="First slide" />
       <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center" style="background: rgba(6, 3, 21, .5);">
@@ -133,6 +126,7 @@
     </swiper-slide>
   </swiper-container>
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+   <!-- Slider End -->
 
 
 

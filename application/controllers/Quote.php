@@ -13,36 +13,46 @@ class Quote extends CI_Controller {
    
 
     // Handle form submission
-    public function save() {
+    public function save()
+{
+    $data=array(
+        'id'=>$this->input->post('id'),
+        // 'date'=>$this->input->post('date'),
+        'name'=>$this->input->post('name'),
+        'email'=>$this->input->post('email'),
+        'phone'=>$this->input->post('phone'),
+        'address'=>$this->input->post('address'),
+        'items'=>$this->input->post('items'),
+        'status'=>1,
+        
+    );
 
-        // Set validation rules
-        $this->form_validation->set_rules('date', 'Date', 'required|trim');
-        $this->form_validation->set_rules('name', 'Name', 'required|trim');
-        $this->form_validation->set_rules('email', 'Email', 'required|valid_email|is_unique[users.email]');
-        $this->form_validation->set_rules('phone', 'Phone', 'required|exact_length[10]|numeric');
-
-        // If validation fails, reload the form
-        if ($this->form_validation->run() == FALSE) {
-            $this->load->view('admin/register');
-        } else {
-            // Prepare data for insertion
-            $data = array(
-                'date' => $this->input->post('date'),
-                'name' => $this->input->post('name'),
-                'email' => $this->input->post('email'),
-                'phone' => $this->input->post('phone'),
-                'status'=>1,
-                
-            );
-
-            // Save data using the model
-            if ($this->Quote_model->save($data)) {
-                $this->session->set_flashdata('status', 'Registration successful!');
-                redirect(''); // Redirect back to the form with a success message
-            } else {
-                $this->session->set_flashdata('status', 'Failed to register. Please try again.');
-                redirect(''); // Redirect back to the form with an error message
-            }
+        
+    $res = 0;
+    if($this->input->post('id')==0){
+        $data['created_at'] =date('Y-m-d H:i:s');
+        // $data['created_by'] = $this->session->userdata('id');
+        $res = $this->Quote_model->create($data);
+        if($res){
+            $this->session->set_flashdata('status',' Added successfully..!');
+            redirect('admin/login');
+        
+        }
+        
+    }else{
+        $data['updated_at'] =date('Y-m-d H:i:s');
+        // $data['updated_by'] =$this->session->userdata('id');
+        $res = $this->quote_model->update($data);
+        if($res){
+            $this->session->set_flashdata('status','Updated successfully..!');
+            redirect('admin/login');
+        
         }
     }
+    
+}
+
+
+
+    
 }

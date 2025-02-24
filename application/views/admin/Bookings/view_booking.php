@@ -91,12 +91,12 @@
 <body>
 
     <div class="container">
-        <p>Please note that these are accurate but not guaranteed estimates. Delivery dates may change.</p>
+        <p>Please note that these are accurate but not guaranteed estimates. Shifting dates may change.</p>
 
         <div class="order-info">
             <div><strong>ORDER PLACED</strong><br>May 30, 2021</div>
-            <div><strong>TOTAL</strong><br>$2365.00 USD</div>
-            <div><strong>SHIP TO</strong><br>John Doe</div>
+            <div><strong>TOTAL</strong><br>2365.00</div>
+            <div><strong>SHIFTING TO</strong><br>Kolhapur</div>
             <div><strong>ORDER </strong><br>#1606</div>
         </div>
 
@@ -110,7 +110,7 @@
             </div>
             <div class="step completed">
                 <div class="icon">📦</div>
-                <p>In Production<br><strong>May 31, 2021</strong></p>
+                <p>Packing<br><strong>May 31, 2021</strong></p>
             </div>
             <!-- <div class="step active">
                 <div class="icon">🚢</div>
@@ -118,7 +118,7 @@
             </div> -->
             <div class="step">
                 <div class="icon">🚚</div>
-                <p>Shipping Final Mile<br><strong>July 26 - 29</strong></p>
+                <p>Shifting<br><strong>July 26 - 29</strong></p>
             </div>
             <div class="step">
                 <div class="icon">🎁</div>

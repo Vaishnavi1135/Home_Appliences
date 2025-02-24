@@ -242,10 +242,8 @@
               <i class="nav-icon fas fa-tachometer-alt"></i>
               <p>
                 Dashboard
-                
               </p>
             </a>
-
           </li>
 
           <li class="nav-item">
@@ -270,10 +268,10 @@
                   <p>Add New</p>
                 </a>
               </li>
-
-              
             </ul>
           </li>
+
+
           <li class="nav-item">
             <a href="#" class="nav-link <?=$active=='Services'?'active':''?>">
               <i class="nav-icon fas fa-wrench"></i>
@@ -298,6 +296,8 @@
               
             </ul>
           </li>
+
+
           <li class="nav-item">
             <a href="#" class="nav-link <?=$active=='Review'?'active':''?>">
               <i class="nav-icon fas fa-comment"></i>
@@ -322,6 +322,8 @@
               
             </ul>
           </li>
+
+
           <li class="nav-item">
             <a href="#" class="nav-link <?=$active=='Users'?'active':''?>">
               <i class="nav-icon fas fa-users"></i>
@@ -344,6 +346,7 @@
                 </a>
               </li>
             </ul>
+
 
             <li class="nav-item">
             <a href="#" class="nav-link <?=$active=='Drivers'?'active':''?>">
@@ -380,7 +383,6 @@
                   <p>List</p>
                 </a>
               </li>
-              
               <li class="nav-item">
                 <a href="<?= base_url("admin/bookings/add");?>" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
@@ -389,6 +391,8 @@
               </li>
           </li>
         </ul>
+
+        
 
       </nav>
       <!-- /.sidebar-menu -->

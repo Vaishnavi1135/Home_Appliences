@@ -5,6 +5,8 @@ class Pages extends CI_Controller
     {
         parent :: __construct();
         $this->load->helper('url');
+        $this->load->model(array('admin/services_model','admin/plans_model','admin/review_model'));
+
     }
 
     public function index()
@@ -37,6 +39,7 @@ class Pages extends CI_Controller
 
     public function pricing_plan()
     {
+        $data['plans'] =  $this->plans_model->read();
         $data['title'] = "Kolhapur Packers and Movers";
         $data['content'] = $this->load->view("pricing_plan",$data,true);
         $data['active'] = "Pages";
@@ -45,6 +48,7 @@ class Pages extends CI_Controller
 
     public function testimonial()
     {
+        $data['review'] =  $this->review_model->read();
         $data['title'] = "Kolhapur Packers and Movers";
         $data['content'] = $this->load->view("testimonial",$data,true);
         $data['active'] = "Pages";

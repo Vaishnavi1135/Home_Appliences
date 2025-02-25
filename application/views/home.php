@@ -88,6 +88,8 @@
     swiper-slide img {
       display: block;
       width: 100%;
+      height: 100%;
+      object-fit: cover;
     }
   </style>
   <swiper-container class="mySwiper" pagination="true" pagination-clickable="true" space-between="30" effect="fade"
@@ -268,19 +270,15 @@
                             </div>
                         </div>
                        
-                        <?php foreach ($review as $key => $value) 
-                        {
-                        ?>
+                       
                         <div class="col-sm-6">
                             <div class="bg-success p-4 wow fadeIn" data-wow-delay="0.7s">
                                 <i class="fa fa-star fa-2x text-white mb-3"></i>
-                                <h2 class="text-white mb-2" data-toggle="counter-up"><?= $value->id ?></h2>
+                                <h2 class="text-white mb-2" data-toggle="counter-up"><?= count($review) ?></h2>
                                 <p class="text-white mb-0">Customer Reviews</p>
                             </div>
                         </div>
-                        <?php
-                         }           
-                        ?>
+                      
                     </div>
                 </div>
             </div>
@@ -654,33 +652,3 @@ $(document).ready(function() {
     });
 });
 </script>
-<!-- <script>
-    document.addEventListener("DOMContentLoaded", function () {
-    const toggleButton = document.getElementById("themeToggle");
-    const body = document.body;
-
-    // Load saved theme from localStorage
-    if (localStorage.getItem("theme") === "dark") {
-        body.classList.add("dark-mode");
-    }
-
-    // Toggle theme
-    toggleButton.addEventListener("click", function () {
-        body.classList.toggle("dark-mode");
-
-        // Save user preference in localStorage
-        if (body.classList.contains("dark-mode")) {
-            localStorage.setItem("theme", "dark");
-        } else {
-            localStorage.setItem("theme", "light");
-        }
-    });
-});
-
-</script> -->
-
-    <!-- Testimonial End -->
-
-    <!-- Back to Top -->
-
-    

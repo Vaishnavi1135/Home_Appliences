@@ -386,7 +386,7 @@
                                 <div class="p-4 pt-0">
                                     <p><i class="fa fa-check text-success me-3"></i><?= $value->services ?></p>
                                     <p><i class="fa fa-check text-success me-3"></i><?= $value->services ?></p>
-                                    <a class="btn-slide mt-2" href=""><i class="fa fa-arrow-right"></i><span>Order Now</span></a>
+                                    <a class="btn-slide mt-2" href="pages/payment"><i class="fa fa-arrow-right"></i><span>Order Now</span></a>
                                 </div>
                             </div>
                         </div>
@@ -439,7 +439,7 @@
                                 </div>
                                 <div class="p-4 pt-0">
                                     <p><i class="fa fa-check text-success me-3"></i><?= $value->services ?></p>
-                                    <a class="btn-slide mt-2" href=""><i class="fa fa-arrow-right"></i><span>Order Now</span></a>
+                                    <a class="btn-slide mt-2" href="<?php echo base_url('payment');?>"><i class="fa fa-arrow-right"></i><span>Order Now</span></a>
                                 </div>
                             </div>
                         </div>

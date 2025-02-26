@@ -30,6 +30,7 @@ class Services extends CI_Controller
         $data['active'] = "Services";
         $data['content'] = $this->load->view("admin/Services/add_services",$data,true);
         $this->load->view("admin/admin_template",$data);
+        $this->load->model(array('admin/services_model'));
     }
 
     public function edit($id=0)

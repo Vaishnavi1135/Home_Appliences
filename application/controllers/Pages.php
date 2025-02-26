@@ -54,5 +54,23 @@ class Pages extends CI_Controller
         $data['active'] = "Pages";
         $this->load->view("main_template",$data);
     }
+
+    public function payment()
+    {
+        $data['payment'] =  $this->plans_model->read();
+        $data['title'] = "Kolhapur Packers and Movers";
+        $data['content'] = $this->load->view("payment",$data,true);
+        $data['active'] = "Pages";
+        $this->load->view("main_template",$data);
+    }
+
+    public function scanner()
+    {
+        $data['scanner'] =  $this->plans_model->read();
+        $data['title'] = "Kolhapur Packers and Movers";
+        $data['content'] = $this->load->view("scanner",$data,true);
+        $data['active'] = "Pages";
+        $this->load->view("main_template",$data);
+    }
 }
  ?>

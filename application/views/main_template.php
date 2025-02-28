@@ -111,12 +111,11 @@
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <h4 class="text-light mb-4">Services</h4>
-                    <a class="btn btn-link" href="">PACKERS AND MOVERS</a>
-                    <a class="btn btn-link" href="">CAR TRANSPORT</a>
-                    <a class="btn btn-link" href="">WAREHOUSE SERVICES</a>
-                    <a class="btn btn-link" href="">HIRE TRUCK & TEMPO</a>
-                    <a class="btn btn-link" href="">CARGO SERVICES</a>
-                    <a class="btn btn-link" href="">TRANSPORT SERVICES</a>
+                    <a class="btn btn-link" href="">ELECTRONIC APPLIENCES</a>
+                    <a class="btn btn-link" href="">KITCHEN APPLIENCES</a>
+                    <a class="btn btn-link" href="">FURNITURE APPLIENCES</a>
+                    <a class="btn btn-link" href="">VEHICLE APPLIENCES</a>
+                   
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <h4 class="text-light mb-4">Quick Links</h4>

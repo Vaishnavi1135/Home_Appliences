@@ -3,7 +3,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Contact_model extends CI_Model {
 
-    private $table = "contact";
+    private $table = "contactnew";
 
     public function read()
     {
@@ -25,7 +25,7 @@ class Contact_model extends CI_Model {
 
 
     public function insert_contact($data) {
-        return $this->db->insert('contact', $data);
+        return $this->db->insert('contactnew', $data);
     }
 
    

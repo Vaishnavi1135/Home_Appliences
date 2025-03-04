@@ -169,7 +169,7 @@
 </body>
 </html> -->
 
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -240,4 +240,176 @@
         </form>
     </div>
 </body>
+</html> -->
+
+<!-- <?php
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "adminnew"; 
+
+
+$conn = new mysqli($servername, $username, $password, $dbname);
+
+
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
+
+$sql = "SELECT * FROM household_items";
+$result = $conn->query($sql);
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movers & Packers Items</title>
+    <style>
+        table {
+            width: 80%;
+            border-collapse: collapse;
+            margin: 20px auto;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 10px;
+            text-align: center;
+        }
+        th {
+            background-color: #f4f4f4;
+        }
+    </style>
+</head>
+<body>
+
+<h2 style="text-align: center;">Movers & Packers Price List</h2>
+
+<table>
+    <tr>
+        <th>ID</th>
+        <th>Category</th>
+        <th>Item Name</th>
+        <th>Moving Cost (₹)</th>
+        <th>Packing Cost (₹)</th>
+        <th>Total (Moving + Packing) (₹)</th>
+    </tr>
+
+    <?php
+    if ($result->num_rows > 0) {
+        while($row = $result->fetch_assoc()) {
+            echo "<tr>
+                    <td>{$row['id']}</td>
+                    <td>{$row['category']}</td>
+                    <td>{$row['item_name']}</td>
+                    <td>₹ {$row['moving_cost']}</td>
+                    <td>₹ {$row['packing_cost']}</td>
+                    <td>₹ {$row['moving_packing_cost']}</td>
+                  </tr>";
+        }
+    } else {
+        echo "<tr><td colspan='6'>No items found</td></tr>";
+    }
+    $conn->close();
+    ?>
+</table>
+
+</body>
+</html> -->
+
+<?php
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "adminnew"; // Change DB name accordingly
+
+// Create Connection
+$conn = new mysqli($servername, $username, $password, $dbname);
+
+// Check Connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
+// Fetch selected items from database (assuming they are sent via GET request)
+$item_ids = isset($_GET['items']) ? explode(',', $_GET['items']) : [];
+$total_moving_cost = 0;
+$total_packing_cost = 0;
+$total_combined_cost = 0;
+$items_data = [];
+
+if (!empty($item_ids)) {
+    $ids = implode(',', array_map('intval', $item_ids)); // Prevent SQL injection
+    $sql = "SELECT * FROM household_items WHERE id IN ($ids)";
+    $result = $conn->query($sql);
+
+    while ($row = $result->fetch_assoc()) {
+        $items_data[] = $row;
+        $total_moving_cost += $row['moving_cost'];
+        $total_packing_cost += $row['packing_cost'];
+        $total_combined_cost += $row['moving_packing_cost'];
+    }
+}
+
+$conn->close();
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Receipt - Movers & Packers</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        .container { width: 60%; margin: auto; border: 1px solid black; padding: 20px; }
+        h2 { text-align: center; }
+        table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+        th, td { border: 1px solid black; padding: 10px; text-align: center; }
+        th { background-color: #f4f4f4; }
+        .total { font-weight: bold; }
+        .btn-print { margin-top: 20px; display: block; text-align: center; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Movers & Packers - Receipt</h2>
+    <p><strong>Date:</strong> <?php echo date("d M Y, h:i A"); ?></p>
+    <p><strong>Order ID:</strong> <?php echo rand(10000, 99999); ?></p>
+
+    <table>
+        <tr>
+            <th>Item Name</th>
+            <th>Moving Cost (₹)</th>
+            <th>Packing Cost (₹)</th>
+            <th>Total Cost (₹)</th>
+        </tr>
+        
+        <?php foreach ($items_data as $item): ?>
+            <tr>
+                <td><?php echo $item['item_name']; ?></td>
+                <td>₹ <?php echo number_format($item['moving_cost'], 2); ?></td>
+                <td>₹ <?php echo number_format($item['packing_cost'], 2); ?></td>
+                <td>₹ <?php echo number_format($item['moving_packing_cost'], 2); ?></td>
+            </tr>
+        <?php endforeach; ?>
+
+        <tr class="total">
+            <td><strong>Total</strong></td>
+            <td><strong>₹ <?php echo number_format($total_moving_cost, 2); ?></strong></td>
+            <td><strong>₹ <?php echo number_format($total_packing_cost, 2); ?></strong></td>
+            <td><strong>₹ <?php echo number_format($total_combined_cost, 2); ?></strong></td>
+        </tr>
+    </table>
+
+    <div class="btn-print">
+        <button onclick="window.print()">Print Receipt</button>
+    </div>
+</div>
+
+</body>
 </html>
+

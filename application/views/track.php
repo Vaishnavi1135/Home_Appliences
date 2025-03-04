@@ -13,7 +13,7 @@
                         <label for="email"><b>GC Number</b></label>
                         <input type="number" placeholder="Enter GC Number" name="GC NUmber"  required>
                 
-                <input type="submit" value="track" style="background:red; color:white;">
+                <input href="<?php echo base_url('admin/bookings/view_booking');?>" type="submit" value="track" style="background:red; color:white;">
             </form>           
         </div>
          </div>

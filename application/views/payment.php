@@ -169,155 +169,12 @@
 </body>
 </html> -->
 
-<!-- <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shifting Order Payment</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f8f9fa;
-            text-align: center;
-           
-        }
-        .payment-container {
-            max-width: 400px;
-            margin: auto;
-            background: white;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-        }
-        input, select, button {
-            width: 100%;
-            padding: 10px;
-            margin: 10px 0;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-        }
-        button {
-            background-color: #007bff;
-            color: white;
-            font-size: 16px;
-            border: none;
-            cursor: pointer;
-        }
-        button:hover {
-            background-color: #0056b3;
-        }
-        .payment-method {
-            text-align: left;
-            margin: 10px 0;
-        }
-        .payment-method label {
-            display: flex;
-            align-items: center;
-        }
-        /* .payment-method input {
-            margin-right: 10px;
-        } */
-    </style>
-    <script>
-        function payWithRazorpay() {
-            console.log("Redirecting to Razorpay...");
-            let razorpayUrl = "https://razorpay.com/your-payment-link"; // Replace with your actual Razorpay link
-            window.open(razorpayUrl, "_blank"); // Opens in a new tab
-        }
-    </script>
-</head>
-<body>
-    <div class="payment-container">
-        <h2>Shifting Order Payment</h2>
-        <form action="payment_process.php" method="POST">
-            <input type="text" name="name" placeholder="Full Name" required>
-            <input type="email" name="email" placeholder="Email" required>
-            <input type="text" name="phone" placeholder="Phone Number" required>
-            <input type="number" name="amount" placeholder="Amount (₹)" required>
-            <button type="submit">Proceed to Pay COD</button>
-            <button type="button" onclick="payWithRazorpay()">Proceed to Pay Online</button>
-        </form>
-    </div>
-</body>
-</html> -->
-
-<!-- <?php
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "adminnew"; 
+ 
 
 
-$conn = new mysqli($servername, $username, $password, $dbname);
 
 
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
 
-
-$sql = "SELECT * FROM household_items";
-$result = $conn->query($sql);
-?>
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Movers & Packers Items</title>
-    <style>
-        table {
-            width: 80%;
-            border-collapse: collapse;
-            margin: 20px auto;
-        }
-        th, td {
-            border: 1px solid black;
-            padding: 10px;
-            text-align: center;
-        }
-        th {
-            background-color: #f4f4f4;
-        }
-    </style>
-</head>
-<body>
-
-<h2 style="text-align: center;">Movers & Packers Price List</h2>
-
-<table>
-    <tr>
-        <th>ID</th>
-        <th>Category</th>
-        <th>Item Name</th>
-        <th>Moving Cost (₹)</th>
-        <th>Packing Cost (₹)</th>
-        <th>Total (Moving + Packing) (₹)</th>
-    </tr>
-
-    <?php
-    if ($result->num_rows > 0) {
-        while($row = $result->fetch_assoc()) {
-            echo "<tr>
-                    <td>{$row['id']}</td>
-                    <td>{$row['category']}</td>
-                    <td>{$row['item_name']}</td>
-                    <td>₹ {$row['moving_cost']}</td>
-                    <td>₹ {$row['packing_cost']}</td>
-                    <td>₹ {$row['moving_packing_cost']}</td>
-                  </tr>";
-        }
-    } else {
-        echo "<tr><td colspan='6'>No items found</td></tr>";
-    }
-    $conn->close();
-    ?>
-</table>
-
-</body>
-</html> -->
 
 <?php
 $servername = "localhost";
@@ -333,24 +190,13 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-// Fetch selected items from database (assuming they are sent via GET request)
-$item_ids = isset($_GET['items']) ? explode(',', $_GET['items']) : [];
-$total_moving_cost = 0;
-$total_packing_cost = 0;
-$total_combined_cost = 0;
-$items_data = [];
+// Fetch all items grouped by category
+$sql = "SELECT * FROM household_items ORDER BY category";
+$result = $conn->query($sql);
 
-if (!empty($item_ids)) {
-    $ids = implode(',', array_map('intval', $item_ids)); // Prevent SQL injection
-    $sql = "SELECT * FROM household_items WHERE id IN ($ids)";
-    $result = $conn->query($sql);
-
-    while ($row = $result->fetch_assoc()) {
-        $items_data[] = $row;
-        $total_moving_cost += $row['moving_cost'];
-        $total_packing_cost += $row['packing_cost'];
-        $total_combined_cost += $row['moving_packing_cost'];
-    }
+$items_by_category = [];
+while ($row = $result->fetch_assoc()) {
+    $items_by_category[$row['category']][] = $row;
 }
 
 $conn->close();
@@ -361,55 +207,49 @@ $conn->close();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Receipt - Movers & Packers</title>
+    <title>Select Items for Moving & Packing</title>
     <style>
         body { font-family: Arial, sans-serif; margin: 20px; }
-        .container { width: 60%; margin: auto; border: 1px solid black; padding: 20px; }
-        h2 { text-align: center; }
+        .container { width: 70%; margin: auto; }
         table { width: 100%; border-collapse: collapse; margin-top: 20px; }
         th, td { border: 1px solid black; padding: 10px; text-align: center; }
         th { background-color: #f4f4f4; }
-        .total { font-weight: bold; }
-        .btn-print { margin-top: 20px; display: block; text-align: center; }
+        .btn-submit { margin-top: 20px; padding: 10px; background: blue; color: white; border: none; cursor: pointer; }
+        .category-title { background: #ddd; font-weight: bold; padding: 10px; }
     </style>
 </head>
 <body>
 
 <div class="container">
-    <h2>Movers & Packers - Receipt</h2>
-    <p><strong>Date:</strong> <?php echo date("d M Y, h:i A"); ?></p>
-    <p><strong>Order ID:</strong> <?php echo rand(10000, 99999); ?></p>
-
-    <table>
-        <tr>
-            <th>Item Name</th>
-            <th>Moving Cost (₹)</th>
-            <th>Packing Cost (₹)</th>
-            <th>Total Cost (₹)</th>
-        </tr>
+    <h2>Select Items for Moving & Packing</h2>
+    <form action="receipt.php" method="GET">
         
-        <?php foreach ($items_data as $item): ?>
-            <tr>
-                <td><?php echo $item['item_name']; ?></td>
-                <td>₹ <?php echo number_format($item['moving_cost'], 2); ?></td>
-                <td>₹ <?php echo number_format($item['packing_cost'], 2); ?></td>
-                <td>₹ <?php echo number_format($item['moving_packing_cost'], 2); ?></td>
-            </tr>
+        <?php foreach ($items_by_category as $category => $items): ?>
+            <h3 class="category-title"><?php echo htmlspecialchars($category); ?></h3>
+            <table>
+                <tr>
+                    <th>Item Name</th>
+                    <th>Moving (₹)</th>
+                    <th>Packing (₹)</th>
+                    <th>Move?</th>
+                    <th>Pack?</th>
+                </tr>
+                
+                <?php foreach ($items as $item): ?>
+                    <tr>
+                        <td><?php echo $item['item_name']; ?></td>
+                        <td>₹ <?php echo number_format($item['moving_cost'], 2); ?></td>
+                        <td>₹ <?php echo number_format($item['packing_cost'], 2); ?></td>
+                        <td><input type="checkbox" name="move_items[]" value="<?php echo $item['id']; ?>"></td>
+                        <td><input type="checkbox" name="pack_items[]" value="<?php echo $item['id']; ?>"></td>
+                    </tr>
+                <?php endforeach; ?>
+            </table>
         <?php endforeach; ?>
 
-        <tr class="total">
-            <td><strong>Total</strong></td>
-            <td><strong>₹ <?php echo number_format($total_moving_cost, 2); ?></strong></td>
-            <td><strong>₹ <?php echo number_format($total_packing_cost, 2); ?></strong></td>
-            <td><strong>₹ <?php echo number_format($total_combined_cost, 2); ?></strong></td>
-        </tr>
-    </table>
-
-    <div class="btn-print">
-        <button onclick="window.print()">Print Receipt</button>
-    </div>
+        <button type="submit" class="btn-submit">Generate Receipt</button>
+    </form>
 </div>
 
 </body>
 </html>
-

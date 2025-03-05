@@ -47,6 +47,22 @@ class Home extends CI_Controller
         $this->load->view("main_template",$data);
     }
 
+    public function selectitem()
+    {
+        $data['title'] = "Kolhapur Packers and Movers";
+        $data['content'] = $this->load->view("selectitem",$data,true);
+        $data['active'] = "Home";
+        $this->load->view("main_template",$data);
+    }
+
+    public function receipt()
+    {
+        $data['title'] = "Kolhapur Packers and Movers";
+        $data['content'] = $this->load->view("receipt",$data,true);
+        $data['active'] = "Home";
+        $this->load->view("main_template",$data);
+    }
+
     public function sendEmail()
     {
     error_reporting(E_ALL);
@@ -82,6 +98,9 @@ class Home extends CI_Controller
         echo $this->email->print_debugger(); // For debugging during development
     }
 }
+
+
+
 
     
 }

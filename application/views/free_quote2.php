@@ -8,7 +8,7 @@
             <div class="col-lg-6 mt-5 pb-5">
                 <h3 class="text-danger text-uppercase mt-3" style="font-style: italic;">Get A Free Quote...!!</h3>
                 <div class="bg-light text-center p-5 wow fadeIn mt-5 pt-5" data-wow-delay="0.5s">
-                <?php echo form_open("quote/save");?>
+                <?php echo form_open("quote/save", array("id" => "quoteForm"));?>
                 <?php echo form_hidden('id',0); ?>
                         <div class="row g-3">
                             <!-- <div class="col-12 col-sm-12">
@@ -23,14 +23,14 @@
                             <div class="col-12 col-sm-12">
                                 <input type="number" name="phone" class="form-control border-0" placeholder="Phone No" style="height: 55px;" required>
                             </div>
-                            <div class="col-12 col-sm-12">
+                            <!-- <div class="col-12 col-sm-12">
                                <input type="text" class="form-control border-0" placeholder="Address" style="height: 55px;">
-                            </div>
-                            <div class="col-12 col-sm-12">
+                            </div> -->
+                            <!-- <div class="col-12 col-sm-12">
                                  <textarea id="items" name="items" class="form-control border-0" placeholder="List items to be shifted" style="height: 100px;" required></textarea>
-                            </div>
+                            </div> -->
                             <div class="col-12">
-                                <button type="submit" href="<?php echo base_url("quote/save");?>" class="btn btn-primary w-100 py-3">Submit</button>
+                                <button type="submit" href=""  class="btn btn-primary w-100 py-3">Select Items</button>
                             </div>
                             
                         </div>
@@ -39,65 +39,32 @@
             </div>
         </div>
     </div>
+</div>
+    <script>
+    document.addEventListener("DOMContentLoaded", function () {
+        document.getElementById("quoteForm").addEventListener("submit", function (event) {
+            event.preventDefault(); // Prevent default form submission
+// alert("hello");
+            let formData = new FormData(this);
 
-    <!-- <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const sendOTPForm = document.getElementById('sendOTPForm');
-
-            if (sendOTPForm) {
-                sendOTPForm.addEventListener('submit', async (e) => {
-                    e.preventDefault();
-
-                    const email = sendOTPForm.elements.email.value;
-                    const phone = sendOTPForm.elements.phone.value;
-
-                    if (!email || !phone) {
-                        alert("Please fill in both email and phone number.");
-                        return;
-                    }
-
-                    // Generate OTP (4 digits)
-                    const otp = generateOtp();
-
-                    // Simple client-side validation for email format
-                    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-                    if (!emailRegex.test(email)) {
-                        alert("Please enter a valid email address.");
-                        return;
-                    }
-
-                    // Send OTP via SMTP.js
-                    const result = await sendOtpToEmail(email, otp);
-
-                    if (result === "OK") {
-                        alert(`OTP sent successfully to ${email}`);
-                        window.location.href = 'verifyOTP.html';  // Redirect to OTP verification page
-                    } else {
-                        alert(`Error sending OTP: ${result}`);
-                    }
-                });
-            }
-        });
-
-        // Function to generate OTP (4 digits)
-        function generateOtp() {
-            return Math.floor(1000 + Math.random() * 9000);
-        }
-
-        // Function to send OTP via SMTP.js
-        function sendOtpToEmail(email, otp) {
-            return new Promise((resolve, reject) => {
-                Email.send({
-                    SecureToken: "your-secure-token-here",  // Replace with your SMTPJS secure token
-                    To: email,
-                    From: "vaishnavirabade0110@gmail.com",  // Replace with your email address
-                    Subject: "Your OTP Code",
-                    Body: `Your OTP code is: ${otp}`
-                }).then(function (message) {
-                    resolve(message);
-                }).catch(function (error) {
-                    reject(error);
-                });
+            fetch("<?php echo base_url('quote/save'); ?>", {
+                method: "POST",
+                body: formData
+            })
+            .then(response => response.json()){})
+            .then(data => {
+                if (data.success) {
+                    // Redirect to another page after successful submission
+                    window.location.href = "<?php echo base_url("home/selectitem"); ?>";
+                } else {
+                    alert("Failed to save data. Please try again.");
+                }
             });
-        }
-    </script> -->
+            // .catch(error => console.error("Error:", error));
+        });
+    });
+
+</script>
+
+
+   

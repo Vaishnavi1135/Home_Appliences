@@ -35,7 +35,7 @@ class Quote extends CI_Controller {
         $res = $this->Quote_model->create($data);
         if($res){
             $this->session->set_flashdata('status',' Added successfully..!');
-            redirect('admin/login');
+            redirect('home/selectitem');
         
         }
         
@@ -45,7 +45,7 @@ class Quote extends CI_Controller {
         $res = $this->quote_model->update($data);
         if($res){
             $this->session->set_flashdata('status','Updated successfully..!');
-            redirect('admin/login');
+            redirect('home/selectitem');
         
         }
     }

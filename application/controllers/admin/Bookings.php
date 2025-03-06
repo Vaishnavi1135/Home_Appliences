@@ -6,9 +6,9 @@ class Bookings extends CI_Controller
         parent :: __construct();
         $this->load->helper('url');
         $this->load->model(array('admin/bookings_model'));
-        if(!$this->session->userdata('isUserLoggedIn')){
-            redirect('admin/login');
-        }
+        // if(!$this->session->userdata('isUserLoggedIn')){
+        //     redirect('admin/login');
+        // }
     }
 
     public function index()

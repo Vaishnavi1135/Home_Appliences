@@ -31,18 +31,18 @@ $conn->close();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Select Items for Moving & Packing</title>
     <style>
-        body { font-family: Arial, sans-serif; margin: 20px; }
+        body { font-family: Arial, sans-serif; margin: ; }
         .container { width: 70%; margin: auto; }
         table { width: 100%; border-collapse: collapse; margin-top: 20px; }
         th, td { border: 1px solid black; padding: 10px; text-align: center; }
-        th { background-color: #f4f4f4; }
+        th { background-color:rgb(227, 17, 17); color:white;}
         .btn-submit { margin-top: 20px; padding: 10px; background: blue; color: white; border: none; cursor: pointer; }
-        .category-title { background: #ddd; font-weight: bold; padding: 10px; }
+        .category-title { background: #ddd; font-weight: bold; padding: 10px; margin-top: 20px; }
     </style>
 </head>
 <body>
 
-<div class="container">
+<div class="container py-5">
     <h2>Select Items for Moving & Packing</h2>
     <form action="receipt" method="GET">
         

@@ -15,6 +15,8 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Roboto:wght@500;700&display=swap" rel="stylesheet">
+        <link rel="icon"  type="image/png" href="<?php echo base_url('assets/images/images-modified.png'); ?>">
+
 
         <!-- Icon Font Stylesheet -->
         <!-- <link href="<?php echo base_url();?>/assets/css/all.min.css" rel="stylesheet"> -->

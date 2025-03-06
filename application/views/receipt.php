@@ -41,23 +41,29 @@ $conn->close();
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+<meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Receipt - Movers & Packers</title>
     <style>
-        body { font-family: Arial, sans-serif; margin: 20px; }
-        .container { width: 60%; margin: auto; border: 1px solid black; padding: 20px; }
-        h2 { text-align: center; }
+        body { font-family: Arial, sans-serif; margin: ; }
+        .container { width: 60%; margin: auto; border: 1px solid black; padding: 20px; margin-top: 20px; margin-bottom: 20px; }
+        h2 { text-align: center; margin-bottom: 20px; }
         table { width: 100%; border-collapse: collapse; margin-top: 20px; }
         th, td { border: 1px solid black; padding: 10px; text-align: center; }
-        th { background-color: #f4f4f4; }
+        th { background-color:rgb(244, 16, 16); color:white; }
         .total { font-weight: bold; }
-        .btn-print { margin-top: 20px; display: block; text-align: center; }
+        .btn-print { margin-top: 20px; display: block; text-align: center; margin-bottom: 20px; }
+
+        @media print {
+            body * { visibility: hidden; }
+            .container, .container * { visibility: visible; }
+            .container { position: absolute; left: 0; top: 0; width: 100%; }
+        }
     </style>
 </head>
 <body>
 
-<div class="container">
+<div class="container py-5" id="receipt">
     <h2>Movers & Packers - Receipt</h2>
     <p><strong>Date:</strong> <?php echo date("d M Y, h:i A"); ?></p>
     <p><strong>Order ID:</strong> <?php echo rand(10000, 99999); ?></p>
@@ -90,9 +96,15 @@ $conn->close();
     </table>
 
     <div class="btn-print">
-        <button onclick="window.print()">Print Receipt</button>
+        <button onclick="printReceipt()">Print Receipt</button>
     </div>
 </div>
+
+<script>
+    function printReceipt() {
+        window.print();
+    }
+</script>
 
 </body>
 </html>

@@ -99,7 +99,7 @@
                 <div class="row">
                   <div class="col-md-8">
                     <p class="text-center">
-                      <strong>Shiftings: 1 Jan, 2014 - 30 Jul, 2014</strong>
+                      <strong>Shiftings: 1 Oct, 2024 - 30 Jan, 2025</strong>
                     </p>
 
                     <div class="chart">
@@ -282,14 +282,14 @@
                       <!-- Message. Default to the left -->
                       <div class="direct-chat-msg">
                         <div class="direct-chat-infos clearfix">
-                          <span class="direct-chat-name float-left">Alexander Pierce</span>
+                          <span class="direct-chat-name float-left">Supervisor</span>
                           <span class="direct-chat-timestamp float-right">23 Jan 2:00 pm</span>
                         </div>
                         <!-- /.direct-chat-infos -->
                         <img class="direct-chat-img" src="<?php echo base_url();?>/assets/img/user1-128x128.jpg" alt="message user image">
                         <!-- /.direct-chat-img -->
                         <div class="direct-chat-text">
-                          Is this template really for free? That's unbelievable!
+                        Alright team, we have a house-moving job today. Priya, you take care of packing delicate items.
                         </div>
                         <!-- /.direct-chat-text -->
                       </div>
@@ -298,14 +298,14 @@
                       <!-- Message to the right -->
                       <div class="direct-chat-msg right">
                         <div class="direct-chat-infos clearfix">
-                          <span class="direct-chat-name float-right">Sarah Bullock</span>
+                          <span class="direct-chat-name float-right">Amit</span>
                           <span class="direct-chat-timestamp float-left">23 Jan 2:05 pm</span>
                         </div>
                         <!-- /.direct-chat-infos -->
-                        <img class="direct-chat-img" src="<?php echo base_url();?>/assets/img/user3-128x128.jpg" alt="message user image">
+                        <img class="direct-chat-img" src="<?php echo base_url();?>\assets\images\user8-128x128.jpg" alt="message user image">
                         <!-- /.direct-chat-img -->
                         <div class="direct-chat-text">
-                          You better believe it!
+                        Got it, boss. Do we have the moving blankets and straps?
                         </div>
                         <!-- /.direct-chat-text -->
                       </div>
@@ -314,14 +314,14 @@
                       <!-- Message. Default to the left -->
                       <div class="direct-chat-msg">
                         <div class="direct-chat-infos clearfix">
-                          <span class="direct-chat-name float-left">Alexander Pierce</span>
+                          <span class="direct-chat-name float-left">Supervisor</span>
                           <span class="direct-chat-timestamp float-right">23 Jan 5:37 pm</span>
                         </div>
                         <!-- /.direct-chat-infos -->
                         <img class="direct-chat-img" src="<?php echo base_url();?>/assets/img/user1-128x128.jpg" alt="message user image">
                         <!-- /.direct-chat-img -->
                         <div class="direct-chat-text">
-                          Working with AdminLTE on a great new app! Wanna join?
+                        Yes, they’re in the truck. Make sure to secure everything properly.
                         </div>
                         <!-- /.direct-chat-text -->
                       </div>
@@ -330,14 +330,14 @@
                       <!-- Message to the right -->
                       <div class="direct-chat-msg right">
                         <div class="direct-chat-infos clearfix">
-                          <span class="direct-chat-name float-right">Sarah Bullock</span>
+                          <span class="direct-chat-name float-right">Priya</span>
                           <span class="direct-chat-timestamp float-left">23 Jan 6:10 pm</span>
                         </div>
                         <!-- /.direct-chat-infos -->
-                        <img class="direct-chat-img" src="<?php echo base_url();?>/assets/img/user3-128x128.jpg" alt="message user image">
+                        <img class="direct-chat-img" src="<?php echo base_url();?>\assets\images\testimonial-1.jpg" alt="message user image">
                         <!-- /.direct-chat-img -->
                         <div class="direct-chat-text">
-                          I would love to.
+                        Are we using bubble wrap for glass items?
                         </div>
                         <!-- /.direct-chat-text -->
                       </div>

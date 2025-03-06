@@ -106,11 +106,7 @@
                       </div>
                       <!-- /.user-block -->
                       <p>
-                        Lorem ipsum represents a long-held tradition for designers,
-                        typographers and the like. Some people hate it and argue for
-                        its demise, but others ignore the hate as they create awesome
-                        tools to help create filler text for everyone from bacon lovers
-                        to Charlie Sheen fans.
+                      Alright team, we have a full house-moving assignment today, and we need to ensure everything is done efficiently and carefully. Amit, I want you and Rahul to focus on handling the heavy furniture, such as the wardrobes, sofas, and dining table, making sure they are properly wrapped and secured before loading them onto the truck.
                       </p>
 
                       <p>
@@ -139,11 +135,7 @@
                       </div>
                       <!-- /.user-block -->
                       <p>
-                        Lorem ipsum represents a long-held tradition for designers,
-                        typographers and the like. Some people hate it and argue for
-                        its demise, but others ignore the hate as they create awesome
-                        tools to help create filler text for everyone from bacon lovers
-                        to Charlie Sheen fans.
+                      Understood, sir. I will ensure that all the large furniture pieces are covered with moving blankets and secured with straps so that they don’t get scratched or damaged during transportation. Do we have the necessary tools in case we need to disassemble any items?
                       </p>
 
                       <form class="form-horizontal">
@@ -165,7 +157,7 @@
                           <a href="#">Adam Jones</a>
                           <a href="#" class="float-right btn-tool"><i class="fas fa-times"></i></a>
                         </span>
-                        <span class="description">Posted 5 photos - 5 days ago</span>
+                        <span class="description">Yes, the tool kit is in the truck, but double-check before we start to make sure we have everything we might need. Priya, your responsibility is to carefully pack all the delicate and fragile items, such as glassware, decorative pieces, and kitchen utensils, using bubble wrap and sturdy cartons.</span>
                       </div>
                       <!-- /.user-block -->
                       <div class="row mb-3">

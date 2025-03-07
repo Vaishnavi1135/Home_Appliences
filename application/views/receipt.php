@@ -88,11 +88,16 @@ $conn->close();
         <?php endforeach; ?>
 
         <tr class="total">
-            <td><strong>Total</strong></td>
-            <td><strong>₹ <?php echo number_format($total_moving_cost, 2); ?></strong></td>
-            <td><strong>₹ <?php echo number_format($total_packing_cost, 2); ?></strong></td>
-            <td colspan="2"></td>
-        </tr>
+    <td><strong>Total</strong></td>
+    <td><strong>₹ <?php echo number_format($total_moving_cost, 2); ?></strong></td>
+    <td><strong>₹ <?php echo number_format($total_packing_cost, 2); ?></strong></td>
+    <td colspan="2"></td>
+</tr>
+<tr class="total">
+    <td colspan="3"><strong>Grand Total</strong></td>
+    <td colspan="2"><strong>₹ <?php echo number_format($total_moving_cost + $total_packing_cost, 2); ?></strong></td>
+</tr>
+
     </table>
 
     <div class="btn-print">
@@ -102,9 +107,29 @@ $conn->close();
 
 <script>
     function printReceipt() {
-        window.print();
+        var receiptDiv = document.getElementById("receipt");
+        var printWindow = window.open('', '', 'width=800,height=600');
+        printWindow.document.write('<html><head><title>Print Receipt</title>');
+        printWindow.document.write('<style>');
+        printWindow.document.write(`
+            body { font-family: Arial, sans-serif; }
+            .container { width: 60%; margin: auto; border: 1px solid black; padding: 20px; }
+            h2 { text-align: center; margin-bottom: 20px; }
+            table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+            th, td { border: 1px solid black; padding: 10px; text-align: center; }
+            th { background-color:rgb(244, 16, 16); color:white; }
+            .total { font-weight: bold; }
+        `);
+        printWindow.document.write('</style></head><body>');
+        printWindow.document.write(receiptDiv.outerHTML);
+        printWindow.document.write('</body></html>');
+        printWindow.document.close();
+        printWindow.print();
+        printWindow.close();
     }
 </script>
+
+
 
 </body>
 </html>

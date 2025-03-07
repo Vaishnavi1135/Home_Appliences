@@ -6,6 +6,7 @@ class Home extends CI_Controller
         parent :: __construct();
         $this->load->helper('url');
         $this->load->model(array('admin/services_model','admin/plans_model','admin/review_model'));
+        $this->load->library('pdf');
 
     }
 

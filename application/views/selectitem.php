@@ -51,19 +51,21 @@ $conn->close();
             <table>
                 <tr>
                     <th>Item Name</th>
-                    <th>Moving (₹)</th>
                     <th>Packing (₹)</th>
-                    <th>Move?</th>
+                    <th>Moving (₹)</th>
                     <th>Pack?</th>
+                    <th>Move?</th>
+                    
                 </tr>
                 
                 <?php foreach ($items as $item): ?>
                     <tr>
                         <td><?php echo $item['item_name']; ?></td>
-                        <td>₹ <?php echo number_format($item['moving_cost'], 2); ?></td>
-                        <td>₹ <?php echo number_format($item['packing_cost'], 2); ?></td>
-                        <td><input type="checkbox" name="move_items[]" value="<?php echo $item['id']; ?>"></td>
+                       <td>₹ <?php echo number_format($item['packing_cost'], 2); ?></td>
+                       <td>₹ <?php echo number_format($item['moving_cost'], 2); ?></td>
                         <td><input type="checkbox" name="pack_items[]" value="<?php echo $item['id']; ?>"></td>
+                        <td><input type="checkbox" name="move_items[]" value="<?php echo $item['id']; ?>"></td>
+
                     </tr>
                 <?php endforeach; ?>
             </table>

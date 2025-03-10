@@ -94,7 +94,7 @@
         <p>Please note that these are accurate but not guaranteed estimates. Shifting dates may change.</p>
 
         <div class="order-info">
-            <div><strong>ORDER PLACED</strong><br>May 30, 2021</div>
+            <div><strong>ORDER PLACED</strong><br>jan 30, 2024</div>
             <div><strong>TOTAL</strong><br>2365.00</div>
             <div><strong>SHIFTING TO</strong><br>Kolhapur</div>
             <div><strong>ORDER </strong><br>#1606</div>
@@ -106,11 +106,11 @@
         <div class="timeline">
             <div class="step completed">
                 <div class="icon">✔</div>
-                <p>Order Placed<br><strong>May 30, 2021</strong></p>
+                <p>Order Placed<br><strong>May 30, 2024</strong></p>
             </div>
             <div class="step completed">
                 <div class="icon">📦</div>
-                <p>Packing<br><strong>May 31, 2021</strong></p>
+                <p>Packing<br><strong>May 31, 2024</strong></p>
             </div>
             <!-- <div class="step active">
                 <div class="icon">🚢</div>

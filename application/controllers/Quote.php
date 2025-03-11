@@ -21,8 +21,6 @@ class Quote extends CI_Controller {
         'name'=>$this->input->post('name'),
         'email'=>$this->input->post('email'),
         'phone'=>$this->input->post('phone'),
-        'address'=>$this->input->post('address'),
-        'items'=>$this->input->post('items'),
         'status'=>1,
         
     );

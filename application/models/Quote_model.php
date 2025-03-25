@@ -13,6 +13,13 @@ class Quote_model extends CI_Model {
         ->result();
     }
 
+
+    public function insert_quote($data) {
+        return $this->db->insert('quote', $data);
+    }
+
+
+
     public function read_by_id($id=0)
     {
         return $this->db->select("*")

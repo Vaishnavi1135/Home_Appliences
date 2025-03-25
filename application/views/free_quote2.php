@@ -66,5 +66,31 @@
 
 </script>
 
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    document.getElementById("quoteForm").addEventListener("submit", function (event) {
+        event.preventDefault(); // Prevent default form submission
+
+        let formData = new FormData(this);
+
+        fetch("<?php echo base_url('quote/save'); ?>", {
+            method: "POST",
+            body: formData
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                alert("Quote submitted successfully!");
+                window.location.href = "<?php echo base_url("home/selectitem"); ?>";
+            } else {
+                alert("Failed to save data. Please try again.");
+            }
+        })
+        .catch(error => console.error("Error:", error));
+    });
+});
+</script>
+
+
 
    

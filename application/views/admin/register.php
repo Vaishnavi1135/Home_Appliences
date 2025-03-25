@@ -174,8 +174,6 @@ document.getElementById("register_user").addEventListener("submit", function(eve
 function validateForm(frm){
   console.log(frm.name.value);
     var returnval = true;
-    // clearErrors();
-
     var name = frm.name.value;
     if(name.length==0){
         seterror("name","Name feild is empty!");

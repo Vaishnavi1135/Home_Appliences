@@ -66,7 +66,7 @@
 
 </script>
 
-<script>
+<!-- <script>
 document.addEventListener("DOMContentLoaded", function () {
     document.getElementById("quoteForm").addEventListener("submit", function (event) {
         event.preventDefault(); // Prevent default form submission
@@ -89,7 +89,7 @@ document.addEventListener("DOMContentLoaded", function () {
         .catch(error => console.error("Error:", error));
     });
 });
-</script>
+</script> -->
 
 
 

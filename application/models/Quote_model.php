@@ -14,10 +14,7 @@ class Quote_model extends CI_Model {
     }
 
 
-    public function insert_quote($data) {
-        return $this->db->insert('quote', $data);
-    }
-
+    
 
 
     public function read_by_id($id=0)

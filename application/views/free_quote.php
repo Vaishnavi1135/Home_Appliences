@@ -7,10 +7,11 @@
             <div class="col-lg-6 mt-5 pb-5">
                 <h3 class="text-danger text-uppercase mt-3" style="text-italic"> Get A Free Quote...!!</h3>
                 <div class="bg-light text-center p-5 wow fadeIn mt-5 pt-5" data-wow-delay="0.5s">
-                    <form id="quoteForm">
+                <form id="quoteForm" method="post" action="">
+
                         <div class="row g-3">
                             <div class="col-12 col-sm-12">
-                                <select class="form-select border-0" style="height: 55px;" id="serviceSelect">
+                                <select class="form-select border-0" style="height: 55px;" name="serviceSelect" id="serviceSelect">
                                     <option value="" selected>Select Services</option>
                                     <option value="1">Packers</option>
                                     <option value="2">Movers</option>
@@ -21,15 +22,21 @@
 
                             <div class="col-12 col-sm-12" id="locationLabels" style="display: none;">
                                 <label for="locationFrom"></label>
-                                <input type="text" class="form-control border-0" id="locationFrom" placeholder="Location From" style="height: 55px;">
+                                <input type="text" class="form-control border-0" name="locationFrom" id="locationFrom" placeholder="Location From" style="height: 55px;">
                                 <span id="locationFromError" style="color: red; display: none;">Please enter location from.</span>
                                 
                                 <label for="locationTo"></label>
-                                <input type="text" class="form-control border-0" id="locationTo" placeholder="Location To" style="height: 55px;">
+                                <input type="text" class="form-control border-0" name="locationTo" id="locationTo" placeholder="Location To" style="height: 55px;">
                                 <span id="locationToError" style="color: red; display: none;">Please enter location to.</span>
+
+                               
+                                <div id="Result" class="form-control border-0"></div>
+
                             </div>
 
-                            <a href="#" id="submitBtn" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Go</a>
+                            <!-- <a href="#" id="submitBtn" type="submit" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Go</a> -->
+                            <button type="submit" href="" id="submitBtn"  class="btn btn-primary w-100 py-3">Go</button>
+
                         </div>
                     </form>
                 </div>
@@ -58,6 +65,8 @@
     });
 
     document.getElementById('submitBtn').addEventListener('click', function(event) {
+        event.preventDefault(); // ✅ Always prevent default form submission
+
         var serviceSelect = document.getElementById('serviceSelect');
         var locationFrom = document.getElementById('locationFrom');
         var locationTo = document.getElementById('locationTo');
@@ -90,7 +99,31 @@
         if (!isValid) {
             event.preventDefault();
         } else {
-            window.location.href = "<?php echo base_url('home/free_quote2');?>";
+            var formdata =(($("#quoteForm")).serialize());
+            $.ajax({
+    url: '<?php echo base_url('Home/distance'); ?>',
+    type: 'POST',
+    data: formdata,
+    beforeSend: function() {
+        $('#Result').html('<p class="text-info">Calculating distance, please wait...</p>');
+        $('#submitBtn').prop('disabled', true);
+    },
+    success: function(response) {
+        $("#Result").html('<p class="text">Distance: ' + response.distance + '</p>'); // ✅ Show nicely
+        console.log(response);
+    },
+    error: function(xhr, status, error) {
+        $('#Result').html('<p class="text-danger">An error occurred: ' + error + '</p>');
+    },
+    complete: function() {
+        $('#submitBtn').prop('disabled', false); // ✅ Re-enable button
+    }
+});
+
+            // window.location.href = "<?php echo base_url('home/distance');?>";
         }
     });
+
+
+
 </script>

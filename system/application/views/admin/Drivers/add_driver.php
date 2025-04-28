@@ -1,0 +1,107 @@
+<section class="content">
+            <div class="col-12">
+            
+                <div class="card">
+                    <div class="card-header">
+                        <h3 class="card-title">Driver</h3>
+                    </div>
+                    <!-- /.card-header -->
+                    <div class="card-body">
+                        <?php echo form_open("admin/drivers/save",'');?>
+                        <?php echo form_hidden('id',0); ?>
+                        <div class="row">
+                            <div class="col-md-12 form-group">
+                                <label for="name">Name</label>
+                                <input type="text" class="form-control" name="name" id="name" >
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-12 form-group">
+                                <label for="license_no">License_No</label>
+                                <input type="number" class="form-control" name="license_no" id="license_no" >
+                            </div>
+                        </div>
+
+                        <!-- <div class="row">
+                            <div class="col-md-12 form-group">
+                                <label for="chassis_no">Chassis_No</label>
+                                <input type="text" class="form-control" name="chassis_no" id="chassis_no" >
+                            </div>
+                        </div> -->
+
+                        <div class="row">
+                            <div class="col-md-12 form-group">
+                                <label for="adhar_no">Adhar_No</label>
+                                <input type="number" class="form-control" name="adhar_no" id="adhar_no" >
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12 form-group">
+                                <label for="exp_date">Exp_Date </label>
+                                <input type="date" class="form-control" name="exp_date" id="exp_date" >
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12 form-group">
+                            <label for="phone">Phone</label>
+                            <input type="tel" class="form-control"  name="phone" id="phone">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12 form-group">
+                            <label for="capacity">Capacity In Tons</label>
+                            <select 
+                                class="form-control" 
+                                name="capacity" 
+                                id="capacity" 
+                                required>
+                                <option value="">Select Capacity  Of Vehicle</option>
+                                <option value="5">0-0.1Tons</option>
+                                <option value="10">0.1-0.2 Tons</option>
+                                <option value="15">0.2-0.3 Tons</option>
+                                <option value="20">0.3-0.4 Tons</option>
+                                <option value="25">0.4-0.5 Tons</option>
+                            </select>
+                            <small class="form-text text-muted">
+                            Please enter the capacity in tons (e.g., 10.5, 20, etc.).
+                            </small>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-12 form-group">
+                            <label for="type">Type</label>
+                            <select 
+                                class="form-control" 
+                                name="type" 
+                                id="type" 
+                                required>
+                                <option value="">Select Type  Of Vehicle</option>
+                                <option value="2">2V</option>
+                                <option value="3">3V</option>
+                                <option value="4">4V</option>
+                                <option value="6">6V</option>
+                            </select>
+                            <small class="form-text text-muted">
+                            Please select the type in villers.
+                            </small>
+                            </div>
+                        </div>
+
+                        
+                        <div class="row">
+                            <div class="col-md-12 form-group">
+                                <input type="submit"  class="btn btn-success" name="submit" id="submit" value="Save">
+                                <input type="reset" class="btn btn-default" name="reset" id="reset" value="Reset">
+                                <input type="button" class="btn btn-danger"  value="Cancel" onclick="window.location.href='<?= base_url('admin/drivers/') ?>'">
+                            </div>
+                        </div>
+                        <?php echo form_close(); ?>
+                        
+                    </div>
+                </div>
+            </div>
+    
+    
+</section>

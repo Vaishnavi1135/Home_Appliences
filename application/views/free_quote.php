@@ -7,7 +7,7 @@
             <div class="col-lg-6 mt-5 pb-5">
                 <h3 class="text-danger text-uppercase mt-3" style="text-italic"> Get A Free Quote...!!</h3>
                 <div class="bg-light text-center p-5 wow fadeIn mt-5 pt-5" data-wow-delay="0.5s">
-                <form id="quoteForm" method="post" action="">
+                <form id="quoteForm" method="post" action="<?=base_url('home/free_quote2');?>">
 
                         <div class="row g-3">
                             <div class="col-12 col-sm-12">
@@ -35,7 +35,11 @@
                             </div>
 
                             <!-- <a href="#" id="submitBtn" type="submit" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Go</a> -->
-                            <button type="submit" href="" id="submitBtn"  class="btn btn-primary w-100 py-3">Go</button>
+                            <button type="submit" href="" id="submitBtn"  class="btn btn-primary w-100 py-3">Calculate Distance</button>
+
+                            <!-- This button will be shown after distance is calculated -->
+                            <button id="nextPageBtn"  class="btn btn-primary w-100 py-3" style="display: none;">Continue</button>
+
 
                         </div>
                     </form>
@@ -46,7 +50,7 @@
 </div>
 
 <script>
-    document.getElementById('serviceSelect').addEventListener('change', function() {
+    document.getElementById('serviceSelect').addEventListener('change', function () {
         var selectedValue = this.value;
         var locationLabels = document.getElementById('locationLabels');
 
@@ -64,7 +68,7 @@
         }
     });
 
-    document.getElementById('submitBtn').addEventListener('click', function(event) {
+    document.getElementById('submitBtn').addEventListener('click', function (event) {
         event.preventDefault(); // ✅ Always prevent default form submission
 
         var serviceSelect = document.getElementById('serviceSelect');
@@ -74,7 +78,7 @@
         var locationFromError = document.getElementById('locationFromError');
         var locationToError = document.getElementById('locationToError');
         var isValid = true;
-        
+
         if (serviceSelect.value === "") {
             serviceError.style.display = 'block';
             isValid = false;
@@ -99,31 +103,31 @@
         if (!isValid) {
             event.preventDefault();
         } else {
-            var formdata =(($("#quoteForm")).serialize());
+            var formdata = ($("#quoteForm").serialize());
             $.ajax({
-    url: '<?php echo base_url('Home/distance'); ?>',
-    type: 'POST',
-    data: formdata,
-    beforeSend: function() {
-        $('#Result').html('<p class="text-info">Calculating distance, please wait...</p>');
-        $('#submitBtn').prop('disabled', true);
-    },
-    success: function(response) {
-        $("#Result").html('<p class="text">Distance: ' + response.distance + '</p>'); // ✅ Show nicely
-        console.log(response);
-    },
-    error: function(xhr, status, error) {
-        $('#Result').html('<p class="text-danger">An error occurred: ' + error + '</p>');
-    },
-    complete: function() {
-        $('#submitBtn').prop('disabled', false); // ✅ Re-enable button
-    }
-});
-
-            // window.location.href = "<?php echo base_url('home/distance');?>";
+                url: '<?php echo base_url('Home/distance'); ?>',
+                type: 'POST',
+                data: formdata,
+                beforeSend: function () {
+                    $('#Result').html('<p class="text-info">Calculating distance, please wait...</p>');
+                    $('#submitBtn').prop('disabled', true);
+                },
+                success: function (response) {
+                    $("#Result").html('<p class="text">Distance: ' + response.distance + '</p>');
+                    document.getElementById('nextPageBtn').style.display = 'block'; // ✅ Show the new button
+                    console.log(response);
+                },
+                error: function (xhr, status, error) {
+                    $('#Result').html('<p class="text-danger">An error occurred: ' + error + '</p>');
+                },
+                complete: function () {
+                    $('#submitBtn').prop('disabled', false); // ✅ Re-enable button
+                }
+            });
         }
     });
 
-
-
+    document.getElementById('nextPageBtn').addEventListener('click', function () {
+        window.location.href = "<?php echo base_url('home/free_quote2'); ?>"; // 🔁 Update to your real path
+    });
 </script>

@@ -14,7 +14,7 @@ class Quote_model extends CI_Model {
     }
 
 
-    
+  
 
 
     public function read_by_id($id=0)

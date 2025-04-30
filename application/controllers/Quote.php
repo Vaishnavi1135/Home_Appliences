@@ -32,6 +32,7 @@ class Quote extends CI_Controller {
         $res = $this->Quote_model->create($data);
         if($res){
             $this->session->set_flashdata('status',' Added successfully..!');
+            $this->sendEmail($data);
             redirect('home/selectitem');
         
         }
@@ -48,49 +49,53 @@ class Quote extends CI_Controller {
     
 }
 
-// public function save() {
-//     $name = $this->input->post('name');
-//     $email = $this->input->post('email');
-//     $phone = $this->input->post('phone');
-//     $status =1;
 
-//     // Prepare data to save in the database
-//     $data = array(
-//         'name' => $name,
-//         'email' => $email,
-//         'phone' => $phone,
-//         'status' => 1
-//     );
 
-//     // Save data using model
-//     if ($this->Quote_model->insert_quote($data)) {
-//         // Send email confirmation
-//         $this->send_email($email, $name);
+    private function sendEmail($data)
+    {
+        $this->load->library('email');
 
-//         echo json_encode(['success' => true]);
-//     } else {
-//         echo json_encode(['success' => false]);
-//     }
-// }
+        $from = 'vaishnavirabade0110@gmail.com';
+        $to = $data['email'];
+        $subject = 'Quote Request Confirmation';
+        $message = "
+            <h3>Quote Request Received</h3>
+            <p>Dear {$data['name']},</p>
+            <p>Thank you for submitting a quote request. We have received your details:</p>
+            <ul>
+                <li>Name: {$data['name']}</li>
+                <li>Email: {$data['email']}</li>
+            </ul>
+            <p>We will contact you soon!</p>
+            <p>Best regards,<br>Your Company</p>
+        ";
 
-// private function send_email($to_email, $name) {
-//     $this->email->from('rabadevaishnavi0525@gmail.com', 'Your Company Name');
-//     $this->email->to($to_email);
-//     $this->email->subject('Thank You for Your Quote Request');
-//     $this->email->message("
-//         Dear $name,<br><br>
-//         Thank you for requesting a quote. Our team will contact you soon.<br><br>
-//         Best Regards,<br>
-//         Your Company Name
-//     ");
+        $config = [
+            'protocol' => 'smtp',
+            'smtp_host' => 'smtp.gmail.com',
+            'smtp_port' => 587,
+            'smtp_user' => 'vaishnavirabade0110@gmail.com',
+            'smtp_pass' => 'bwxp ynei pxwb ggty',//rxmy ivqm elqx bvmd', // App Password
+            'smtp_crypto' => 'tls',
+            'mailtype' => 'html',
+            'charset' => 'utf-8',
+            'wordwrap' => true,
+            'newline' => "\r\n",
+            'smtp_timeout' => 30
+        ];
 
-//     if ($this->email->send()) {
-//         log_message('info', "Email sent successfully to $to_email");
-//     } else {
-//         log_message('error', "Failed to send email to $to_email: " . $this->email->print_debugger());
-//     }
-// }
+        $this->email->initialize($config);
+        $this->email->from($from, 'Kolhapur Packers And Movers');
+        $this->email->to($to);
+        $this->email->subject($subject);
+        $this->email->message($message);
 
+        if ($this->email->send()) {
+            log_message('info', 'Email sent to ' . $to);
+        } else {
+            log_message('error', 'Failed to send email: ' . $this->email->print_debugger());
+        }
+    }
 }
 
 

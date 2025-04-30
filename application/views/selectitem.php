@@ -71,6 +71,29 @@ $conn->close();
             </table>
         <?php endforeach; ?>
 
+        <!-- Button to Show Add Item Form -->
+<button type="button" onclick="document.getElementById('addItemForm').style.display='block'" class="btn-submit" style="background: green;">Add New Item</button>
+
+<!-- Add Item Form -->
+<div id="addItemForm" style="display:none; margin-top: 20px;">
+    <h3>Add New Household Item</h3>
+    <form action="add_item.php" method="POST">
+        <label>Item Name:</label><br>
+        <input type="text" name="item_name" required><br><br>
+
+        <label>Category:</label><br>
+        <input type="text" name="category" required><br><br>
+
+        <label>Packing Cost (₹):</label><br>
+        <input type="number" step="0.01" name="packing_cost" required><br><br>
+
+        <label>Moving Cost (₹):</label><br>
+        <input type="number" step="0.01" name="moving_cost" required><br><br>
+
+        <button type="submit" href="<?php echo base_url("home/selectitem");?>" class="btn-sub">Add Item</button>
+                </div>
+
+
         <button type="submit" href="<?php echo base_url("home/receipt");?>" class="btn-submit">Generate Receipt</button>
     </form>
 </div>

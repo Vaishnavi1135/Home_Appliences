@@ -77,169 +77,53 @@ class Home extends CI_Controller
         $this->load->view("main_template",$data);
     }
 
-    public function sendEmail()
+    public function sendEmail($data)
     {
-    error_reporting(E_ALL);
-    ini_set("display_errors", 1);
+        
+        $this->load->library('email');
 
-    $from = 'vaishnavirabade0110@gmail.com'; // Corrected email address
-    $to = $this->input->post('to');
-    $subject = "Email sent";
-    $message = "This is a test email sent using CodeIgniter Email Library.";
+        $from = 'vaishnavirabade0110@gmail.com';
+        $to = $data['email'];
+        $subject = 'Quote Request Confirmation';
+        $message = "
+            <h3>Quote Request Received</h3>
+            <p>Dear {$data['name']},</p>
+            <p>Thank you for submitting a quote request. We have received your details:</p>
+            <ul>
+                <li>Name: {$data['name']}</li>
+                <li>Email: {$data['email']}</li>
+            </ul>
+            <p>We will contact you soon!</p>
+            <p>Best regards,<br>Your Company</p>
+        ";
 
-    $config['protocol'] = 'smtp';
-    $config['smtp_host'] = 'smtp.gmail.com';
-    $config['smtp_port'] = 587;
-    $config['smtp_user'] = 'vaishnavirabade0110@gmail.com'; // Corrected email address
-    $config['smtp_pass'] = 'rxmy ivqm elqx bvmd'; // Use your App Password here
-    $config['smtp_crypto'] = 'tls';
-    $config['mailtype'] = 'html'; // Ensure correct type
-    $config['charset'] = 'utf-8';
-    $config['wordwrap'] = true;
-    $config['newline'] = "\r\n";
-    $config['smtp_timeout'] = 60;
+        $config = [
+            'protocol' => 'smtp',
+            'smtp_host' => 'smtp.gmail.com',
+            'smtp_port' => 587,
+            'smtp_user' => 'vaishnavirabade0110@gmail.com',
+            'smtp_pass' => 'rxmy ivqm elqx bvmd', // App Password
+            'smtp_crypto' => 'tls',
+            'mailtype' => 'html',
+            'charset' => 'utf-8',
+            'wordwrap' => true,
+            'newline' => "\r\n",
+            'smtp_timeout' => 30
+        ];
 
-    $this->email->initialize($config);
-    $this->email->from($from, 'Vaishnavi'); // Optional: Add a name
-    $this->email->to($to);
-    $this->email->subject($subject);
-    $this->email->message($message);
+        $this->email->initialize($config);
+        $this->email->from($from, 'Your Company');
+        $this->email->to($to);
+        $this->email->subject($subject);
+        $this->email->message($message);
 
-    if ($this->email->send()) {
-        echo "Email sent successfully!";
-    } else {
-        echo "Failed to send email.";
-        echo $this->email->print_debugger(); // For debugging during development
+        if ($this->email->send()) {
+            log_message('info', 'Email sent to ' . $to);
+        } else {
+            log_message('error', 'Failed to send email: ' . $this->email->print_debugger());
+        }
     }
-}
-// public function distance()
-// {
-//     // Load input values
-//     $service = $this->input->post('serviceSelect'); // Hardcoded for Movers (2); replace with $this->input->get('serviceSelect') for dynamic input
-//     $from = $this->input->post('locationFrom');//$locationFrom; // Simplified for better Nominatim compatibility
-//     $to = $this->input->post('locationTo');// $locationTo;
-//     // Validate service selection
 
-   
-//     if (empty($service)) {
-//         echo "Please select a service.";
-//         // return;
-//     }
-
-//     // Packers only - no distance needed
-//     if ($service == "1") {
-//         echo "<h4>Quote for Packers requested. No distance calculation needed.</h4>";
-//         // return;
-//     }
-
-//     // End input validation
-//     if (empty($from)) {
-//         echo "Please enter the 'Location From'.";
-//         // return;
-//     }
-//     if (($service == "2" || $service == "3") && empty($to)) {
-//         echo "Please enter the 'Location To'.";
-//         // return;
-//     }
-
-//     // Function to geocode using Nominatim with retry logic
-//     function geocodeWithNominatim($location, $maxRetries = 2) {
-//         $location = urlencode($location);
-//         $url = "https://nominatim.openstreetmap.org/search?q={$location}&format=json&limit=1";
-    
-
-//         $userAgent = 'YourAppName/1.0 (your.email@example.com)'; // REPLACE with your app name and email
-
-//         for ($attempt = 1; $attempt <= $maxRetries; $attempt++) {
-//             $ch = curl_init();
-//             curl_setopt($ch, CURLOPT_URL, $url);
-//             curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-//             curl_setopt($ch, CURLOPT_HTTPHEADER, ["User-Agent: $userAgent"]);
-//             $response = curl_exec($ch);
-//             if ($response === false) {
-//                 echo "Geocoding Error (Attempt $attempt): cURL error - " . curl_error($ch);
-//                 curl_close($ch);
-//                 if ($attempt == $maxRetries) return false;
-//                 sleep(1);
-//                 continue;
-//             }
-//             curl_close($ch);
-
-//             $data = json_decode($response, true);
-//             if (empty($data)) {
-//                 echo "Geocoding Error (Attempt $attempt): No results for '$location'. Raw response: $response";
-//                 if ($attempt == $maxRetries) return false;
-//                 sleep(1);
-//                 continue;
-//             }
-//             return ['lat' => $data[0]['lat'], 'lon' => $data[0]['lon']];
-//         }
-//         return false;
-//     }
-
-//     // Geocode $from
-//     $fromCoords = geocodeWithNominatim($from);
-//     if ($fromCoords === false) {
-//         echo "Geocoding Error: Could not find coordinates for '$from' after retries.";
-//         // return;
-//     }
-//     $fromLat = $fromCoords['lat'];
-//     $fromLon = $fromCoords['lon'];
-
-//     // Geocode $to
-//     $toCoords = geocodeWithNominatim($to);
-//     if ($toCoords === false) {
-//         echo "Geocoding Error: Could not find coordinates for '$to' after retries.";
-//         // return;
-//     }
-//     $toLat = $toCoords['lat'];
-//     $toLon = $toCoords['lon'];
-
-//     // Calculate distance using OSRM
-//     $osrmUrl = "http://router.project-osrm.org/route/v1/driving/{$fromLon},{$fromLat};{$toLon},{$toLat}?overview=false";
-//     $ch = curl_init();
-//     curl_setopt($ch, CURLOPT_URL, $osrmUrl);
-//     curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-//     $osrmResponse = curl_exec($ch);
-//     if ($osrmResponse === false) {
-//         echo "OSRM Error: " . curl_error($ch);
-//         curl_close($ch);
-//         // return;
-//     }
-//     curl_close($ch);
-
-//     $osrmData = json_decode($osrmResponse, true);
-//     if (empty($osrmData) || $osrmData['code'] !== 'Ok') {
-//         echo "OSRM Error: " . ($osrmData['message'] ?? 'Failed to get route.');
-//         // return;
-//     }
-
-//     // Extract distance (in meters) and duration (in seconds)
-//     $distanceMeters = (float)$osrmData['routes'][0]['distance'];
-//     $durationSeconds = (int)$osrmData['routes'][0]['duration'];
-
-//     // Convert to human-readable formats
-//     $distanceKm = round($distanceMeters / 1000, 1); // Meters to kilometers
-//     $durationHours = floor($durationSeconds / 3600); // Hours
-//     $durationMinutes = round(($durationSeconds % 3600) / 60); // Minutes
-//     $durationText = ($durationHours > 0 ? "$durationHours hours " : "") . ($durationMinutes > 0 ? "$durationMinutes mins" : "");
-
-//     // // Output results
-//     // echo "<h4>Service: " . ($service == 2 ? "Movers" : "Both Packers & Movers") . "</h4>";
-//     // echo "<p><strong>From:</strong> {$from}</p>";
-//     // echo "<p><strong>To:</strong> {$to}</p>";
-//     // echo "<p><strong>Distance:</strong> {$distanceKm} km</p>";
-//     // echo "<p><strong>Estimated Duration:</strong> {$durationText}</p>";
-
-//     $html ='';
-//     // $html = "<h4>Service: {$serviceText}</h4>";
-//     $html .= "<p><strong>From:</strong> {$from}</p>";
-//     $html .= "<p><strong>To:</strong> {$to}</p>";
-//     $html .= "<p><strong>Distance:</strong> {$distanceKm} km</p>";
-//     $html .= "<p><strong>Estimated Duration:</strong> {$durationText}</p>";
-
-//     echo $html;
-// }
 
 public function distance()
 {
